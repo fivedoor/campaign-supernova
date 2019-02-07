@@ -1,0 +1,35 @@
+export interface IModel {
+    name?: string;
+    number?: number;
+    numberFlag?: boolean;
+    type?: string;
+    typeId?: number;
+    typeFlag?: boolean;
+    href?: string;
+    href_1?: string;
+    href_2?: string;
+    hrefFlag?: boolean;
+    img?: string;
+    img_1?: string;
+    img_2?: string;
+    imgFlag?: boolean;
+    key?: string;
+    src?: string;
+    src_1?: string;
+    src_2?: string;
+    srcFlag?: boolean;
+    width?: string;
+    height?: string;
+    cta?: string;
+    ctaFlag?: boolean;
+    heading?: string;
+    headingFlag?: boolean;
+    copy?: string;
+    copyFlag?: boolean;
+    txt?: string[];
+    links?: string[];
+    moduleAmends?: string;
+    approved?: string;
+    approvalDate?: any;
+    rejectionDate?: any;
+}

@@ -1,35 +1,37 @@
-import { TestBed, async } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
+/* tslint:disable:no-unused-variable */
 import { AppComponent } from './app.component';
 
-describe('AppComponent', () => {
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
-      declarations: [
-        AppComponent
-      ],
-    }).compileComponents();
-  }));
+import { TestBed }      from '@angular/core/testing';
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app).toBeTruthy();
+import { By }           from '@angular/platform-browser';
+
+////////  SPECS  /////////////
+
+/// Delete this
+describe('Smoke test', () => {
+  it('should run a passing test', () => {
+    expect(true).toEqual(true, 'should pass');
+  });
+});
+
+describe('AppComponent with TCB', function () {
+  beforeEach(() => {
+    TestBed.configureTestingModule({declarations: [AppComponent]});
   });
 
-  it(`should have as title 'demo-app'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('demo-app');
+  it('should instantiate component', () => {
+    let fixture = TestBed.createComponent(AppComponent);
+    expect(fixture.componentInstance instanceof AppComponent).toBe(true, 'should create AppComponent');
   });
 
-  it('should render title in a h1 tag', () => {
-    const fixture = TestBed.createComponent(AppComponent);
+  it('should have expected <h1> text', () => {
+    let fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to demo-app!');
+
+    let h1 = fixture.debugElement.query(el => el.name === 'h1').nativeElement;  // it works
+
+        h1 = fixture.debugElement.query(By.css('h1')).nativeElement;            // preferred
+
+    expect(h1.innerText).toMatch(/angular app/i, '<h1> should say something about "Angular App"');
   });
 });

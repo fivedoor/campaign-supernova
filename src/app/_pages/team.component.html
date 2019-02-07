@@ -1,0 +1,89 @@
+<div class="page-bg">
+  <div class="container page-pad">
+    <div class="container page-width">
+      <div class="row">
+        <div class="col-xs-12" > 
+          <h1>Campaign Team </h1>
+            <div style="padding-top:15px">
+              <p>Here they are, your dream team, the finest workforce known to humanity. They make things happen.</p>
+            </div>
+               <!--********** MODULES [start] ************--> 
+      
+            <!-- Add Module FIRST [start]--> 
+              <div class="panel-default" *ngIf="!TeamInputisActive">
+                    <button type="button" (click)="toggleTeamInput()" class="btn btn-success btn-sm"> Add Team Member</button>
+              </div> 
+              <!-- Add Module FIRST [end]--> 
+
+
+        <!-- HERO MODULES INPUT - NO MODS [start] -->
+         <div [formGroup]="memberForm" novalidate style="padding-top:20px"  *ngIf="TeamInputisActive">
+            <div class="panel-border" > 
+                <div class="form-group" >
+                <label class="info"  > Name: <small [hidden]="memberForm.controls.name.valid"  class="text-danger pull-right errors">
+                name is required
+                 </small>
+                 </label>
+                <strong>  <input type="text" class="form-control" formControlName="name" id="name"></strong>
+                
+                </div>
+
+                 <div class="form-group" >
+                <label class="info"  > Email: <small [hidden]="memberForm.controls.email.valid"  class="text-danger pull-right errors">
+                  a valid email is required
+                 </small>
+                  </label>
+                <input type="text" class="form-control" formControlName="email" id="email">
+               
+                </div>
+
+                <div class="form-group"  >
+                <label class="info"  >Role:
+                    <small [hidden]="memberForm.controls.role.valid"  class="text-danger pull-right errors">
+                role is required
+                 </small>
+                </label>
+
+                <input type="text" class="form-control" formControlName="role" id="role">
+                
+                </div>
+
+              <div  class="margin-20">
+               <button [disabled]="!memberForm.valid" type="button" (click)="addMember()" class="btn btn-success btn-full" >Add Team Member</button>
+
+               <button (click)="toggleTeamInput()"  class="btn btn-full btn-close">close</button>
+              </div>
+            </div>
+         </div>
+
+          <div class="col-xs-12" > 
+            <div class="tableHolder">
+               <table class="table table-striped table-hover" >
+                <thead>
+                  <tr >
+                   <th >Name </th>
+                   <th >Email </th>
+                   <th >Role </th>
+                 </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let key of arrayOfTeamIds">
+                      <td >{{testTeam[key].name}}</td>
+                       <td >{{testTeam[key].email}}</td>
+                       <td >{{testTeam[key].role}}
+                        <button  class="btn-super pull-right">Demo Workforce</button>
+                       </td>
+                  </tr>
+                    <tr *ngFor="let key of arrayOfCustomTeamIds">
+                      <td >{{customTeam[key].name}}</td>
+                       <td >{{customTeam[key].email}}</td>
+                       <td >{{customTeam[key].role}} <a style="font-size:0.85em;" (click)="deleteMember(key,customTeam[key].name); $event.stopPropagation()" class="glyphicon glyphicon-remove pull-right">  </a></td>
+                  </tr>
+                 </tbody>
+              </table> 
+            <div>
+        </div>
+      </div> 
+    </div>
+ </div>
+     

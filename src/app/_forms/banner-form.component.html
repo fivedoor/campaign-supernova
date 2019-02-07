@@ -1,0 +1,85 @@
+
+  <div [formGroup]="bannerForm" novalidate >
+
+
+ <!--  panel and margin-->
+        <div *ngIf="!module"  class="editorPad">
+
+            <div class="form-group" >
+            <label> Module Name:</label>
+            <strong>  <input type="text" class="form-control" formControlName="name" [(ngModel)]="newModel.name" id="name"></strong>
+             <small [hidden]="bannerForm.controls.name.valid"  class="text-danger">
+            name is required
+             </small>
+            </div>
+
+
+               <!-- Add Data -->
+          <div  class="margin-20">
+               <button [disabled]="!bannerForm.valid" type="button" (click)="passModelData()"  class="btn btn-success btn-full" >Add This Module +</button>
+          </div>
+        <!-- Add Data -->
+
+        </div>
+      <!--  panel div-->
+
+
+
+             <table  class="table table-bordered tempData modTable table-outline" *ngIf="module" >
+            <thead>
+              <tr >
+                <th >Module</th>
+                 <th class="values" >
+                 <div class="col-xs-10" style="padding:0"> <strong> 
+                 <input type="text" class="form-control form-inline"  formControlName="name" [(ngModel)]="newModel.name" id="name" ></strong>
+                 </div>
+                 <div class="col-xs-2" style="padding:0">
+                  <a *ngIf="bannerForm.controls.approved.value !== true  && viewType === 'author'" (click)="addData()" class="pull-right details-edit" > update </a>
+                 </div>
+                 <div class="col-xs-12" style="padding:0">
+                 <small style="font-size:12px" [hidden]="bannerForm.controls.name.valid" class="text-danger">name is required </small>
+                 </div>
+                 </th>
+              </tr>
+            </thead>
+            <tbody >
+            <tr class="panel panel-default">
+                <td width="20%"  >Status</td>
+                 <td class="values">  <a *ngIf="module.value.approved === false" class="btn btn-danger btn-xs" style="cursor: default;" ><strong>Rejected</strong> </a>
+
+             <a *ngIf="module.value.approved === true" class="btn btn-success btn-xs" style="cursor: default;" >Approved</a>
+              <button *ngIf="module.value.approved  === ''" (click)="pendingQAStatus()" type="button" class="btn btn-warning btn-xs">Pending Approval</button>
+               </td>
+              </tr>
+              <tr class="panel panel-default" *ngIf="module.value.approved === false" >
+              <td width="20%" class="amends-bg">Amends</td>
+                 <td class="values amends-bg" > 
+                 <div class="form-group" >
+                 <span *ngIf="viewType !== 'qa'" style="white-space:pre-line;" > {{module.value.moduleAmends}}</span>
+                
+                  </div></td>
+                   </tr> 
+             
+               <tr class="panel panel-default">
+                 <td width="20%"  >Module No</td>
+                 <td class="values" >{{i+1}}
+                 </td>
+              </tr>
+              <tr *ngIf="module.value.type" class="panel panel-default">
+                 <td width="20%" >Module Type</td>
+                 <td >{{module.value.type}}
+                 
+                 </td>
+              </tr>
+               <tr  class="panel panel-default">
+                 <td colspan="2">
+                  <button [disabled]="!bannerForm.valid" type="button" (click)="passModelData()"  class="btn btn-success btn-full" >Update This Module</button>
+
+                 </td>
+              </tr>
+       
+              
+            </tbody>
+          </table>
+
+       </div>

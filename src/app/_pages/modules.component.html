@@ -1,0 +1,58 @@
+<div *ngFor="let mod of moduleTypeArray; let i=index">
+  <modal id="custom-modal-{{i+1}}">
+  <div class="modal-bg">
+      <div class="mymodel" >
+          <div class="modal-body">
+
+            <a (click)="closeModal(i+1);">
+              <img src="{{mod.preview}}" />
+            </a>
+     <div class="mod-label">{{mod.name}}</div> 
+     <div class="mod-description">{{mod.description}}</div> 
+
+
+        </div>
+      </div>
+     </div>
+  </modal>
+</div>
+
+
+<div class="page-bg">
+  <div class="container page-pad">
+     <div class="container page-width">
+        <div class="row">
+         <div class="col-xs-12" > 
+            <h1>Module Library</h1>
+            <div style="padding-top:15px">
+              <p>A reference library of the modules currently available for email templating.</p>
+            </div>
+          </div>
+         <div class="col-xs-12" > 
+          <div class="tableHolder">
+             <table class="table table-striped table-hover" >
+              <thead>
+                <tr >
+                   <th >Name </th>
+                   <th >Description </th>
+                   <th style="width:200px;">Preview </th>
+                 </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let mod of moduleTypeArray; let i=index">
+                    <td align="left">{{mod.name}}</td>
+                     <td align="left" style="font-size:12px">{{mod.description}}</td>
+                     <td style="width:200px;" align="right">
+                      <a (click)="openModal(i+1)">
+                        <img style="max-width:100%;" src="{{mod.preview}}"/>
+                        </a>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+          <div>
+      </div>
+    </div>
+  </div>
+</div>
+ 

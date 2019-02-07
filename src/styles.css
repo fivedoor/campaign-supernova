@@ -1,1 +1,183 @@
 /* You can add global styles to this file, and also import other style files */
+/*  Loading   spinner  */  
+      body, html {
+        height: 100%;
+      }
+      .app-loading {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+      }
+      .app-loading .spinner {
+        height: 200px;
+        width: 200px;
+        animation: rotate 2s linear infinite;
+        transform-origin: center center;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+      .app-loading .spinner .path {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+        animation: dash 1.5s ease-in-out infinite;
+        stroke-linecap: round;
+        stroke: #ddd;
+      }
+      @keyframes rotate {
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes dash {
+        0% {
+          stroke-dasharray: 1, 200;
+          stroke-dashoffset: 0;
+        }
+        50% {
+          stroke-dasharray: 89, 200;
+          stroke-dashoffset: -35px;
+        }
+        100% {
+          stroke-dasharray: 89, 200;
+          stroke-dashoffset: -124px;
+        }
+      }
+/*  Loading   spinner  ends */  
+
+
+body, p {
+font-family: 'Lato', 'Gotham', sans-serif !important;  
+
+}
+
+body {
+    
+    background: #f8f8f8;
+    background: -webkit-linear-gradient(left top, #ffffff, #fafafa); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right,  #ffffff, #fafafa); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right,  #ffffff, #fafafa); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right,  #ffffff, #fafafa); /* Standard syntax */
+	  color:#444444 ;
+
+    /* The image used */
+    /*
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/ngdataformdemo.appspot.com/o/bg.png?alt=media&token=8261d9c9-278e-42c4-9742-e1e81b7e7f23");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    */
+}
+
+
+
+a {
+cursor: pointer;
+color:#0092D3;
+}
+
+
+
+.btn, input, select {
+	 -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+a:focus, 
+button:focus, 
+input:focus, 
+textarea:focus {
+    outline: none !important;
+}
+
+input:focus, 
+textarea:focus {
+/*    box-shadow:  inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(176, 218, 47, 0.6) !important;
+*/    box-shadow: none !important;
+border-color: #85aa7d !important;
+/*background-color: #d8efd3 !important;
+*//*border: none !important;*/
+border-width: 1px !important;
+
+/*-webkit-box-shadow: inset 0px 0px 36px 0px rgba(255,223,13,0.45) !important;
+-moz-box-shadow: inset 0px 0px 36px 0px rgba(255,223,13,0.45) !important;
+box-shadow: inset 0px 0px 36px 0px rgba(255,223,13,0.45) !important;*/
+}
+
+/*button {
+  outline: 1px solid #f9d852  !important;
+}*/
+
+/* MODAL STYLES
+-------------------------------*/
+modal {
+  /* modals are hidden by default */
+  display: none;
+}
+modal .mymodal {
+  /* modal container fixed across whole screen */
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* z-index must be higher than .modal-background */
+  z-index: 1000;
+  /* enables scrolling for tall modals */
+/*  overflow: auto;
+*/
+
+}
+modal .modal-body {
+ /* padding: 20px;
+  background: #cccccc;
+  margin: 40px;*/
+}
+
+.mod-label {
+font-weight: 500;
+color: #d3d3d3;
+font-size: 15px;
+padding:15px 0 10px 0;
+
+}
+
+.mod-description{
+font-weight: 500;
+color: #d3d3d3;
+font-size: 14px;
+}
+
+a.mod-label :hover {
+text-decoration: none;
+}
+modal .modal-bg {
+  /* modal background fixed across whole screen */
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* semi-transparent black  */
+  background: rgba(0,0,0,0.8);
+  /* z-index must be below .modal and above everything else  */
+  z-index: 900;
+  text-align: center;
+}
+modal .modal-bg img{
+  width:100%;
+  max-width: 600px
+  
+}
+body.modal-open {
+  /* body overflow is hidden to hide main scrollbar when modal window is open */
+  overflow: hidden;
+}

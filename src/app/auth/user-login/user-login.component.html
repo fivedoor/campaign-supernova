@@ -1,0 +1,43 @@
+<div class="page-bg">
+
+  <div class="container page-pad">
+    <div class="container page-width">
+      <div class="row">
+        <div class="col-xs-12" >
+
+	<div >
+
+		<p *ngIf="errorMessage.length > 0" class="text-danger">
+			{{errorMessage}}</p>
+			
+		<p *ngIf="error.message.length > 0" class="text-danger">
+			{{error.message}}</p>
+
+		<form (ngSubmit)="onLoginEmail()">
+			<div class="form-group">
+				<label for="email">Email</label> <input type="text"
+					class="form-control" id="email" name="email" required
+					[(ngModel)]="email">
+			</div>
+
+			<div class="form-group">
+				<label for="password">Password</label> <input type="password"
+					class="form-control" id="password" name="password" required
+					[(ngModel)]="password">
+			</div>
+
+			<button type="submit" class="btn btn-success">Log In</button>
+		</form>
+
+<h4><strong>Don't Have an account?</strong></h4>
+<p>You can trial the demo version using the following credentials: </p>
+email: <strong> demo@campaignsupernova.com</strong><br/>
+password:  <strong> 123abc</strong>
+
+
+
+ </div>
+  </div>
+      </div>
+    </div>
+  </div>

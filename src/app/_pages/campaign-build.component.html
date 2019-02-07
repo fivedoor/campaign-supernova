@@ -1,0 +1,125 @@
+<div class="page-bg">
+  <div class="container page-pad">
+    <div class="container page-width">
+      <div class="row">
+        <div class="col-xs-12" >
+          <h1>New Campaign</h1>
+          <div style="padding-top:15px">
+            <p > Fill out the details for your email campaign...</p>
+          </div>
+        </div>
+        <div class="col-xs-12" >
+          <form [formGroup]="myForm" novalidate (ngSubmit)="setCampaign()">
+              <div class="panel-border" > 
+                <div class="form-group">
+                    <label>Title:</label>         
+                   <input type="text" class="form-control" formControlName="title" id="title"  >
+                </div>
+
+                <div class="form-group">
+                  <label class="info"  >Version:<a class="popup mainpopup glyphicon glyphicon-info-sign pull-right" (click)="infoAlert('versionInfo', '')" style="text-decoration:none">
+                    <span class="popuptext" id="versionInfo">
+                     <p style="font-weight:bold" >Apply a mandatory version number </p>
+                    <p > If you want to imply minor version iterations please use <span class="text-success" style="font-weight:bold">underscores</span> for separation rather than <span class="text-danger" style="font-weight:bold"> full stops</span> which are currently not supported.</p>
+                    <p class="text-success"> <strong>3_1</strong>  &#10004;</p>
+                     <p class="text-danger"> <strong>3.1</strong>   &#x2718;</p>
+
+                    </span>
+                  </a></label> 
+                  <input type="text" class="form-control" formControlName="version" id="version">
+                </div> 
+
+                <div class="form-group">
+                  <label class="info" > Owner: <a class="popup mainpopup glyphicon glyphicon-info-sign pull-right" (click)="infoAlert('ownerInfo', '')" style="text-decoration:none">
+                            <span class="popuptext" id="ownerInfo">
+                             <p >The <strong>owner</strong> will have controls to: </p>
+                             <ul>
+                               <li>Approve or reject a campaign</li>
+                               <li >Register feedback regarding campaign rejection</li>
+                               <li >Apply a red flag to any section of a rejected campaign FAO the author </li>
+                             </ul>
+                            <p > Once you have created a new campaign, choose <strong>'Owner view'</strong> from the view selector to experience the owner view and controls</p>
+
+                            </span>
+                          </a>
+                  </label>
+                 <select name="ownerId" class="selectpicker form-control" formControlName="ownerId" id="ownerId" (change)="setPersonel('owner', $event.target.value, 'ownerId')"> 
+                     <option value='' disabled selected class="selectText">Select a team member</option>
+
+                    <option *ngFor="let owner of arrayOfKeys; let i=index"
+                  [(value)]="arrayOfKeys[i]" >
+                        {{testTeam[owner].name}}
+                    </option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="info">Author:
+                    <a class="popup mainpopup glyphicon glyphicon-info-sign pull-right" (click)="infoAlert('authorInfo', '')" style="text-decoration:none">
+                      <span class="popuptext" id="authorInfo">
+                       <p >The <strong>author</strong> will have controls to: </p>
+                      <ul>
+                         <li> Edit campaign and module data </li>
+                         <li >Add or delete modules </li>
+                         <li >Request QA </li>
+                         <li >Request final approval from the owner</li>
+                       </ul>
+                        <p > Once you have created a new campaign, <strong>'Author view'</strong>  will be the default view on loading. </p>
+                      </span>
+                    </a>
+                  </label>
+                   <select name="authorId" class="selectpicker form-control" formControlName="authorId" id="authorId" (change)="setPersonel('author', $event.target.value, 'authorId')"> 
+                     <option value='' disabled selected>Select a team member</option>
+
+                    <option *ngFor="let author of arrayOfKeys; let i=index"
+                  [(value)]="arrayOfKeys[i]" >
+                        {{testTeam[author].name}}
+                    </option>
+                  </select>
+                </div>
+
+                 <div class="form-group">
+                  <label class="info"> QA: <a class="popup mainpopup glyphicon glyphicon-info-sign pull-right" (click)="infoAlert('qaInfo', '')" style="text-decoration:none">
+                    <span class="popuptext" id="qaInfo">
+                     <p >The <strong>QA</strong> will have controls to:</p> 
+                     <ul>
+                       <li> Approve or reject campaign data </li>
+                       <li >Approve or reject modules </li>
+                       <li >Register feedback for a rejected module / campaign data</li>
+                       <li >Apply a red flag to any specific data field FAO the author</li>
+                     </ul>
+                      <p > Once you have created a new campaign, choose <strong>'QA view'</strong> from the view selector to experience the owner view and controls</p>
+                   </span>
+                          </a>
+                   </label>
+                   <select name="qaId" class="selectpicker form-control" formControlName="qaId" id="qaId" (change)="setPersonel('qa', $event.target.value, 'qaId')"> 
+                     <option value='' disabled selected class="first-option">Select a team member</option>
+
+                    <option *ngFor="let qa of arrayOfKeys; let i=index"
+                  [(value)]="arrayOfKeys[i]">
+                        {{testTeam[qa].name}}
+                    </option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                 <label class="info">Description: <a class="popup mainpopup glyphicon glyphicon-info-sign pull-right" (click)="infoAlert('descriptionInfo', '')" style="text-decoration:none">
+                      <span class="popuptext" id="descriptionInfo">
+                       <p>Write a description. Minimum 10 characters</p> 
+                     </span>
+                            </a>
+                 </label>
+                  <input type="text" class="form-control" formControlName="description" id="description" >
+                </div> 
+                 <br/>
+                 <button type="submit" [disabled]="!myForm.valid"  class="btn btn-success" >Let's Do this...  </button>
+              
+              <div class="pull-right"></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+       

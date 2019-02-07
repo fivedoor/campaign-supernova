@@ -1,0 +1,435 @@
+  
+  <div [formGroup]="fourPidForm" novalidate >
+
+      <!--  panel and margin-->
+        <div *ngIf="!module" class="editorPad">
+              <!--  <pre> newModel: <br>{{newModel|json}}</pre>
+               <pre> fourPidForm: <br>{{fourPidForm.value|json}}</pre> -->
+
+                  <div class="form-group" style="padding-bottom:20px" >
+                  <label> Module Name:</label>
+                  <strong>  <input type="text" class="form-control" formControlName="name" [(ngModel)]="newModel.name" id="name"></strong>
+                   <small [hidden]="fourPidForm.controls.name.valid"  class="text-danger">
+                  name is required</small>
+                  </div>
+
+                   <div class="form-group" >
+                  <label>Title 1:</label>
+                  <input type="text" class="form-control" formControlName="title_1" [(ngModel)]="newModel.title_1" id="title_1">
+                  
+                  </div>
+                  <div class="form-group" >
+                  <label>Description 1:</label>
+                  <input type="text" class="form-control" formControlName="description_1" [(ngModel)]="newModel.description_1" id="description_1">
+                  
+                  </div>
+                  <div class="form-group" >
+                  <label>Price 1:</label>
+                  <input type="text" class="form-control" formControlName="price_1" [(ngModel)]="newModel.price_1" id="price_1">
+                  </div>
+
+                  <div class="form-group"  >
+                  <label>Url 1:</label>
+                  <input type="text" class="form-control" formControlName="href_1" [(ngModel)]="newModel.href_1" id="href_1">
+                   <small [hidden]="fourPidForm.controls.href_1.valid"  class="text-danger">
+                  this does not appear to be a valid url
+                   </small>
+                  </div>
+
+                  <div class="form-group"  >
+                  <label>Image Src 1</label>
+                  <input type="text" class="form-control" formControlName="src_1" [(ngModel)]="newModel.src_1" id="src_1" readonly>
+                  </div> 
+
+                  <div class="form-group" >
+                   <label> Image 1:</label>
+                    <input type="text" class="form-control" formControlName="img_1" [(ngModel)]="newModel.img_1" id="img_1" readonly>  
+                     <small [hidden]="fourPidForm.controls.img_1.valid" class="text-danger">
+                                img is required
+                                 </small>
+                  </div>
+                   <div class="form-group" style="padding-bottom:20px" >
+                        <input #myInput1 type="file" class="btn btn-default btn-sm pull-left img-input" (change)="detectFiles($event)" placeholder="File Name" name="filename">
+
+                       <button  type="button" (click)="updateModelImage(1)"   class="btn btn-default btn-upload btn-sm pull-left">Upload Image</button>
+                        <button type="button" (click)="resetImage(this.myInputVariable_1,1)"  class="btn-default btn btn-sm  btn-upload">Reset</button>     
+                  </div>
+
+
+
+                   <div class="form-group" >
+                  <label>Title 2:</label>
+                  <input type="text" class="form-control" formControlName="title_2" [(ngModel)]="newModel.title_2" id="title_2">
+                  
+                  </div>
+                  <div class="form-group" >
+                  <label>Description 2:</label>
+                  <input type="text" class="form-control" formControlName="description_2" [(ngModel)]="newModel.description_2" id="description_2">
+                  
+                  </div>
+                  <div class="form-group" >
+                  <label>Price 2:</label>
+                  <input type="text" class="form-control" formControlName="price_2" [(ngModel)]="newModel.price_2" id="price_2">
+                  </div>
+
+                  <div class="form-group"  >
+                  <label>Url 2:</label>
+                  <input type="text" class="form-control" formControlName="href_2" [(ngModel)]="newModel.href_2" id="href_2">
+                   <small [hidden]="fourPidForm.controls.href_2.valid"  class="text-danger">
+                  this does not appear to be a valid url
+                   </small>
+                  </div>
+
+                  <div class="form-group"  >
+                  <label>Image Src 2</label>
+                  <input type="text" class="form-control" formControlName="src_2" [(ngModel)]="newModel.src_2" id="src_2" readonly>
+                  </div> 
+
+                  <div class="form-group" >
+                   <label> Image 2:</label>
+                    <input type="text" class="form-control" formControlName="img_2" [(ngModel)]="newModel.img_2" id="img_2" readonly>  
+                     <small [hidden]="fourPidForm.controls.img_2.valid" class="text-danger">
+                                img is required
+                                 </small>
+                  </div>
+               
+                  <div class="form-group" style="padding-bottom:20px" >
+                        <input #myInput type="file" class="btn btn-default btn-sm pull-left img-input" (change)="detectFiles($event)" placeholder="File Name" name="filename">
+
+                       <button  type="button" (click)="updateModelImage(2)"   class="btn btn-default btn-upload btn-sm pull-left">Upload Image</button>
+                        <button type="button" (click)="resetImage(this.myInputVariable_2, 2)"  class="btn-default btn btn-sm  btn-upload">Reset</button>     
+                  </div>
+
+
+
+
+
+                    <div class="form-group" >
+                  <label>Title 3:</label>
+                  <input type="text" class="form-control" formControlName="title_3" [(ngModel)]="newModel.title_3" id="title_3">
+                  
+                  </div>
+                  <div class="form-group" >
+                  <label>Description 3:</label>
+                  <input type="text" class="form-control" formControlName="description_3" [(ngModel)]="newModel.description_3" id="description_3">
+                  
+                  </div>
+                  <div class="form-group" >
+                  <label>Price 3:</label>
+                  <input type="text" class="form-control" formControlName="price_3" [(ngModel)]="newModel.price_3" id="price_3">
+                  </div>
+
+                  <div class="form-group"  >
+                  <label>Url 3:</label>
+                  <input type="text" class="form-control" formControlName="href_3" [(ngModel)]="newModel.href_3" id="href_3">
+                   <small [hidden]="fourPidForm.controls.href_3.valid"  class="text-danger">
+                  this does not appear to be a valid url
+                   </small>
+                  </div>
+
+                  <div class="form-group"  >
+                  <label>Image Src 3</label>
+                  <input type="text" class="form-control" formControlName="src_3" [(ngModel)]="newModel.src_3" id="src_3" readonly>
+                  </div> 
+
+                  <div class="form-group" >
+                   <label> Image 3:</label>
+                    <input type="text" class="form-control" formControlName="img_3" [(ngModel)]="newModel.img_3" id="img_3" readonly>  
+                     <small [hidden]="fourPidForm.controls.img_3.valid" class="text-danger">
+                                img is required
+                                 </small>
+                  </div>
+                   <div class="form-group" style="padding-bottom:20px" >
+                        <input #myInput3 type="file" class="btn btn-default btn-sm pull-left img-input" (change)="detectFiles($event)" placeholder="File Name" name="filename">
+
+                       <button  type="button" (click)="updateModelImage(3)"   class="btn btn-default btn-upload btn-sm pull-left">Upload Image</button>
+                        <button type="button" (click)="resetImage(this.myInputVariable_3,3)"  class="btn-default btn btn-sm  btn-upload">Reset</button>     
+                  </div>
+
+
+
+                   <div class="form-group" >
+                  <label>Title 4:</label>
+                  <input type="text" class="form-control" formControlName="title_4" [(ngModel)]="newModel.title_4" id="title_4">
+                  
+                  </div>
+                  <div class="form-group" >
+                  <label>Description 4:</label>
+                  <input type="text" class="form-control" formControlName="description_4" [(ngModel)]="newModel.description_4" id="description_4">
+                  
+                  </div>
+                  <div class="form-group" >
+                  <label>Price 4:</label>
+                  <input type="text" class="form-control" formControlName="price_4" [(ngModel)]="newModel.price_4" id="price_4">
+                  </div>
+
+                  <div class="form-group"  >
+                  <label>Url 4:</label>
+                  <input type="text" class="form-control" formControlName="href_4" [(ngModel)]="newModel.href_4" id="href_4">
+                   <small [hidden]="fourPidForm.controls.href_4.valid"  class="text-danger">
+                  this does not appear to be a valid url
+                   </small>
+                  </div>
+
+                  <div class="form-group"  >
+                  <label>Image Src 4</label>
+                  <input type="text" class="form-control" formControlName="src_4" [(ngModel)]="newModel.src_4" id="src_4" readonly>
+                  </div> 
+
+                  <div class="form-group" >
+                   <label> Image 4:</label>
+                    <input type="text" class="form-control" formControlName="img_4" [(ngModel)]="newModel.img_4" id="img_4" readonly>  
+                     <small [hidden]="fourPidForm.controls.img_4.valid" class="text-danger">
+                                img is required
+                                 </small>
+                  </div>
+               
+                  <div class="form-group" >
+                        <input #myInput type="file" class="btn btn-default btn-sm pull-left img-input" (change)="detectFiles($event)" placeholder="File Name" name="filename">
+
+                       <button  type="button" (click)="updateModelImage(4)"   class="btn btn-default btn-upload btn-sm pull-left">Upload Image</button>
+                        <button type="button" (click)="resetImage(this.myInputVariable_4, 4)"  class="btn-default btn btn-sm  btn-upload">Reset</button>     
+                  </div>
+
+                    <!-- Add Data -->
+                <div  class="margin-20">
+                     <button [disabled]="!fourPidForm.valid" type="button" (click)="passModelData()"  class="btn btn-success btn-full" >Add This Module +</button>
+                </div>
+              <!-- Add Data -->
+
+                </div>
+                <!--  panel div-->
+
+
+                           <!--  panel and margin-->
+         <table  class="table table-bordered tempData modTable table-outline" *ngIf="module">
+                      <thead>
+                        <tr >
+                          <th >Module</th>
+                           <th class="values" >
+                           <div class="col-xs-10" style="padding:0"> <strong> 
+                           <input type="text" class="form-control form-inline"  formControlName="name" [(ngModel)]="newModel.name" id="name" ></strong>
+                           </div>
+                           <div class="col-xs-2" style="padding:0">
+                            <a *ngIf="fourPidForm.controls.approved.value !== true  && viewType === 'author'" (click)="addData()" class="pull-right details-edit" > update </a>
+                           </div>
+                           <div class="col-xs-12" style="padding:0">
+                           <small style="font-size:12px" [hidden]="fourPidForm.controls.name.valid" class="text-danger">name is required </small>
+                           </div>
+                           </th>
+                        </tr>
+                      </thead>
+                      <tbody >
+                      
+                          <tr class="panel panel-default">
+                          <td width="20%"  >Status</td>
+                           <td class="values">  <a *ngIf="module.value.approved === false" class="btn btn-danger btn-xs" style="cursor: default;" ><strong>Rejected</strong> </a>
+
+                       <a *ngIf="module.value.approved === true" class="btn btn-success btn-xs" style="cursor: default;" >Approved</a>
+                        <button *ngIf="module.value.approved  === ''" (click)="pendingQAStatus()" type="button" class="btn btn-warning btn-xs">Pending Approval</button>
+                         </td>
+                        </tr>
+                        <tr class="panel panel-default" *ngIf="module.value.approved === false" >
+                        <td width="20%" class="amends-bg">Amends</td>
+                           <td class="values amends-bg" > 
+                           <div class="form-group" >
+                           <span *ngIf="viewType !== 'qa'" style="white-space:pre-line;" > {{module.value.moduleAmends}}</span>
+                          
+                            </div></td>
+                             </tr> 
+                       
+                         <tr class="panel panel-default">
+                           <td width="20%"  >Module No</td>
+                           <td class="values" >{{i+1}}
+                           </td>
+                        </tr>
+                        <tr *ngIf="module.value.type" class="panel panel-default">
+                           <td width="20%" >Module Type</td>
+                           <td >{{module.value.type}}
+                           
+                           </td>
+                        </tr>
+                        <tr  class="panel panel-default">
+                           <td width="20%" >Title 1</td>
+                           <td class="values"><input type="text" class="form-control" formControlName="title_1" [(ngModel)]="newModel.title_1" id="title_1">
+                         
+                           </td>
+                        </tr>
+                       <tr   class="panel panel-default">
+                           <td width="20%" >Description 1</td>
+                           <td class="values"><input type="text" class="form-control" formControlName="description_1" [(ngModel)]="newModel.description_1" id="description_1">
+                         
+                           </td>
+                        </tr>
+                         <tr   class="panel panel-default">
+                           <td width="20%" >Price 1</td>
+                           <td class="values"><input type="text" class="form-control" formControlName="price_1" [(ngModel)]="newModel.price_1" id="price_1">
+                         
+                           </td>
+                        </tr>
+                        <tr  class="panel panel-default">
+                           <td width="20%" >Link Url 1</td>
+                           <td class="values"><input type="text" class="form-control" formControlName="href_1" [(ngModel)]="newModel.href_1" id="href_1">
+                           <small [hidden]="fourPidForm.controls.href_1.valid" class="text-danger">
+                          this does not appear to be a valid url
+                           </small>
+                           </td>
+                        </tr>
+                         <tr  class="panel panel-default">
+                             <td width="20%"  >Image Name</td>
+                             <td class="values"> <input type="text" class="form-control" formControlName="img_1" [(ngModel)]="newModel.img_1" id="img_1" readonly> 
+                             <small [hidden]="fourPidForm.controls.img_1.valid" class="text-danger">heading is required     </small>
+                             </td>
+                            </tr>
+
+                       <tr  class="panel panel-default">
+                             <td width="20%"  >Image Select</td>
+                             <td class="form-group"  >
+                          <input #myInput type="file" class="btn btn-default btn-sm pull-left img-input" (change)="detectFiles($event)" placeholder="File Name" name="filename">
+
+                         <button  type="button" (click)="updateModelImage(1)"  class="btn btn-default btn-sm pull-left btn-upload">Upload Image</button>
+                          <button type="button" (click)="resetImage(this.myInputVariable_1,1)"   class="btn-default btn btn-sm btn-upload">Reset</button>     
+                  
+                             </td>
+                            </tr>
+                         <tr  class="panel panel-default">
+                           <td width="20%" >Title 2</td>
+                           <td class="values"><input type="text" class="form-control" formControlName="title_2" [(ngModel)]="newModel.title_2" id="title_2">
+                         
+                           </td>
+                        </tr>
+                        <tr  class="panel panel-default">
+                           <td width="20%" >Description 2</td>
+                           <td class="values"><input type="text" class="form-control" formControlName="description_2" [(ngModel)]="newModel.description_2" id="description_2">
+                         
+                           </td>
+                        </tr>
+                         <tr  class="panel panel-default">
+                           <td width="20%" >Price 2</td>
+                           <td class="values"><input type="text" class="form-control" formControlName="price_2" [(ngModel)]="newModel.price_2" id="price_2">
+                         
+                           </td>
+                        </tr>
+                        <tr  class="panel panel-default">
+                           <td width="20%" >Link Url 2</td>
+                           <td class="values"><input type="text" class="form-control" formControlName="href_2" [(ngModel)]="newModel.href_2" id="href_2">
+                           <small [hidden]="fourPidForm.controls.href_2.valid" class="text-danger">
+                          this does not appear to be a valid url
+                           </small>
+                           </td>
+                        </tr>
+                                   <tr  class="panel panel-default">
+                             <td width="20%"  >Image Name</td>
+                             <td class="values"> <input type="text" class="form-control" formControlName="img_2" [(ngModel)]="newModel.img_2" id="img_2" readonly> 
+                             <small [hidden]="fourPidForm.controls.img_2.valid" class="text-danger">heading is required     </small>
+                             </td>
+                            </tr>
+
+                                   <tr  class="panel panel-default">
+                             <td width="20%"  >Image Select</td>
+                             <td class="form-group"  >
+                          <input #myInput type="file" class="btn btn-default btn-sm pull-left img-input" (change)="detectFiles($event)" placeholder="File Name" name="filename">
+
+                         <button  type="button" (click)="updateModelImage(2)"  class="btn btn-default btn-sm pull-left btn-upload">Upload Image</button>
+                          <button type="button" (click)="resetImage(this.myInputVariable_2,2)"   class="btn-default btn btn-sm btn-upload">Reset</button>     
+                  
+                             </td>
+                            </tr>
+
+                                   <tr  class="panel panel-default">
+                           <td width="20%" >Title 3</td>
+                           <td class="values"><input type="text" class="form-control" formControlName="title_3" [(ngModel)]="newModel.title_3" id="title_3">
+                         
+                           </td>
+                        </tr>
+                                   <tr  class="panel panel-default">
+                           <td width="20%" >Description 3</td>
+                           <td class="values"><input type="text" class="form-control" formControlName="description_3" [(ngModel)]="newModel.description_3" id="description_3">
+                         
+                           </td>
+                        </tr>
+                                   <tr  class="panel panel-default">
+                           <td width="20%" >Price 3</td>
+                           <td class="values"><input type="text" class="form-control" formControlName="price_3" [(ngModel)]="newModel.price_3" id="price_3">
+                         
+                           </td>
+                        </tr>
+                                   <tr  class="panel panel-default">
+                           <td width="20%" >Link Url 3</td>
+                           <td class="values"><input type="text" class="form-control" formControlName="href_3" [(ngModel)]="newModel.href_3" id="href_3">
+                           <small [hidden]="fourPidForm.controls.href_3.valid" class="text-danger">
+                          this does not appear to be a valid url
+                           </small>
+                           </td>
+                        </tr>
+                                   <tr  class="panel panel-default">
+                             <td width="20%"  >Image Name</td>
+                             <td class="values"> <input type="text" class="form-control" formControlName="img_3" [(ngModel)]="newModel.img_3" id="img_3" readonly> 
+                             <small [hidden]="fourPidForm.controls.img_3.valid" class="text-danger">heading is required     </small>
+                             </td>
+                            </tr>
+
+                                   <tr  class="panel panel-default">
+                             <td width="20%"  >Image Select</td>
+                             <td class="form-group"  >
+                          <input #myInput type="file" class="btn btn-default btn-sm pull-left img-input" (change)="detectFiles($event)" placeholder="File Name" name="filename">
+
+                         <button  type="button" (click)="updateModelImage(3)"  class="btn btn-default btn-sm pull-left btn-upload">Upload Image</button>
+                          <button type="button" (click)="resetImage(this.myInputVariable_3,3)"   class="btn-default btn btn-sm btn-upload">Reset</button>     
+                  
+                             </td>
+                            </tr>
+                         <tr  class="panel panel-default">
+                           <td width="20%" >Title 4</td>
+                           <td class="values"><input type="text" class="form-control" formControlName="title_4" [(ngModel)]="newModel.title_4" id="title_4">
+                         
+                           </td>
+                        </tr>
+                       <tr   class="panel panel-default">
+                           <td width="20%" >Description 4</td>
+                           <td class="values"><input type="text" class="form-control" formControlName="description_4" [(ngModel)]="newModel.description_4" id="description_4">
+                         
+                           </td>
+                        </tr>
+                         <tr   class="panel panel-default">
+                           <td width="20%" >Price 4</td>
+                           <td class="values"><input type="text" class="form-control" formControlName="price_4" [(ngModel)]="newModel.price_4" id="price_4">
+                         
+                           </td>
+                        </tr>
+                        <tr  class="panel panel-default">
+                           <td width="20%" >Link Url 4</td>
+                           <td class="values"><input type="text" class="form-control" formControlName="href_4" [(ngModel)]="newModel.href_4" id="href_4">
+                           <small [hidden]="fourPidForm.controls.href_4.valid" class="text-danger">
+                          this does not appear to be a valid url
+                           </small>
+                           </td>
+                        </tr>
+                         <tr  class="panel panel-default">
+                             <td width="20%"  >Image Name</td>
+                             <td class="values"> <input type="text" class="form-control" formControlName="img_4" [(ngModel)]="newModel.img_4" id="img_4" readonly> 
+                             <small [hidden]="fourPidForm.controls.img_4.valid" class="text-danger">heading is required     </small>
+                             </td>
+                            </tr>
+
+                       <tr  class="panel panel-default">
+                             <td width="20%"  >Image Select</td>
+                             <td class="form-group"  >
+                          <input #myInput type="file" class="btn btn-default btn-sm pull-left img-input" (change)="detectFiles($event)" placeholder="File Name" name="filename">
+
+                         <button  type="button" (click)="updateModelImage(4)"  class="btn btn-default btn-sm pull-left btn-upload">Upload Image</button>
+                          <button type="button" (click)="resetImage(this.myInputVariable_4,4)"   class="btn-default btn btn-sm btn-upload">Reset</button>     
+                  
+                             </td>
+                            </tr>
+                      
+                          <tr  class="panel panel-default">
+                           <td colspan="2">
+                            <button [disabled]="!fourPidForm.valid" type="button" (click)="passModelData()"  class="btn btn-success btn-full" >Update This Module</button>
+
+                           </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+        </div>

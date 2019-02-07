@@ -1,14 +1,35 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>DemoApp</title>
-  <base href="/">
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Campaign Supernova</title>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css?family=Lato:200,300,300i,400,400i,700,700i,900" rel="stylesheet">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <app-root></app-root>
-</body>
+
+<!-- local bootstrap -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ng2-bootstrap/3.3.6/ng2-bootstrap.min.js"></script>
+ -->
+ <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- lightbox -->
+
+
+
+  </head>
+
+  <body>
+    <my-app ><!-- loading layout replaced by app after startupp -->
+      <div class="app-loading">
+        <div class="logo"></div>
+        <svg class="spinner" viewBox="25 25 50 50">
+          <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+        </svg>
+      </div></my-app>
+  </body>
 </html>

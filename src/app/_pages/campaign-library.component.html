@@ -1,0 +1,52 @@
+<div class="page-bg">
+  <div class="container page-pad">
+     <div class="container page-width">
+        <div class="row">
+          <div class="col-xs-9" > 
+              <h1>Campaign Library</h1>
+              <div style="padding-top:15px">
+                <p > Each time you create and save a campaign it will be stored in the Campaign Library. <br/>Click on the campaign to access the data or delete unwanted campaigns.</p>
+              </div>
+          </div>
+
+        <div class="col-xs-12" > 
+            <div class="tableHolder">
+               <table class="table table-striped table-hover" >
+                <thead>
+                  <tr >
+                     <th >Name </th>
+                     <th >Description </th>
+                     <th > </th>
+                   </tr>
+                  </thead>
+                  <tbody>
+                   <tr *ngFor="let demoCampaign of demoCampaignTitles ; let j=index" >
+                        <td >
+                          <a [routerLink]="['/form', 'demos', demoCampaignTitles[j]]" routerLinkActive="active" role="button" [class.disabled]="disabled ? true : null">{{demoCampaign}}
+                          </a></td>
+                          <td style="font-size:1em;"><a [routerLink]="['/form', 'demos', demoCampaignTitles[j]]" routerLinkActive="active" role="button" [class.disabled]="disabled ? true : null">   {{demoCampaigns[demoCampaign].description}}
+                            </a>
+                        </td>
+
+                        <td><a [routerLink]="['/form', 'demos', demoCampaignTitles[j]]" routerLinkActive="active" role="button" [class.disabled]="disabled ? true : null"> <button class="btn-super pull-right">Demo Campaign</button></a></td>
+                      </tr>
+                      <tr *ngFor="let campaign of arrayOfKeys ; let i=index" >
+                        <td>
+                          <a [routerLink]="['/form', 'emails', arrayOfKeys[i]]" routerLinkActive="active" role="button" [class.disabled]="disabled ? true : null">{{campaign}}
+                          </a></td>
+                          <td style="font-size:1em">
+                          <a [routerLink]="['/form', 'emails', arrayOfKeys[i]]" routerLinkActive="active" role="button" [class.disabled]="disabled ? true : null">
+                             {{campaigns[campaign].description}}</a>
+                          
+                        </td>
+                        <td><a (click)="deleteCampaign(campaign); $event.stopPropagation()" class="glyphicon glyphicon-remove pull-right"></a></td>
+                      </tr>
+                </tbody>
+              </table>
+            <div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>

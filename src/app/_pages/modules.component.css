@@ -1,0 +1,59 @@
+
+.page-bg{
+  background: none;
+}
+.page-pad {
+    padding: 85px 0 50px 0;
+}
+
+.page-width {
+}
+
+a.disabled { pointer-events: none; cursor: default;}
+
+h1,h2,h3,h4 {
+	color:#555555;
+	font-weight: 300;
+}
+
+p,span  {
+	color:#555555;
+}
+
+p  {
+  font-size: 15px;
+  line-height: 1.5em;
+}
+
+td {
+	font-size: 14px
+}
+
+a {
+color: #555555;
+}
+
+
+.table-striped>tbody>tr:nth-child(odd)>td, 
+.table-striped>tbody>tr:nth-child(odd)>th {
+  background-color: none; 
+ }
+
+.table-striped>tbody>tr:nth-child(even)>td, 
+.table-striped>tbody>tr:nth-child(even)>th {
+   background-color: none; 
+}
+
+
+.tableHolder {
+	margin-top: 20px;
+	overflow: auto;
+	 width:100%; 
+	 height: 410px;
+}
+
+table-bordered {
+border: none;
+
+
+}

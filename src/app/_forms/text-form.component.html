@@ -1,0 +1,216 @@
+
+   <div [formGroup]="textForm" novalidate >
+
+
+ <!--  panel and margin-->
+        <div *ngIf="!module" class="editorPad">
+            <!-- <pre> newModel: <br>{{newModel|json}}</pre>
+                 <pre> newLinks: {{newLinks|json}}</pre>
+                 <pre> linksNotFound: {{linksNotFound|json}}</pre> 
+               <pre> textForm: <br>{{textForm.value|json}}</pre>-->
+
+                  <div class="form-group" >
+                  <label> Module Name:</label>
+                  <strong>  <input type="text" class="form-control" formControlName="name" [(ngModel)]="newModel.name" id="name"></strong>
+                   <small [hidden]="textForm.controls.name.valid"  class="text-danger">
+                  name is required
+                   </small>
+                  </div>
+
+                   <div class="form-group" >
+                   <div style="padding-bottom:5px">
+                  <label style="display:inline">Copy:</label>
+                  <a class="popup modpopup glyphicon glyphicon-info-sign pull-right" (click)="infoAlert('myPopupInput', '')" >
+                  <span class="popuptext" id="myPopupInput{{i}}">
+                   <p >Inline links can be added to your copy in the following format:</p>
+                <h4><strong>{{bracketsOpen}}</strong><span class="linkName">LinkName</span>
+                <strong>|</strong>
+                <span class="linkText">word or phrase to link</span><strong>{{bracketsClose}}</strong>
+                </h4>
+                 <p >Click to review and define the url for each link</p>
+                  </span>
+                </a>
+                </div>
+                  <textarea type="text" autosize class="form-control" formControlName="copy" [(ngModel)]="newModel.copy" id="copy"></textarea>
+                  </div>
+
+
+                  <div class="form-group padTop10">   
+                       <button  type="button" (click)="getLinks(this.textForm)"   class="btn btn-default btn btn-sm"> Check for Links...</button> 
+                  </div>
+
+                  <div *ngIf="linksNotFound" class="form-group">
+                      <small class="text-danger">
+                      There were no links found in this Copy! Check that your links follow the correct format. <br/> <!-- e.g. 
+                        <code ng-non-bindable> {{unsub.link|click here to unsubscribe}}</code> -->
+                     </small>
+                  </div>
+
+                  <!--formArray links-->
+                  <div formArrayName="links">
+                        
+                        <!--ngFor -->         
+                         <ng-template ngFor let-item [ngForOf]="textForm.controls.links.controls" let-j="index" [ngForTrackBy]="trackByFn">
+                            <div  [formGroupName]="j"> 
+                              <table class="table table-nested"  >
+                                
+                                 <tbody >    
+                                 <tr >
+                                    <td width="15%" >Link</td>
+                                     <td class="values"  colspan="2">{{newLinks[j]['linkName']}}</td>
+                                   </tr>          
+                                   <tr>
+                                     <td width="15%" >Text</td>
+                                     <td class="values"  >{{newLinks[j]['text']}}</td>
+                                    </tr>
+                                    <tr>
+                                       <td width="15%"  >Url</td>
+                                       <td class="values" ><input type="text" formControlName="href" [(ngModel)]="newLinks[j]['href']" class="val"  class="form-control">
+                                          <small [hidden]="textForm.controls.links.controls[j].controls.href.valid" class="text-danger">valid url is required</small>
+                                       </td>
+                                    </tr>
+                                  </tbody>
+                              </table>                  
+                            </div> 
+                        </ng-template> 
+                        <!--ngFor -->
+
+                    </div> 
+                    <!--formArray links-->
+             
+
+              <!-- Add Data -->
+                <div  class="margin-20">
+                     <button [disabled]="!textForm.valid" type="button" (click)="passModelData()"   class="btn btn-success btn-full" >Add This Module +</button>
+                </div>
+                                    <!-- Add Data -->   
+                
+                </div>
+                <!--  panel div-->
+
+
+             
+     
+              
+                  <!--  panel and margin-->
+         <table  class="table table-bordered tempData modTable table-outline" *ngIf="module">
+                      <thead>
+                        <tr >
+                          <th >Module</th>
+                           <th class="values" >
+                           <div class="col-xs-10" style="padding:0"> <strong> 
+                           <input type="text" class="form-control form-inline"  formControlName="name" [(ngModel)]="newModel.name" id="name" ></strong>
+                           </div>
+                           <div class="col-xs-2" style="padding:0">
+                            <a *ngIf="textForm.controls.approved.value !== true  && viewType === 'author'" (click)="addData()" class="pull-right details-edit" > update </a>
+                           </div>
+                           <div class="col-xs-12" style="padding:0">
+                           <small style="font-size:12px" [hidden]="textForm.controls.name.valid" class="text-danger">name is required </small>
+                           </div>
+                           </th>
+                        </tr>
+                      </thead>
+                      <tbody >
+                      <tr class="panel panel-default">
+                          <td width="20%"  >Status</td>
+                           <td class="values">  <a *ngIf="module.value.approved === false" class="btn btn-danger btn-xs" style="cursor: default;" ><strong>Rejected</strong> </a>
+
+                       <a *ngIf="module.value.approved === true" class="btn btn-success btn-xs" style="cursor: default;" >Approved</a>
+                        <button *ngIf="module.value.approved  === ''" (click)="pendingQAStatus()" type="button" class="btn btn-warning btn-xs">Pending Approval</button>
+                         </td>
+                        </tr>
+                        <tr class="panel panel-default" *ngIf="module.value.approved === false" >
+                        <td width="20%" class="amends-bg">Amends</td>
+                           <td class="values amends-bg" > 
+                           <div class="form-group" >
+                           <span *ngIf="viewType !== 'qa'" style="white-space:pre-line;" > {{module.value.moduleAmends}}</span>
+                          
+                            </div></td>
+                             </tr> 
+                       
+                         <tr class="panel panel-default">
+                           <td width="20%"  >Module No</td>
+                           <td class="values" >{{i+1}}
+                           </td>
+                        </tr>
+                        <tr *ngIf="module.value.type" class="panel panel-default">
+                           <td width="20%" >Module Type</td>
+                           <td >{{module.value.type}}
+                           
+                           </td>
+                        </tr>
+                        
+
+                       
+                         <tr *ngIf="module.value.copy" class="panel panel-default">
+                           <td width="20%" >Copy<br/></td>
+                           <td class="values">
+                               <textarea type="text" autosize class="form-control" formControlName="copy" [(ngModel)]="newModel.copy" id="copy"></textarea>
+                              <div *ngIf="linksNotFound" class="form-group">
+                                  <small class="text-danger" >
+                                  There were no links found in this Copy! Check that your links follow the correct format. 
+                                 </small>
+                               </div>
+                               <div class="form-group padTop10" >
+                                 <button  type="button" (click)="getLinks(textForm)"   class="btn btn-default btn btn-sm"> Check for Links...</button> 
+                                
+                                  <a class="popup modpopup glyphicon glyphicon-info-sign pull-right" (click)="infoAlert('myPopup', i)" >
+                                    <span class="popuptext" id="myPopup{{i}}">
+                                     <p >Inline links can be added to your copy in the following format:</p>
+                                  <h4><strong>{{bracketsOpen}}</strong><span class="linkName">LinkName</span>
+                                  <strong>|</strong>
+                                  <span class="linkText">word or phrase to link</span><strong>{{bracketsClose}}</strong>
+                                  </h4>
+                                   <p >Click to review and define the url for each link</p>
+                                    </span>
+                                  </a>
+                               </div>
+                               
+                            </td>
+                        </tr>
+                        
+                         <tr class="form-group" *ngIf="textForm.controls.links.controls[0]" formArrayName="links">
+                             
+                           <td width="20%"  >Inline Link </td>
+                           <td class="values" > 
+                           
+                                 
+                                    <!--ngFor -->         
+                                     <ng-template ngFor let-item [ngForOf]="textForm.controls.links.controls" let-j="index" [ngForTrackBy]="trackByFn">
+                                        <div  [formGroupName]="j"> 
+                                          <table class="table table-nested"  >
+                                          
+                                             <tbody >              
+                                             <tr >
+                                                <td width="15%" >Link</td>
+                                                 <td class="values" colspan="2">{{newLinks[j]['linkName']}}</td>
+                                               </tr>   
+                                               <tr>
+                                                 <td width="15%"  >Text</td>
+                                                 <td class="values" >{{newLinks[j]['text']}}</td>
+                                                </tr>
+                                                <tr>
+                                                   <td width="15%" >Url</td>
+                                                   <td class="values" ><input type="text" formControlName="href" [(ngModel)]="newLinks[j]['href']" class="val"  class="form-control">
+                                                      <small [hidden]="textForm.controls.links.controls[j].controls.href.valid" class="text-danger">valid url is required</small>
+                                                   </td>
+                                                </tr>
+                                              </tbody>
+                                          </table>                  
+                                        </div> 
+                                    </ng-template> 
+                                    <!--ngFor -->
+                          </td>
+                        </tr>
+                          <tr  class="panel panel-default">
+                           <td colspan="2">
+                            <button [disabled]="!textForm.valid" type="button" (click)="passModelData()"  class="btn btn-success btn-full" >Update This Module</button>
+
+                           </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+
+
+                </div>

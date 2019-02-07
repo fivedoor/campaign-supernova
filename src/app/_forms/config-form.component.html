@@ -1,0 +1,103 @@
+
+  <div [formGroup]="configForm" novalidate >
+
+
+<!-- <pre>newLogo: {{newLogo|json}}</pre>
+<pre>newConfig: {{newConfig|json}}</pre>
+<pre>configForm: {{configForm.value|json}}</pre> -->
+
+        
+                       <table class="table table-bordered table-header"  *ngIf="CampaignInputisActive" >
+                         <thead>
+                            <tr >
+                           <th style="border-bottom:none"><span class="table-title">Campaign Modules</span>  
+                           </th>
+                        </tr>
+                      </thead>
+                      </table>
+
+                    <table class="table table-bordered header-table-outline" style="margin-bottom:30px">
+                    
+                       <tbody >
+                      <tr> 
+                        <td width="20%"  >Module</td>
+                        <td  ><span class="table-title"> Header </span></td>
+                      </tr>
+
+                      <tr class="panel panel-default">
+                          <td width="20%"  >Status</td>
+                           <td class="values" >  
+                           <a *ngIf="configForm.controls.dataApproved.value === false" class="btn btn-danger btn-xs" style="cursor: default;" ><strong>Rejected</strong> </a>
+                               <!-- - Requires the following amendments:-->
+                           <a *ngIf="configForm.controls.dataApproved.value === true" class="btn btn-success btn-xs" style="cursor: default;" >Approved</a>
+                           
+                             <button *ngIf="configForm.controls.dataApproved.value === ''" (click)="pendingQAStatus()" type="button" class="btn btn-warning btn-xs">Pending Approval</button>
+                         </td>
+                      </tr>
+                      <tr> 
+                        <td width="20%"  >Module No</td>
+                          <td  >0</td>
+                          </tr>
+                          <tr class="panel panel-default" *ngIf="configForm.controls.dataApproved.value === false">
+                          <td width="20%" class="amends-bg" >Amends</td>
+                             <td class="values amends-bg" >  
+                             <div class="form-group"  >
+                             <span *ngIf="viewType !== 'qa'" style="white-space:pre-line;" > {{configForm.value.dataAmends}}</span>
+                              </div></td>
+
+                      </tr>
+                      <tr class="panel panel-default">
+                           <td width="20%"  >Preheader</td>
+                           <td class="values" >
+                            <input type="text" class="form-control" formControlName="preheader" [(ngModel)]="newConfig.preheader" id="preheader" >
+                            <small [hidden]="configForm.controls.preheader.valid" class="text-danger">
+                            preheader is required
+                             </small></td>
+                          
+                        </tr>
+                         <tr class="panel panel-default ">
+                           <td width="20%"  >Header</td>
+                           <td class="values" >
+                             <input type="text" class="form-control" formControlName="header" [(ngModel)]="newConfig.header"  id="header" >
+                           
+                            <small [hidden]="configForm.controls.header.valid" class="text-danger">
+                            header is required
+                             </small></td>
+                        </tr>
+                       
+                        <tr class="panel panel-default">
+                           <td width="20%"  >Logo</td>
+                           <td formGroupName="logo" >
+                               <div class="select-table">
+                                <select name="type" class="form-control" [(ngModel)]="newLogo.type" formControlName="type" >
+                                  <option value="supernova">Campaign Supernova</option>
+                                  <option value="builder">Campaign Builder</option>
+                                </select>
+                               </div>
+
+                            <small [hidden]="configForm['controls'].logo['controls'].type.valid" class="text-danger">
+                            logo is required
+                             </small></td>
+                            
+                        </tr>
+                        <tr class="panel panel-default">
+                           <td width="20%"  >Logo Link</td>
+                           <td formGroupName="logo" class="values" >
+                          <input type="text" class="form-control" [(ngModel)]="newLogo.href" formControlName="href" >
+                           <small [hidden]="configForm['controls'].logo['controls'].href.valid" class="text-danger">
+                            This does not appear to be a valid url
+                             </small>
+                          </td>
+                           
+                        </tr>
+                       
+                           <tr  class="panel panel-default">
+                 <td colspan="2">
+                  <button  *ngIf="configForm.controls.approved.value !== true && viewType === 'author'" type="button" (click)="passConfigData()" [disabled]="!configForm.valid" class="btn btn-success btn-full" >Update This Module</button>
+
+                 </td>
+              </tr>
+
+              </tbody>
+           </table>
+ </div>
