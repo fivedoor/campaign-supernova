@@ -32,8 +32,8 @@ ngOnInit(): void {
         //  console.log(this.module);
         //  console.log('module.value: ');
         //  console.log(this.module.value);
+ 
     // FORM
-
   this.bannerForm =
         this._fb.group({
                     name: ['', [Validators.required, Validators.minLength(3)]],

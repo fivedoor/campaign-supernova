@@ -4,937 +4,792 @@
       <div class="row">
         <div class="col-xs-12" >
 
-           <h1> {{id}} </h1>
-                                 
-            <!-- ********** Modal Data Preview ********** -->
-             <modal id="custom-modal">
-                <div class="modal-bg">
-                  <div class="mymodel" >
-                    <div class="modal-body">
-                   <!--      
-                      <pre> moduleInputs: <br>{{moduleInputs|json}}</pre>
-                      <pre> newLinks: {{newLinks|json}}</pre> 
-                     <pre> newModel: <br>{{newModel|json}}</pre>
-                      <pre> currentModule: {{currentModule|json}}</pre>
-                    <pre> CampaignInputisActive: {{CampaignInputisActive}} </pre>
-                      -->
-                    
-                      <pre> myForm: {{myForm.value|json}}</pre> 
-                      <!--  
-                      <pre> myForm.controls.header.valid:{{myForm.controls.header.valid|json}}</pre>
-                      <pre> newModel: <br>{{newModel|json}}</pre>
-                      <pre> moduleInputs: <br>{{moduleInputs|json}}</pre>
-                      <pre> isLastMod: {{isLastMod|json}}</pre>
-                      <pre> CampaignInputisActive: {{CampaignInputisActive|json}}</pre>
-                      <pre> EditorIsActive: {{EditorIsActive|json}}</pre>
-                      <pre> isEditor: {{isEditor|json}}</pre>
-                      <pre> currentModule: {{currentModule|json}}</pre>
-                      <pre> buttonHoverModPreviewActive: {{buttonHoverModPreviewActive|json}}</pre>
-                      <pre> tableHoverModBorderActive: {{tableHoverModBorderActive|json}}</pre>
-                      <pre> optionSelectModTypeActive: {{optionSelectModTypeActive|json}}</pre> 
-                      -->
-                    <!--    <pre> customForm: {{customForm.value|json}}</pre> 
-                      <pre> heroForm: {{heroForm.value|json}}</pre> 
-                      <pre> textForm: {{textForm.value|json}}</pre> 
-                      <pre> bannerForm: {{bannerForm.value|json}}</pre> 
-                      <pre> buttonForm: {{buttonForm.value|json}}</pre> 
-                      <pre> footerForm: {{footerForm.value|json}}</pre> 
-                      <pre> fourPidForm: {{fourPidForm.value|json}}</pre> -->
-                    </div>
-                  </div>
+          <h1> {{id}} </h1>
+
+          <!-- ********** Modal Data Preview ********** -->
+          <modal id="custom-modal">
+            <div class="modal-bg">
+              <div class="mymodel" >
+                <div class="modal-body">
+
+                  <pre> campaignForm: {{campaignForm.value|json}}</pre> 
+                <!--    <pre> personnelAssignedToRole: <br>{{personnelAssignedToRole|json}}</pre>
+                  <pre> newModel: <br>{{newModel|json}}</pre>
+                  <pre> newLinks: {{newLinks|json}}</pre> 
+                  <pre> moduleInputs: <br>{{moduleInputs|json}}</pre>
+                  <pre> currentModule: {{currentModule|json}}</pre>
+                  <pre> isLastMod: {{isLastMod|json}}</pre>
+                  <pre> editorIsActive: {{editorIsActive|json}}</pre>
+                  <pre> isEditor: {{isEditor|json}}</pre>
+                  <pre> currentModule: {{currentModule|json}}</pre>
+                  <pre> buttonHoverModPreviewActive: {{buttonHoverModPreviewActive|json}}</pre>
+                  <pre> tableHoverModBorderActive: {{tableHoverModBorderActive|json}}</pre>
+                  <pre> optionSelectModTypeActive: {{optionSelectModTypeActive|json}}</pre> 
+                  <pre> campaignInputisActive: {{campaignInputisActive|json}}</pre> -->
+             <!--     <pre> campaignForm.controls.header.valid:{{campaignForm.controls.header.valid|json}}</pre>-->
                 </div>
-            </modal>
-           <!-- ********** Modal Data Preview ********** -->
+              </div>
+            </div>
+          </modal>
+          <!-- ********** / Modal Data Preview ********** -->
 
-            <form [formGroup]="myForm" novalidate (ngSubmit)="buildCampaign()">
-             <!-- ********** Details Display ********** -->      
-              <table class="table table-bordered details"  *ngIf="!DetailsInputisActive">
-                 <thead>
-                        <tr >
-                           <th colspan="2" ><span class="table-title" [ngClass]="{'inline': viewType === 'owner'}">Campaign Details</span> 
+          <form [formGroup]="campaignForm" novalidate (ngSubmit)="buildCampaign()">
+            <!-- ********** Details Display ********** -->      
+            <table class="table table-bordered details"  *ngIf="!detailsInputisActive">
+              <thead>
+                <tr >
+                  <th colspan="2" ><span class="table-title" [ngClass]="{'inline': viewType === 'owner'}">Campaign Details</span> 
 
-                            <a *ngIf="myForm.controls.approved.value !== true" (click)="toggleDetailsInput()" class="pull-right details-edit" > edit </a>
-             
-                         <span *ngIf="viewType === 'owner'"  class="pull-right qa-controls">
-                           <button *ngIf="myForm.controls.approved.value === false" [disabled]="type === 'demos'" type="button" (click)="setCampaign()"  class="btn btn-primary btn-xs">Save Comments </button>
-                            <button (click)="toggleCampaignStatus(false)" type="button" class="btn btn-danger btn-sm">Reject</button>
-                            <button (click)="toggleCampaignStatus(true)" type="button" class="btn btn-success btn-sm" [disabled]="!readyForApproval">Approve</button>
-                        </span>
+                    <a *ngIf="campaignForm.controls.approved.value !== true" (click)="toggleDetailsInput()" class="pull-right details-edit" > edit </a>
 
-                   <div class="form-group padTop10" *ngIf="myForm.controls.approved.value === false" > 
-                    <textarea [readonly]="viewType !== 'owner'"  type="text" autosize class="form-control qaAmends amends-bg" formControlName="ownerFeedback" id="ownerFeedback"></textarea>
+                    <span *ngIf="viewType === 'owner'"  class="pull-right qa-controls">
+                      <button *ngIf="campaignForm.controls.approved.value === false" [disabled]="type === 'demos'" type="button" (click)="setCampaign()"  class="btn btn-primary btn-xs">Save Comments </button>
+                      <button (click)="toggleCampaignStatus(false)" type="button" class="btn btn-danger btn-sm">Reject</button>
+                      <button (click)="toggleCampaignStatus(true)" type="button" class="btn btn-success btn-sm" [disabled]="!readyForApproval">Approve</button>
+                    </span>
+
+                    <div class="form-group pad-top-10" *ngIf="campaignForm.controls.approved.value === false" > 
+                      <textarea [readonly]="viewType !== 'owner'"  type="text" autosize class="form-control qaAmends amends-bg" formControlName="ownerFeedback" id="ownerFeedback"></textarea>
                     </div>
-                           </th>
-                         </tr>
-                    </thead>
+                  </th>
+                </tr>
+              </thead>
 
-                     <tr class="panel panel-default ">
-                           <td width="20%"  >Title  </td>
-                           <td class="values">{{myForm.value.title}}</td>
-                     </tr>
-                      <tr class="panel panel-default ">
-                           <td width="20%"  >Version</td>
-                           <td  class="values"  >{{myForm.value.version}}</td>
-                     </tr>
-                     <tr class="panel panel-default">
-                          <td width="20%"  >Status</td>
-                           <td class="values">  
-                           <a *ngIf="myForm.controls.approved.value === false" (click)="rejectionStatus()" class="btn btn-danger btn-xs" style="cursor: default;" ><strong>Rejected</strong> </a>
-                               <!-- - Requires the following amendments:-->
-                           <a *ngIf="myForm.controls.approved.value === true" (click)="approvalStatus()" class="btn btn-success btn-xs" style="cursor: default;" >Approved</a>
-                                           
-                            <button *ngIf="myForm.controls.approved.value === ''" (click)="pendingStatus()" type="button" class="btn btn-warning btn-xs">Pending Approval</button>
+              <tr class="panel panel-default ">
+                <td width="20%"  >Title  </td>
+                <td class="values">{{campaignForm.value.title}}</td>
+              </tr>
+              <tr class="panel panel-default ">
+                <td width="20%"  >Version</td>
+                <td  class="values"  >{{campaignForm.value.version}}</td>
+              </tr>
+              <tr class="panel panel-default">
+                <td width="20%"  >Status</td>
+                <td class="values">  
+                  <a *ngIf="campaignForm.controls.approved.value === false" (click)="rejectionStatus()" class="btn btn-danger btn-xs"  ><strong>Rejected</strong> </a>
+                  <!-- - Requires the following amendments:-->
+                  <a *ngIf="campaignForm.controls.approved.value === true" (click)="approvalStatus()" class="btn btn-success btn-xs"  >Approved</a>
 
-                            <a class="popup mainpopup glyphicon glyphicon-info-sign pull-right" (click)="infoAlert('statusInfo','')" >
-                              <span class="popuptext" id="statusInfo">
-                               <p >Only when all campaign modules and data are approved by the QA can the author request approval from the owner. </p>
-                                 <p > When the owner approves or rejects a campaign the status will be updated along with a record of the owner’s id and a date stamp. </p>
-                                 <p>The status value can be clicked to view these details.</p>
-                              <p >Once the owner has approved the campaign the author no longer has access to any controls to edit the campaign.</p>
-                              </span>
-                            </a>
-                         </td>
-                     </tr>
-                      <tr class="panel panel-default ">
-                           <td width="20%"  >Owner </td>
-                           <td class="values" >{{myForm.value.owner}}
-                              <a class="popup mainpopup glyphicon glyphicon-info-sign pull-right" (click)="infoAlert('ownerInfo','')" >
-                                <span class="popuptext" id="ownerInfo">
-                                 <p >The owner has controls to: </p>
-                                 <ul>
-                                   <li>Approve or reject a campaign</li>
-                                   <li >Register feedback regarding rejection</li>
-                                   <li >Apply a red flag to any section of a rejected campaign FAO the author </li>
-                                 </ul>
-                                <p > Choose <strong>'Owner view'</strong> from the view selector to experience the owner view and controls</p>
+                  <button *ngIf="campaignForm.controls.approved.value === ''" (click)="pendingStatus()" type="button" class="btn btn-warning btn-xs">Pending Approval</button>
 
-                                </span>
-                              </a>
-                           </td>
-                     </tr>
-                      <tr class="panel panel-default ">
-                           <td width="20%"  >Author</td>
-                           <td class="values" >{{myForm.value.author}}
-                          <a class="popup mainpopup glyphicon glyphicon-info-sign pull-right" (click)="infoAlert('authorInfo','')" >
-                                    <span class="popuptext" id="authorInfo">
-                                     <p >The author has controls to: </p>
-                                    <ul>
-                                       <li> Edit campaign and module data </li>
-                                       <li >Add or delete modules </li>
-                                       <li >Request QA </li>
-                                       <li >Request final approval from the owner</li>
-                                     </ul>
-                                      <p > Choose  <strong>'Author view'</strong> from the view selector to experience the owner view and controls.   <strong>'Author view' </strong>  is the default view on loading a campaign. </p>
-                                    </span>
-                                  </a>
-                           </td>
-                     </tr>
-                      <tr class="panel panel-default ">
-                           <td width="20%"  >QA</td>
-                           <td class="values">{{myForm.value.qa}}
-                               <a class="popup mainpopup glyphicon glyphicon-info-sign pull-right" (click)="infoAlert('qaInfo','')" >
-                                    <span class="popuptext" id="qaInfo">
-                                     <p >The QA has controls to:</p> 
-                                     <ul>
-                                       <li> Approve or reject campaign data </li>
-                                       <li >Approve or reject each module </li>
-                                       <li >Register feedback with a each rejected module / campaign data</li>
-                                       <li >Apply a red flag to any specific data field FAO the author</li>
-                                     </ul>
-                                      <p > Choose <strong>'QA view'</strong> from the view selector to experience the owner view and controls</p>
-                                   </span>
-                                  </a>
-                           </td>
-                     </tr>
-                      <tr class="panel panel-default ">
-                           <td width="20%"  >Description</td>
-                           <td class="values" >{{myForm.value.description}}</td>
-                     </tr>
-              </table>
-               <!-- ********** Details Display ********** --> 
-               <!-- ********** Details Editor is Active ********** -->
-              <table class="table table-bordered details"  *ngIf="DetailsInputisActive" >
-                 <thead>
-                    <tr >
-                       <th colspan="2" ><span class="table-title" [ngClass]="{'inline': viewType === 'owner'}">Campaign Details</span> 
-                        <a *ngIf="myForm.controls.approved.value !== true" (click)="toggleDetailsInput()" class="pull-right details-edit" > update </a>
-                       </th>
-                     </tr>
-                  </thead>
-                     <tr class="panel panel-default ">
-                           <td width="20%"  >Title  </td>
-                           <td class="values" > 
-                           <input type="text" class="form-control" formControlName="title" id="title" >
-                      <small [hidden]="myForm.controls.title.valid" class="text-danger">
-                            title is required
-                             </small>
-                             </td>
-                     </tr>
-                      <tr class="panel panel-default ">
-                           <td width="20%"  >Version</td>
-                           <td class="values" > <input type="text" class="form-control" formControlName="version" id="version">
-                         <small [hidden]="myForm.controls.version.valid" class="text-danger">
-                        version is required
-                         </small>
-                         </td>
-                     </tr>
-                     <tr class="panel panel-default">
-                          <td width="20%"  >Status</td>
-                           <td class="values">  
-                           <a *ngIf="myForm.controls.approved.value === false" (click)="rejectionStatus()" class="btn btn-danger btn-xs" style="cursor: default;" ><strong>Rejected</strong> </a>
-                           <a *ngIf="myForm.controls.approved.value === true" (click)="approvalStatus()" class="btn btn-success btn-xs" style="cursor: default;" >Approved</a>
-                                           
-                            <button *ngIf="myForm.controls.approved.value === ''" (click)="pendingQAStatus()" type="button" class="btn btn-warning btn-xs">Pending Approval</button>
-                         </td>
-                     </tr>
-                     <tr class="panel panel-default ">
-                           <td width="20%"  >Owner</td>
-                           <td class="values" >
-                           <div class="select-table">
-                           <select name="ownerId" class="form-control" formControlName="ownerId" id="ownerId" (change)="setPersonel('owner', $event.target.value, 'ownerId')"> 
-                           <option value='' disabled selected>Select a team member</option>
+                  <a class="popup mainpopup glyphicon glyphicon-info-sign pull-right" (click)="infoAlert('statusInfo','')" >
+                    <span class="popuptext" id="statusInfo">
+                      <p >Only when all campaign modules and data are approved by the QA can the author request approval from the owner. </p>
+                      <p > When the owner approves or rejects a campaign the status will be updated along with a record of the owner’s id and a date stamp. </p>
+                      <p>The status value can be clicked to view these details.</p>
+                      <p >Once the owner has approved the campaign the author no longer has access to any controls to edit the campaign.</p>
+                    </span>
+                  </a>
+                </td>
+              </tr>
+              <tr class="panel panel-default ">
+                <td width="20%"  >Owner </td>
+                <td class="values" >{{campaignForm.value.owner}}
+                  <a class="popup mainpopup glyphicon glyphicon-info-sign pull-right" (click)="infoAlert('ownerInfo','')" >
+                    <span class="popuptext" id="ownerInfo">
+                      <p >The owner has controls to: </p>
+                      <ul>
+                        <li>Approve or reject a campaign</li>
+                        <li >Register feedback regarding rejection</li>
+                        <li >Apply a red flag to any section of a rejected campaign FAO the author </li>
+                      </ul>
+                      <p > Choose <strong>'Owner view'</strong> from the view selector to experience the owner view and controls</p>
 
-                          <option *ngFor="let owner of arrayOfKeys; let i=index"
-                        [(value)]="arrayOfKeys[i]">
-                              {{testTeam[owner].name}}
-                          </option>
-                        </select>
-                        </div>
-                     </td>
-                     </tr>
-                      <tr class="panel panel-default ">
-                           <td width="20%"  >Author</td>
-                           <td class="values" >
-                                          <div class="select-table">
+                    </span>
+                  </a>
+                </td>
+              </tr>
+              <tr class="panel panel-default ">
+                <td width="20%"  >Author</td>
+                <td class="values" >{{campaignForm.value.author}}
+                  <a class="popup mainpopup glyphicon glyphicon-info-sign pull-right" (click)="infoAlert('authorInfo','')" >
+                    <span class="popuptext" id="authorInfo">
+                      <p >The author has controls to: </p>
+                      <ul>
+                        <li> Edit campaign and module data </li>
+                        <li >Add or delete modules </li>
+                        <li >Request QA </li>
+                        <li >Request final approval from the owner</li>
+                      </ul>
+                      <p > Choose  <strong>'Author view'</strong> from the view selector to experience the owner view and controls.   <strong>'Author view' </strong>  is the default view on loading a campaign. </p>
+                    </span>
+                  </a>
+                </td>
+              </tr>
+              <tr class="panel panel-default ">
+                <td width="20%"  >QA</td>
+                <td class="values">{{campaignForm.value.qa}}
+                  <a class="popup mainpopup glyphicon glyphicon-info-sign pull-right" (click)="infoAlert('qaInfo','')" >
+                    <span class="popuptext" id="qaInfo">
+                      <p >The QA has controls to:</p> 
+                      <ul>
+                        <li> Approve or reject campaign data </li>
+                        <li >Approve or reject each module </li>
+                        <li >Register feedback with a each rejected module / campaign data</li>
+                        <li >Apply a red flag to any specific data field FAO the author</li>
+                      </ul>
+                      <p > Choose <strong>'QA view'</strong> from the view selector to experience the owner view and controls</p>
+                    </span>
+                  </a>
+                </td>
+              </tr>
+              <tr class="panel panel-default ">
+                <td width="20%"  >Description</td>
+                <td class="values" >{{campaignForm.value.description}}</td>
+              </tr>
+            </table>
+            <!-- ********** / Details Display ********** --> 
+            <!-- ********** Details Editor is Active ********** -->
+            <table class="table table-bordered details"  *ngIf="detailsInputisActive" >
+              <thead>
+                <tr >
+                  <th colspan="2" ><span class="table-title" [ngClass]="{'inline': viewType === 'owner'}">Campaign Details</span> 
+                    <a *ngIf="campaignForm.controls.approved.value !== true" (click)="toggleDetailsInput()" class="pull-right details-edit" > update </a>
+                  </th>
+                </tr>
+              </thead>
+              <tr class="panel panel-default ">
+                <td width="20%"  >Title  </td>
+                <td class="values" > 
+                  <input type="text" class="form-control" formControlName="title" id="title" >
+                  <small [hidden]="campaignForm.controls.title.valid" class="text-danger">
+                    title is required
+                  </small>
+                </td>
+              </tr>
+              <tr class="panel panel-default ">
+                <td width="20%"  >Version</td>
+                <td class="values" > <input type="text" class="form-control" formControlName="version" id="version">
+                  <small [hidden]="campaignForm.controls.version.valid" class="text-danger">
+                    version is required
+                  </small>
+                </td>
+              </tr>
+              <tr class="panel panel-default">
+                <td width="20%"  >Status</td>
+                <td class="values">  
+                  <a *ngIf="campaignForm.controls.approved.value === false" (click)="rejectionStatus()" class="btn btn-danger btn-xs" ><strong>Rejected</strong> </a>
+                  <a *ngIf="campaignForm.controls.approved.value === true" (click)="approvalStatus()" class="btn btn-success btn-xs"  >Approved</a>
 
-                              <select name="authorId" class="form-control" formControlName="authorId" id="authorId" (change)="setPersonel('author', $event.target.value, 'authorId')"> 
-                           <option value='' disabled selected>Select a team member</option>
+                  <button *ngIf="campaignForm.controls.approved.value === ''" (click)="pendingQAStatus()" type="button" class="btn btn-warning btn-xs">Pending Approval</button>
+                </td>
+              </tr>
+              <tr class="panel panel-default ">
+                <td width="20%"  >Owner</td>
+                <td class="values" >
+                  <div class="select-table">
+                    <select name="ownerId" class="form-control" formControlName="ownerId" id="ownerId" (change)="setPersonnel('owner', $event.target.value, 'ownerId')"> 
+                      <option value='' disabled selected>Select a team member</option>
 
-                          <option *ngFor="let author of arrayOfKeys; let i=index"
-                        [(value)]="arrayOfKeys[i]">
-                              {{testTeam[author].name}}
-                          </option>
-                        </select>
-                     </div>
-
-                           </td>
-                     </tr>
-                      <tr class="panel panel-default ">
-                           <td width="20%"  >QA</td>
-                           <td class="values" >
-                                          <div class="select-table">
-
-                             <select name="qaId" class="form-control" formControlName="qaId" id="qaId" (change)="setPersonel('qa', $event.target.value, 'qaId')"> 
-                           <option value='' disabled selected>Select a team member</option>
-
-                          <option *ngFor="let qa of arrayOfKeys; let i=index"
-                        [(value)]="arrayOfKeys[i]">
-                              {{testTeam[qa].name}}
-                          </option>
-                        </select>
-                    </div>         
-
-                           </td>
-                     </tr>
-                      <tr class="panel panel-default ">
-                           <td width="20%"  >Description</td>
-                           <td class="values">
-                             <input type="text" class="form-control" formControlName="description" id="description">
-                         <small [hidden]="myForm.controls.description.valid" class="text-danger">
-                        description is required
-                         </small>
-                           </td>
-                     </tr>
-              </table>
-               <!--**********  Details Editor is Active **********-->
-              <div style="padding-top:20px;"></div>
-
-               <!-- **********  Styles Display ********** -->
-               <!-- **********  Styles Display ********** -->
-               <!-- **********  Styles Editor is Active [start] ********** -->
-                <!-- **********  Styles Editor is Active [end] ********** --> 
-
-              <!-- row [start] --> 
-               <div class="row">
-                   <!-- col-xs-8/12 [start] --> 
-                  <div class="col-xs-8" >
-                  <!-- [ngClass]="{'col-xs-8': myForm.value.logo.type||myForm.value.modules[0], 'col-xs-12':!myForm.value.logo.type||!myForm.value.modules[0]}" -->
-
-
-
-                   
-         <!-- **********  Data Display ********** -->
-                             <div *ngIf="!CampaignInputisActive">
-
-                    <table class="table table-bordered table-header"  (mouseenter)="tableHoverModBorder(-1)" (mouseleave)="tableHoverModBorder(-1)">
-                      <thead>
-                        <tr >
-                           <th style="border-bottom:none"><span class="table-title">Campaign Modules</span>  
-                           </th>
-                        </tr>
-                      </thead>
-                    </table>
-
-                   <table class="table table-bordered modules" style="margin-bottom:30px"  (mouseenter)="tableHoverModBorder(-1)" (mouseleave)="tableHoverModBorder(-1)" [ngClass]="{'header-table-outline': tableHoverModBorderActive && currentModule === -1}">
-                        <tbody >
-                        <tr  *ngIf="viewType === 'author'"  [hidden]="myForm.controls.config.controls.header.valid && myForm.controls.config.controls.logo.controls.href.valid"> 
-                          <td colspan="2" class="amends-bg"  > <p style="font-size:15px" class="text-danger">You will need to ensure the mandatory fields in this table are filled out before you can continue to add further modules. Click <strong>'edit'</strong> above to start filling out the data fields. </p>
-                          </td>
-                          </tr>
-                        <tr> 
-                        <td width="20%"  >Module</td>
-                          <td  ><span class="table-title"> Header </span>
-                           <div  class="pull-right" >
-                          <img *ngIf="viewType === 'author'" src="https://firebasestorage.googleapis.com/v0/b/ngdataformdemo.appspot.com/o/red-arrow1.gif?alt=media&token=e7c8e7ea-fc67-41d9-b1a4-d649aec6d16f" class="arrow-guide" [hidden]="myForm.controls.config.controls.header.valid && myForm.controls.config.controls.logo.controls.href.valid" /> 
-                          <a *ngIf="myForm.controls.approved.value !== true && viewType === 'author'" (click)="toggleCampaignInput('open')" class="details-edit">edit</a>
-                         </div>
-
-                        <div *ngIf="viewType === 'qa'"  class="pull-right qa-controls" >
-                             <button *ngIf="myForm.controls.config.controls.dataApproved.value === false" [disabled]="type === 'demos'"  type="button" (click)="setCampaign()"  class="btn btn-primary btn-xs">Save Comments </button>
-                              <button (click)="toggleCampaignDataStatus(false)" type="button" class="btn btn-danger btn-xs">Reject</button>
-                              <button (click)="toggleCampaignDataStatus(true)" type="button" class="btn btn-success btn-xs">Approve</button>
-                          </div> 
-                          </td>
-                          </tr>
-                        <tr class="panel panel-default">
-                            <td width="20%"  >Status</td>
-                             <td class="values" >  
-                             <a *ngIf="myForm.controls.config.controls.dataApproved.value === false" class="btn btn-danger btn-xs" style="cursor: default;" ><strong>Rejected</strong> </a>
-                                 <!-- - Requires the following amendments:-->
-                             <a *ngIf="myForm.controls.config.controls.dataApproved.value === true" class="btn btn-success btn-xs" style="cursor: default;" >Approved</a>
-                        
-                             <button *ngIf="myForm.controls.config.controls.dataApproved.value === ''" (click)="pendingQAStatus()" type="button" class="btn btn-warning btn-xs">Pending Approval</button>
-
-                           </td>
-                          </tr>
-                           <tr> 
-                             <td width="20%"  >Module No</td>
-                             <td  >0</td>
-                          </tr>
-                          <tr class="panel panel-default" *ngIf="myForm.controls.config.controls.dataApproved.value === false">
-                          <td width="20%" class="amends-bg" >Amends</td>
-                             <td class="values amends-bg" formGroupName="config" ><span *ngIf="viewType == 'author'|| viewType === 'owner' && myForm.controls.approved.value !== false" style="white-space:pre-line;" > {{myForm.value.config.dataAmends}}</span>
-                              <div class="form-group"  >
-                              <textarea *ngIf="viewType === 'qa' || viewType === 'owner' && myForm.controls.approved.value === false"  type="text" autosize class="form-control qaAmends" formControlName="dataAmends" id="dataAmends"></textarea>
-                              </div></td> <!-- [readonly]="viewType !== 'qa'" -->
-                          </tr>
-                       
-
-                        <tr class="panel panel-default">
-                             <td width="20%"  >Preheader</td>
-                             <td class="values" ><span class="placeholder" contenteditable="false" data-placeholder="Optional description which appears in some email apps next to the subject&nbsp;line" >{{myForm.value.config.preheader}}</span>
-                             <button *ngIf="viewType === 'qa' || myForm.controls.config.controls.preheaderFlag.value == true || viewType === 'owner' && myForm.controls.approved.value === false" 
-                             [disabled]="viewType === 'author' || viewType === 'owner' && myForm.controls.approved.value !== false || viewType === ''" 
-                             [ngClass]="{'btn-danger': myForm.controls.config.controls.preheaderFlag.value === true, 'btn-default': myForm.controls.config.controls.preheaderFlag.value !== true}" 
-                             (click)="toggleModFlag(i,myForm.controls.config.controls.preheaderFlag)"  
-                             type="button" class="btn btn-xs pull-right glyphicon glyphicon-flag"></button>
-                             </td>
-                            
-                          </tr>
-                           <tr class="panel panel-default ">
-                             <td width="20%"  >Header</td>
-                             <td class="values" ><span class="placeholder" contenteditable="false" data-placeholder="Introductory sentence which will appear at the top of the email" >{{myForm.value.config.header}}</span> 
-                             <button *ngIf="viewType === 'qa' || myForm.controls.config.controls.headerFlag.value == true|| viewType === 'owner' && myForm.controls.approved.value === false" 
-                             [disabled]="viewType === 'author' || viewType === 'owner' && myForm.controls.approved.value !== false || viewType === ''" 
-                             [ngClass]="{'btn-danger': myForm.controls.config.controls.headerFlag.value === true, 'btn-default': myForm.controls.config.controls.headerFlag.value !== true}" 
-                             (click)="toggleModFlag(i,myForm.controls.config.controls.headerFlag)" 
-                             type="button" class="btn btn-xs pull-right glyphicon glyphicon-flag" ></button></td>
-                             
-                          </tr>
-                         
-                          <tr class="panel panel-default">
-                             <td width="20%"  >Logo</td>
-                             <td class="values" ><span class="placeholder" contenteditable="false" data-placeholder="Select from the range of brand logos" >{{myForm.value.config.logo.type}}</span>
-                             <button *ngIf="viewType === 'qa'|| myForm.controls.config.controls.logo.controls.typeFlag.value == true|| viewType === 'owner' && myForm.controls.approved.value === false" 
-                             [disabled]="viewType === 'author' || viewType === 'owner' && myForm.controls.approved.value !== false || viewType === ''" 
-                             [ngClass]="{'btn-danger': myForm.controls.config.controls.logo.controls.typeFlag.value === true, 'btn-default': myForm.controls.config.controls.logo.controls.typeFlag.value !== true}" 
-                             (click)="toggleModFlag(i,myForm.controls.config.controls.logo.controls.typeFlag)"  
-                             type="button" class="btn btn-xs pull-right glyphicon glyphicon-flag"></button></td>
-                              
-                          </tr>
-                          <tr class="panel panel-default">
-                             <td width="20%"  >Logo Link</td>
-                             <td class="values" ><span class="placeholder" contenteditable="false" data-placeholder="Choose a link destination for your logo" ><a href="{{myForm.value.config.logo.href}}"> {{myForm.value.config.logo.href}}</a></span>
-                             <button *ngIf="viewType === 'qa' || myForm.controls.config.controls.logo.controls.hrefFlag.value == true|| viewType === 'owner' && myForm.controls.approved.value === false" 
-                             [disabled]="viewType === 'author' || viewType === 'owner' && myForm.controls.approved.value !== false" 
-                             [ngClass]="{'btn-danger': myForm.controls.config.controls.logo.controls.hrefFlag.value === true, 'btn-default': myForm.controls.config.controls.logo.controls.hrefFlag.value !== true}" 
-                             (click)="toggleModFlag(i,myForm.controls.config.controls.logo.controls.hrefFlag)"  type="button" class="btn btn-danger btn-xs pull-right glyphicon glyphicon-flag"></button></td>
-                             
-                          </tr>
-                          </tbody>
-                      </table>
-                      </div>
-                      <!-- **********  Data Display ********** -->
-
-                    <!-- **********  Data Editor is Active [start] ********** -->
-                    <div *ngIf="CampaignInputisActive">
-                        <config-form   *ngIf="isEditor && EditorIsActive" (sendConfigData)="addConfigData($event)" [CampaignInputisActive]='CampaignInputisActive' [viewType]='viewType' [configInput]='myForm.controls.config'> </config-form>
-                    </div>
-                    <!-- **********  Data Editor is Active [end] ********** --> 
-
-
-
-               <!--********** MODULES [start] ************--> 
-                
-                <!-- Add Module FIRST [start]--> 
-                <div *ngIf="viewType === 'author' && !EditorIsActive" style="padding-bottom:25px" class="panel-default">
-               
-                      <button [disabled]="!myForm.controls.config.controls.header.valid || !myForm.controls.config.controls.logo.controls.href.valid"  *ngIf="myForm['controls'].approved.value !== true" type="button" (click)="OpenEditor(-1,false,moveToFormEditor)"  (mouseenter)="buttonHoverModPreview(-1,last)" (mouseleave)="buttonHoverModPreview(-1,last)"  class="btn btn-mod btn-full" > Add Module Here &#8595;</button>
+                      <option *ngFor="let owner of arrayOfPersonnelIds; let i=index"
+                      [(value)]="arrayOfPersonnelIds[i]">
+                      {{testTeam[owner].name}}
+                    </option>
+                  </select>
                 </div>
-                <!-- Add Module FIRST [end]--> 
+              </td>
+            </tr>
+            <tr class="panel panel-default ">
+              <td width="20%"  >Author</td>
+              <td class="values" >
+                <div class="select-table">
 
+                  <select name="authorId" class="form-control" formControlName="authorId" id="authorId" (change)="setPersonnel('author', $event.target.value, 'authorId')"> 
+                    <option value='' disabled selected>Select a team member</option>
 
+                    <option *ngFor="let author of arrayOfPersonnelIds; let i=index"
+                    [(value)]="arrayOfPersonnelIds[i]">
+                    {{testTeam[author].name}}
+                  </option>
+                </select>
+              </div>
 
-                <!-- ModulesInput for none is Active -->
-                <div *ngIf="EditorIsActive && currentModule === -1 && !isEditor && !myForm.value.modules.length" class="panel panel-default input-outline" style="padding:0" >
+            </td>
+          </tr>
+          <tr class="panel panel-default ">
+            <td width="20%"  >QA</td>
+            <td class="values" >
+              <div class="select-table">
 
-                    <div class="closeEditor">
-                    <a class="glyphicon glyphicon-remove pull-right" (click)="closeEditor()"></a>
+                <select name="qaId" class="form-control" formControlName="qaId" id="qaId" (change)="setPersonnel('qa', $event.target.value, 'qaId')"> 
+                  <option value='' disabled selected>Select a team member</option>
+
+                  <option *ngFor="let qa of arrayOfPersonnelIds; let i=index"
+                  [(value)]="arrayOfPersonnelIds[i]">
+                  {{testTeam[qa].name}}
+                </option>
+              </select>
+            </div>         
+
+          </td>
+        </tr>
+        <tr class="panel panel-default ">
+          <td width="20%"  >Description</td>
+          <td class="values">
+            <input type="text" class="form-control" formControlName="description" id="description">
+            <small [hidden]="campaignForm.controls.description.valid" class="text-danger">
+              description is required
+            </small>
+          </td>
+        </tr>
+      </table>
+      <!--********** /  Details Editor is Active **********-->
+      <div class="pad-top-20"></div>
+
+      <!-- **********  Styles Display ********** -->
+      <!-- ********** / Styles Display ********** -->
+      <!-- **********  Styles Editor is Active  ********** -->
+      <!-- ********** / Styles Editor is Active  ********** --> 
+
+      <!-- row [start] --> 
+      <div class="row">
+        <!-- col-xs-8/12 [start] --> 
+        <div class="col-xs-8" >
+
+          <!-- ********** Campaign Config Display ********** -->
+          <div *ngIf="!campaignInputisActive">
+
+            <table class="table table-bordered table-header"  (mouseenter)="tableHoverModBorder(-1)" (mouseleave)="tableHoverModBorder(-1)">
+              <thead>
+                <tr >
+                  <th style="border-bottom:none"><span class="table-title">Campaign Modules</span>  
+                  </th>
+                </tr>
+              </thead>
+            </table>
+
+            <table class="table table-bordered modules marg-bot-30"   (mouseenter)="tableHoverModBorder(-1)" (mouseleave)="tableHoverModBorder(-1)" [ngClass]="{'header-table-outline': tableHoverModBorderActive && currentModule === -1}">
+              <tbody >
+                <tr  *ngIf="viewType === 'author'"  [hidden]="campaignForm.controls.config.controls.header.valid && campaignForm.controls.config.controls.logo.controls.href.valid"> 
+                  <td colspan="2" class="amends-bg"  > <p class="text-danger">You will need to ensure the mandatory fields in this table are filled out before you can continue to add further modules. Click <strong>'edit'</strong> above to start filling out the data fields. </p>
+                  </td>
+                </tr>
+                <tr> 
+                  <td width="20%"  >Module</td>
+                  <td  ><span class="table-title"> Header </span>
+                    <div  class="pull-right" >
+                      <img *ngIf="viewType === 'author'" src="https://firebasestorage.googleapis.com/v0/b/ngdataformdemo.appspot.com/o/red-arrow1.gif?alt=media&token=e7c8e7ea-fc67-41d9-b1a4-d649aec6d16f" class="arrow-guide" [hidden]="campaignForm.controls.config.controls.header.valid && campaignForm.controls.config.controls.logo.controls.href.valid" /> 
+                      <a *ngIf="campaignForm.controls.approved.value !== true && viewType === 'author'" (click)="toggleCampaignConfigInput('open')" class="details-edit">edit</a>
                     </div>
 
-                    <h3 class="editorPad">Add Module... </h3>
+                    <div *ngIf="viewType === 'qa'"  class="pull-right qa-controls" >
+                      <button *ngIf="campaignForm.controls.config.controls.dataApproved.value === false" [disabled]="type === 'demos'"  type="button" (click)="setCampaign()"  class="btn btn-primary btn-xs">Save Comments </button>
+                      <button (click)="toggleCampaignDataStatus(false)" type="button" class="btn btn-danger btn-xs">Reject</button>
+                      <button (click)="toggleCampaignDataStatus(true)" type="button" class="btn btn-success btn-xs">Approve</button>
+                    </div> 
+                  </td>
+                </tr>
+                <tr class="panel panel-default">
+                  <td width="20%"  >Status</td>
+                  <td class="values" >  
+                    <a *ngIf="campaignForm.controls.config.controls.dataApproved.value === false" class="btn btn-danger btn-xs"  ><strong>Rejected</strong> </a>
+                    <!-- - Requires the following amendments:-->
+                    <a *ngIf="campaignForm.controls.config.controls.dataApproved.value === true" class="btn btn-success btn-xs"  >Approved</a>
 
-                    <!-- modInputs -->
-                    <div  class="editorPad1">
+                    <button *ngIf="campaignForm.controls.config.controls.dataApproved.value === ''" (click)="pendingQAStatus()" type="button" class="btn btn-warning btn-xs">Pending Approval</button>
 
-                      <div class="form-group" >
-                         <label>Module Type:</label>  
-                        
-                          <div class="select-input" >
-
-                          <select (change)="setInputs($event.target.value)" name="type" class="form-control" id="module-select" > 
-                             <option value='' disabled selected>Select a Module Type</option>
-
-                            <option *ngFor="let mod of moduleLibrary; let i=index"
-                          [(value)]="mod.typeId">
-                                {{mod.name}}
-                            </option>
-                          </select>
-                          </div>
-                      </div>
-                      
-                    </div>
-                    <!-- modInputs -->
-                    
-
-                    <!-- NO MODS [start] -->
-                    <!-- HERO MODULES INPUT [start] -->
-                     <hero-form *ngIf="moduleInputs.type === 'hero'" (sendModelData)="addData($event)"> </hero-form>
-                     <!--  HERO MODULES INPUT [end]-->
-
-                     <!-- TEXT MODULES INPUT [start] -->
-                     <text-form *ngIf="moduleInputs.type === 'textMod'" (sendModelData)="addData($event)" (sendLinksData)="getChildLinks($event)"> </text-form>
-                     <!--  TEXT MODULES INPUT [end]-->
-
-                     <!-- BANNER MODULES INPUT [start] -->
-                     <banner-form *ngIf="moduleInputs.type === 'bannerMod'" (sendModelData)="addData($event)"> </banner-form>
-                     <!--  BANNER MODULES INPUT [end]-->
-
-                     <!-- BUTTON MODULES INPUT [start] -->
-                     <button-form *ngIf="moduleInputs.type === 'buttonMod'" (sendModelData)="addData($event)" (sendLinksData)="getChildLinks($event)"> </button-form>
-                     <!--  BUTTON MODULES INPUT [end]-->
-                     
-                     <!-- FOOTER MODULES INPUT [start] -->
-                     <footer-form *ngIf="moduleInputs.type === 'footer'" (sendModelData)="addData($event)" (sendLinksData)="getChildLinks($event)"> </footer-form>
-                     <!--  FOOTER MODULES INPUT [end]-->
-
-                      <!-- FOUR PID MODULES INPUT [start] -->
-                     <four-pid-form *ngIf="moduleInputs.type === 'fourPidMod'" (sendModelData)="addData($event)"> </four-pid-form>
-                     <!--  FOUR PID  MODULES INPUT [end]-->
-
-                        <!-- THREE PID MODULES INPUT [start] -->
-                     <three-pid-form *ngIf="moduleInputs.type === 'threePidMod'" (sendModelData)="addData($event)"> </three-pid-form>
-                     <!--  THREE PID  MODULES INPUT [end]-->
-                     <!--   NO MODS [end]-->
-                </div>
-                <!-- ModulesInput for none is Active [end]-->
-
-              
-
-                <!-- ngFor Modules [start]--> 
-                <div *ngFor="let module of myForm['controls'].modules['controls']; let last=last; let i=index" >
+                  </td>
+                </tr>
+                <tr> 
+                  <td width="20%"  >Module No</td>
+                  <td  >0</td>
+                </tr>
+                <tr class="panel panel-default" *ngIf="campaignForm.controls.config.controls.dataApproved.value === false">
+                  <td width="20%" class="amends-bg" >Amends</td>
+                  <td class="values amends-bg" formGroupName="config" ><span *ngIf="viewType == 'author'|| viewType === 'owner' && campaignForm.controls.approved.value !== false" style="white-space:pre-line;" > {{campaignForm.value.config.dataAmends}}</span>
+                    <div class="form-group"  >
+                      <textarea *ngIf="viewType === 'qa' || viewType === 'owner' && campaignForm.controls.approved.value === false"  type="text" autosize class="form-control qaAmends" formControlName="dataAmends" id="dataAmends"></textarea>
+                    </div></td> <!-- [readonly]="viewType !== 'qa'" -->
+                  </tr>
 
 
-                <!-- ***** NEW MODULE INPUTS 0 [start] **** -->
+                  <tr class="panel panel-default">
+                    <td width="20%"  >Preheader</td>
+                    <td class="values" ><span class="placeholder" contenteditable="false" data-placeholder="Optional description which appears in some email apps next to the subject&nbsp;line" >{{campaignForm.value.config.preheader}}</span>
+                      <button *ngIf="viewType === 'qa' || campaignForm.controls.config.controls.preheaderFlag.value == true || viewType === 'owner' && campaignForm.controls.approved.value === false" 
+                      [disabled]="viewType === 'author' || viewType === 'owner' && campaignForm.controls.approved.value !== false || viewType === ''" 
+                      [ngClass]="{'btn-danger': campaignForm.controls.config.controls.preheaderFlag.value === true, 'btn-default': campaignForm.controls.config.controls.preheaderFlag.value !== true}" 
+                      (click)="toggleModFlag(i,campaignForm.controls.config.controls.preheaderFlag)"  
+                      type="button" class="btn btn-xs pull-right glyphicon glyphicon-flag"></button>
+                    </td>
 
-               <!-- ModulesInput is Active -->
-               <div *ngIf="EditorIsActive && -1 === (i-1) && currentModule === -1 && !isEditor" style="padding: 0" class="panel panel-default input-outline" >
+                  </tr>
+                  <tr class="panel panel-default ">
+                    <td width="20%"  >Header</td>
+                    <td class="values" ><span class="placeholder" contenteditable="false" data-placeholder="Introductory sentence which will appear at the top of the email" >{{campaignForm.value.config.header}}</span> 
+                      <button *ngIf="viewType === 'qa' || campaignForm.controls.config.controls.headerFlag.value == true|| viewType === 'owner' && campaignForm.controls.approved.value === false" 
+                      [disabled]="viewType === 'author' || viewType === 'owner' && campaignForm.controls.approved.value !== false || viewType === ''" 
+                      [ngClass]="{'btn-danger': campaignForm.controls.config.controls.headerFlag.value === true, 'btn-default': campaignForm.controls.config.controls.headerFlag.value !== true}" 
+                      (click)="toggleModFlag(i,campaignForm.controls.config.controls.headerFlag)" 
+                      type="button" class="btn btn-xs pull-right glyphicon glyphicon-flag" ></button></td>
 
-                  <div class="closeEditor">
-                  <a class="glyphicon glyphicon-remove pull-right" (click)="closeEditor()"></a>
-                  </div>
+                    </tr>
 
-                  <h3 class="editorPad">Add Module... </h3>
+                    <tr class="panel panel-default">
+                      <td width="20%"  >Logo</td>
+                      <td class="values" ><span class="placeholder" contenteditable="false" data-placeholder="Select from the range of brand logos" >{{campaignForm.value.config.logo.type}}</span>
+                        <button *ngIf="viewType === 'qa'|| campaignForm.controls.config.controls.logo.controls.typeFlag.value == true|| viewType === 'owner' && campaignForm.controls.approved.value === false" 
+                        [disabled]="viewType === 'author' || viewType === 'owner' && campaignForm.controls.approved.value !== false || viewType === ''" 
+                        [ngClass]="{'btn-danger': campaignForm.controls.config.controls.logo.controls.typeFlag.value === true, 'btn-default': campaignForm.controls.config.controls.logo.controls.typeFlag.value !== true}" 
+                        (click)="toggleModFlag(i,campaignForm.controls.config.controls.logo.controls.typeFlag)"  
+                        type="button" class="btn btn-xs pull-right glyphicon glyphicon-flag"></button></td>
 
-                  <!-- modInputs -->
-                  <div class="editorPad1">
-
-                      <div class="form-group" >
-                         <label>Module Type:</label>  
-                      
-                            <div class="select-input" >
-
-                          <select (change)="setInputs($event.target.value)" name="type" class="form-control" id="module-select" > 
-                             <option value='' disabled selected>Select a Module Type</option>
-
-                            <option *ngFor="let mod of moduleLibrary; let i=index"
-                          [(value)]="mod.typeId">
-                                {{mod.name}}
-                            </option>
-                          </select>
-                          </div>
-                      </div>
-                       
-                  </div>
-                  <!-- modInputs -->
-
-
-                     <!--  INPUT 0 [start] -->
-
-                     <!-- HERO MODULES INPUT [start] -->
-                     <hero-form *ngIf="moduleInputs.type === 'hero'" (sendModelData)="addData($event)"> </hero-form>
-                     <!--  HERO MODULES INPUT [end]-->
-
-                     <!-- TEXT MODULES INPUT [start] -->
-                     <text-form *ngIf="moduleInputs.type === 'textMod'" (sendModelData)="addData($event)" (sendLinksData)="getChildLinks($event)"> </text-form>
-                     <!--  TEXT MODULES INPUT [end]-->
-
-                     <!-- BANNER MODULES INPUT [start] -->
-                     <banner-form *ngIf="moduleInputs.type === 'bannerMod'" (sendModelData)="addData($event)"> </banner-form>
-                     <!--  BANNER MODULES INPUT [end]-->
-
-                     <!-- BUTTON MODULES INPUT [start] -->
-                     <button-form *ngIf="moduleInputs.type === 'buttonMod'" (sendModelData)="addData($event)" (sendLinksData)="getChildLinks($event)"> </button-form>
-                     <!--  BUTTON MODULES INPUT [end]-->
-                     
-                     <!-- FOOTER MODULES INPUT [start] -->
-                     <footer-form *ngIf="moduleInputs.type === 'footer'" (sendModelData)="addData($event)" (sendLinksData)="getChildLinks($event)"> </footer-form>
-                     <!--  FOOTER MODULES INPUT [end]-->
-
-                      <!-- FOUR PID MODULES INPUT [start] -->
-                     <four-pid-form *ngIf="moduleInputs.type === 'fourPidMod'" (sendModelData)="addData($event)"> </four-pid-form>
-                     <!--  FOUR PID  MODULES INPUT [end]-->
-
-                        <!-- THREE PID MODULES INPUT [start] -->
-                     <three-pid-form *ngIf="moduleInputs.type === 'threePidMod'" (sendModelData)="addData($event)"> </three-pid-form>
-                     <!--  THREE PID  MODULES INPUT [end]-->
-
-                       
-
-                     <!--   INPUT 0 [end]-->
-
-                    </div>
-                   <!-- ModulesInput is Active [end]-->
-                   <!-- ***** NEW MODULE INPUTS 0 [end] **** -->
-
-
-                <!-- ***** MODULES DISPLAY TABLES [start] **** --> 
-
-                <!-- For # page location -->  
-                  <div class="anchor" id="module{{i}}">{{i}}</div>
-              
-                    <table class="table table-bordered modTable" *ngIf="!EditorIsActive || EditorIsActive && currentModule !== i || !isEditor" style="margin-bottom:30px" (mouseenter)="tableHoverModBorder(i)" (mouseleave)="tableHoverModBorder(i)" [ngClass]="{'table-outline': tableHoverModBorderActive && currentModule === i}">
-                      <thead >
-                        <tr >
-                          <th >Module</th>
-                           <th ><span class="table-title">{{module.value.name}}</span><a *ngIf="myForm.controls.approved.value !== true && viewType === 'author'" (click)="removeModule(i)" class="glyphicon glyphicon-remove pull-right" style="margin-top:2px;">  </a>
-                           <a *ngIf="myForm.controls.approved.value !== true  && viewType === 'author'" (click)="OpenEditor(i,true,moveToFormEditor)" class="pull-right details-edit"> edit </a>
-                               <div *ngIf="viewType === 'qa'"  class="pull-right qa-controls">
-                           <button *ngIf="module.value.approved === false" [disabled]="type === 'demos'"  type="button" (click)="setCampaign()"  class="btn btn-primary btn-xs">Save Comments </button>
-                            <button (click)="toggleModuleStatus(false, i)" type="button" class="btn btn-danger btn-xs">Reject</button>
-                            <button (click)="toggleModuleStatus(true, i)" type="button" class="btn btn-success btn-xs">Approve</button>
-                        </div> 
-
-                           </th>
-                        </tr>
-                      </thead>
-                      <tbody >
+                      </tr>
                       <tr class="panel panel-default">
-                          <td width="20%"  >Status</td>
-                           <td class="values">  <a *ngIf="module.value.approved === false" class="btn btn-danger btn-xs" style="cursor: default;" ><strong>Rejected</strong> </a>
+                        <td width="20%"  >Logo Link</td>
+                        <td class="values" ><span class="placeholder" contenteditable="false" data-placeholder="Choose a link destination for your logo" ><a href="{{campaignForm.value.config.logo.href}}"> {{campaignForm.value.config.logo.href}}</a></span>
+                          <button *ngIf="viewType === 'qa' || campaignForm.controls.config.controls.logo.controls.hrefFlag.value == true|| viewType === 'owner' && campaignForm.controls.approved.value === false" 
+                          [disabled]="viewType === 'author' || viewType === 'owner' && campaignForm.controls.approved.value !== false" 
+                          [ngClass]="{'btn-danger': campaignForm.controls.config.controls.logo.controls.hrefFlag.value === true, 'btn-default': campaignForm.controls.config.controls.logo.controls.hrefFlag.value !== true}" 
+                          (click)="toggleModFlag(i,campaignForm.controls.config.controls.logo.controls.hrefFlag)"  type="button" class="btn btn-danger btn-xs pull-right glyphicon glyphicon-flag"></button></td>
 
-                       <a *ngIf="module.value.approved === true" class="btn btn-success btn-xs" style="cursor: default;" >Approved</a>
-                            <button *ngIf="module.value.approved  === ''|| module.value.approved  === null" (click)="pendingQAStatus()" type="button" class="btn btn-warning btn-xs">Pending Approval</button>
-                         </td>
-                        </tr>
-                        <tr class="panel panel-default" *ngIf="module.value.approved === false" >
-                           
-                          <td width="20%" class="amends-bg"  >Amends</td>
-                           <td class="values amends-bg" formArrayName="modules" > 
-                           <div class="form-group" [formGroupName]="i" >
-                           <span *ngIf="viewType == 'author'|| viewType === 'owner' && myForm.controls.approved.value !== false" style="white-space:pre-line;" > {{module.value.moduleAmends}}</span>
-                            <textarea *ngIf="viewType === 'qa' || viewType === 'owner' && myForm.controls.approved.value === false"   type="text" autosize class="form-control qaAmends" formControlName="moduleAmends" id="moduleAmends{{i}}"></textarea>
-                            </div></td> <!-- [readonly]="viewType !== 'qa'"-->
-                        </tr>
-                         <tr class="panel panel-default">
-                           <td width="20%"  >Module No</td>
-                           <td class="values">{{i+1}}
-                           <button *ngIf="viewType === 'qa' || module.value.numberFlag == true|| viewType === 'owner' && myForm.controls.approved.value === false" 
-                           [disabled]="viewType === 'author' || viewType === 'owner' && myForm.controls.approved.value !== false || viewType === ''" 
-                           [ngClass]="{'btn-danger': module.value.numberFlag === true, 'btn-default': module.value.numberFlag !== true}" 
-                           (click)="toggleModFlag(i,module.controls.numberFlag)" 
-                           type="button" class="btn btn-xs pull-right glyphicon glyphicon-flag" ></button>
-
-                           </td>
-                        </tr>
-                        <tr *ngIf="module.value.type" class="panel panel-default">
-                           <td width="20%" >Module Type</td>
-                           <td class="values">{{module.value.type}}
-                           <button *ngIf="viewType === 'qa' || module.value.typeFlag == true|| viewType === 'owner' && myForm.controls.approved.value === false" 
-                           [disabled]="viewType === 'author' || viewType === 'owner' && myForm.controls.approved.value !== false || viewType === ''" 
-                           [ngClass]="{'btn-danger': module.value.typeFlag === true, 'btn-default': module.value.typeFlag !== true}" 
-                           (click)="toggleModFlag(i,module.controls.typeFlag)" 
-                           type="button" class="btn btn-xs pull-right glyphicon glyphicon-flag" ></button>
-                           </td>
-                        </tr>
-                         <tr *ngIf="module.value.heading" class="panel panel-default">
-                           <td width="20%"  >Heading</td>
-                           <td class="values">{{module.value.heading}}
-                            <button *ngIf="viewType === 'qa' || module.value.headingFlag == true|| viewType === 'owner' && myForm.controls.approved.value === false" 
-                           [disabled]="viewType === 'author' || viewType === 'owner' && myForm.controls.approved.value !== false || viewType === ''" 
-                           [ngClass]="{'btn-danger': module.value.headingFlag === true, 'btn-default': module.value.headingFlag !== true}" 
-                           (click)="toggleModFlag(i,module.controls.headingFlag)" 
-                           type="button" class="btn btn-xs pull-right glyphicon glyphicon-flag" ></button>
-                           </td>
-                        </tr>
-            <!--                (click)="toggleModFlag(i,'headingFlag')" 
-            -->
-                        <tr *ngIf="module.value.href" class="panel panel-default">
-                           <td width="20%" >Link Url</td>
-                           <td class="values"><a href="{{module.value.href}}" target="_blank">{{module.value.href}}</a>
-                           <button *ngIf="viewType === 'qa' || module.value.hrefFlag == true|| viewType === 'owner' && myForm.controls.approved.value === false" 
-                           [disabled]="viewType === 'author' || viewType === 'owner' && myForm.controls.approved.value !== false || viewType === ''" 
-                           [ngClass]="{'btn-danger': module.value.hrefFlag === true, 'btn-default': module.value.hrefFlag !== true}" 
-                           (click)="toggleModFlag(i,module.controls.hrefFlag)" 
-                           type="button" class="btn btn-xs pull-right glyphicon glyphicon-flag" ></button>
-                           </td>
-                        </tr>
-                        <tr *ngIf="module.value.href_1" class="panel panel-default">
-                           <td width="20%" >Link Url 1</td>
-                           <td class="values"><a href="{{module.value.href_1}}" target="_blank">{{module.value.href_1}}</a>
-                           <button *ngIf="viewType === 'qa' || viewType === 'owner' && myForm.controls.approved.value === false" 
-                           [disabled]="viewType === 'author' || viewType === 'owner' && myForm.controls.approved.value !== false || viewType === ''" 
-                           
-                           type="button" class="btn btn-xs pull-right glyphicon glyphicon-flag" ></button>
-                           </td>
-                        </tr>
-                         <tr *ngIf="module.value.href_2" class="panel panel-default">
-                           <td width="20%" >Link Url 2</td>
-                           <td class="values"><a href="{{module.value.href_2}}" target="_blank">{{module.value.href_2}}</a>
-                           <button *ngIf="viewType === 'qa' || viewType === 'owner' && myForm.controls.approved.value === false" 
-                           [disabled]="viewType === 'author' || viewType === 'owner' && myForm.controls.approved.value !== false || viewType === ''" 
-                           
-                           type="button" class="btn btn-xs pull-right glyphicon glyphicon-flag" ></button>
-                           </td>
-                        </tr>
-                         <tr *ngIf="module.value.href_3" class="panel panel-default">
-                           <td width="20%" >Link Url 3</td>
-                           <td class="values"><a href="{{module.value.href_3}}" target="_blank">{{module.value.href_3}}</a>
-                           <button *ngIf="viewType === 'qa' || viewType === 'owner' && myForm.controls.approved.value === false" 
-                           [disabled]="viewType === 'author' || viewType === 'owner' && myForm.controls.approved.value !== false || viewType === ''" 
-                           
-                           type="button" class="btn btn-xs pull-right glyphicon glyphicon-flag" ></button>
-                           </td>
-                        </tr>
-                        <tr *ngIf="module.value.href_4" class="panel panel-default">
-                           <td width="20%" >Link Url 4</td>
-                           <td class="values"><a href="{{module.value.href_4}}" target="_blank">{{module.value.href_4}}</a>
-                           <button *ngIf="viewType === 'qa' || viewType === 'owner' && myForm.controls.approved.value === false" 
-                           [disabled]="viewType === 'author' || viewType === 'owner' && myForm.controls.approved.value !== false || viewType === ''" 
-                           
-                           type="button" class="btn btn-xs pull-right glyphicon glyphicon-flag" ></button>
-                           </td>
-                        </tr>
-                         <tr *ngIf="module.value.img" class="panel panel-default">
-                             <td width="20%"  >Image Name</td>
-                             <td class="values"><a href="{{module.value.src}}" target="_blank">{{module.value.img}}</a>
-                             <button *ngIf="viewType === 'qa' || module.value.imgFlag == true|| viewType === 'owner' && myForm.controls.approved.value === false" 
-                           [disabled]="viewType === 'author' || viewType === 'owner' && myForm.controls.approved.value !== false || viewType === ''" 
-                           [ngClass]="{'btn-danger': module.value.imgFlag === true, 'btn-default': module.value.imgFlag !== true}" 
-                           (click)="toggleModFlag(i,module.controls.imgFlag)" 
-                           type="button" class="btn btn-xs pull-right glyphicon glyphicon-flag" ></button>
-                            </td>
-                        </tr>
-                        <tr *ngIf="module.value.cta"  class="panel panel-default">
-                           <td width="20%" >Cta</td>
-                           <td class="values">{{module.value.cta}}
-                           <button *ngIf="viewType === 'qa' || module.value.ctaFlag == true|| viewType === 'owner' && myForm.controls.approved.value === false" 
-                           [disabled]="viewType === 'author' || viewType === 'owner' && myForm.controls.approved.value !== false || viewType === ''" 
-                           [ngClass]="{'btn-danger': module.value.ctaFlag === true, 'btn-default': module.value.ctaFlag !== true}" 
-                           (click)="toggleModFlag(i,module.controls.ctaFlag)" 
-                           type="button" class="btn btn-xs pull-right glyphicon glyphicon-flag" ></button>
-                           </td>
-                        </tr>
-                         <tr *ngIf="module.value.copy" class="panel panel-default">
-                           <td width="20%" >Copy<br/></td>
-                           <td class="values">
-                             <a class="popup modpopup glyphicon glyphicon-info-sign pull-right" (click)="infoAlert('previewPopUp', i)" >
-                                    <span class="popuptext" id="previewPopUp{{i}}">
-                                     <p>This preview feature is primarily for a developer to reference</p>
-                                     <p >Your copy will be automatically encoded to optimize it for email client rendering.</p> 
-                                     <p>No more hours of toil finding and replacing ampersands and quotation marks throughout your copy etc. etc.</p>
-                                     <p>Each paragraph is split into a text node for the template building process.</p>
-                                    </span>
-                                  </a>
-                             <a (click)="toggleEndcodedFlag(i)" class="pull-right details-edit"  id="copy{{i}}" > Preview Encoded</a>
-                            <span style="white-space:pre-line;" *ngIf="!module.value.encodedFlag"> {{module.value.copy}}
-                            </span>
-                            <span style="white-space:pre-line;" *ngIf="module.value.encodedFlag"> {{module.value.txt|json}}
-                            </span>
-                            <button *ngIf="viewType === 'qa' || module.value.copyFlag == true|| viewType === 'owner' && myForm.controls.approved.value === false" 
-                           [disabled]="viewType === 'author' || viewType === 'owner' && myForm.controls.approved.value !== false || viewType === ''" 
-                           [ngClass]="{'btn-danger': module.value.copyFlag === true, 'btn-default': module.value.copyFlag !== true}" 
-                           (click)="toggleModFlag(i,module.controls.copyFlag)" 
-                           type="button" class="btn btn-xs pull-right glyphicon glyphicon-flag" ></button>
-                            </td>
-                        </tr>
-                         <tr *ngFor="let dk of myForm.controls.modules.controls[i].controls.links.controls; let j=index" >
-                             
-                           <td width="20%"  >Inline Link {{j+1}}</td>
-                           <td class="values" style="padding:0"  > 
-                             <table class="table table-nested" style="margin-bottom:0;" >
-                              <!-- <thead>
-                                  <tr>
-                                     <th width="20%" style="font-weight:normal" > Name</th>
-                                     <th colspan="2" style="font-weight:normal" >{{dk.value.linkName}}</th>
-                                  </tr>
-                                  </thead> -->
-
-                                <tbody >
-                                <tr >
-                                      <td width="20%" >Name</td>
-                                       <td class="values" colspan="2">{{dk.value.linkName}}</td>
-                                     </tr>   
-                                   <tr>
-                                     <td width="15%"  > Text</td>
-                                     <td class="values">{{dk.value.text}}</td>
-                                  </tr>
-                                  <tr>
-                                     <td width="15%" > Url</td>
-                                     <td class="values"><a href="{{dk.href}}" target="_blank">{{dk.value.href}}</a>
-                                      <button *ngIf="viewType === 'qa' || dk.value.linkFlag == true|| viewType === 'owner' && myForm.controls.approved.value === false" 
-                           [disabled]="viewType === 'author' || viewType === 'owner' && myForm.controls.approved.value !== false || viewType === ''" 
-                                       [ngClass]="{'btn-danger': dk.value.linkFlag === true, 'btn-default': dk.value.linkFlag !== true}" 
-                                       (click)="toggleModFlag(i,dk.controls.linkFlag)" 
-                                       type="button" class="btn btn-xs pull-right glyphicon glyphicon-flag" ></button> 
-                                     </td>
-                                  </tr>
-                                </tbody>
-                            </table>
-                          </td>
                         </tr>
                       </tbody>
                     </table>
-                <!-- ***** MODULES DISPLAY TABLES [end] **** --> 
-
-
-
-                     <!-- HERO MODULES INPUT [start] -->
-                     <hero-form *ngIf="isEditor && EditorIsActive && currentModule === i && myForm.controls.approved.value !== true && moduleInputs.type === 'hero'"  (sendModelData)="addData($event)"  [module]='module' [i]='i'> </hero-form>
-                     <!--  HERO MODULES INPUT [end]-->
-
-                     <!-- TEXT MODULES INPUT [start] -->
-                     <text-form *ngIf="isEditor && EditorIsActive && currentModule === i && myForm.controls.approved.value !== true && moduleInputs.type === 'textMod'"  (sendModelData)="addData($event)" (sendLinksData)="getLinks($event)"  [module]='module' [i]='i'> </text-form>
-                     <!--  TEXT MODULES INPUT [end]-->
-
-                      <!-- BANNER MODULES INPUT [start] -->
-                     <banner-form   *ngIf="isEditor && EditorIsActive && currentModule === i && myForm.controls.approved.value !== true && moduleInputs.type === 'bannerMod'" (sendModelData)="addData($event)" [module]='module' [i]='i'> </banner-form>
-                     <!--  BANNER MODULES INPUT [end]-->
-
-                      <!-- BUTTON MODULES INPUT [start] -->
-                     <button-form   *ngIf="isEditor && EditorIsActive && currentModule === i && myForm.controls.approved.value !== true && moduleInputs.type === 'buttonMod'" (sendModelData)="addData($event)" [module]='module' [i]='i'> </button-form>
-                     <!--  BUTTON MODULES INPUT [end]-->
-
-                      <!-- FOOTER MODULES INPUT [start] -->
-                     <footer-form   *ngIf="isEditor && EditorIsActive && currentModule === i && myForm.controls.approved.value !== true && moduleInputs.type === 'footer'" (sendModelData)="addData($event)" [module]='module' [i]='i'> </footer-form>
-                     <!--  FOOTER MODULES INPUT [end]-->
-
-                      <!-- FOUR PID MODULES INPUT [start] -->
-                     <four-pid-form *ngIf="isEditor && EditorIsActive && currentModule === i && myForm.controls.approved.value !== true && moduleInputs.type === 'fourPidMod'" (sendModelData)="addData($event)"  [module]='module' [i]='i'> </four-pid-form>
-                     <!--  FOUR PID  MODULES INPUT [end]-->
-
-                       <!-- THREE PID MODULES INPUT [start] -->
-                     <three-pid-form *ngIf="isEditor && EditorIsActive && currentModule === i && myForm.controls.approved.value !== true && moduleInputs.type === 'fourPidMod'" (sendModelData)="addData($event)"  [module]='module' [i]='i'> </three-pid-form>
-                     <!--  THREE PID  MODULES INPUT [end]-->
-
-                     
-
-
-
-                <div *ngIf="viewType === 'author' && !EditorIsActive"  style="padding-bottom:25px" class="panel-default">
-                    <button [disabled]="!myForm.controls.config.controls.header.valid || !myForm.controls.config.controls.logo.controls.href.valid"   *ngIf="myForm.controls.approved.value !== true" type="button" (click)="OpenEditor(i,false,moveToFormEditor)" (mouseenter)="buttonHoverModPreview(i,last)" (mouseleave)="buttonHoverModPreview(i,last)" class="btn btn-mod btn-full" > Add Module Here &#8595;</button>
                   </div>
+                  <!-- ********** / Campaign Config Display ********** -->
 
-
-
-
-              <!-- NEW MODULES INPUT [start] -->
-                       
-                 <!-- ModulesInput is Active -->
-                  <div *ngIf="EditorIsActive && currentModule === i && !isEditor" style="padding: 0" class="panel panel-default input-outline" >
-
-                <!--  HERO MODULES INPUT [start]-->
-                  <div class="closeEditor">
-                  <a class="glyphicon glyphicon-remove pull-right" (click)="closeEditor()"></a>
+                  <!-- **********  Campaign Config  Editor is Active [start] ********** -->
+                  <div *ngIf="campaignInputisActive">
+                    <config-form   *ngIf="isEditor && editorIsActive" (sendConfigData)="addConfigData($event)" [campaignInputisActive]='campaignInputisActive' [viewType]='viewType' [configInput]='campaignForm.controls.config'> </config-form>
                   </div>
+                  <!-- **********  / Campaign Config  Editor is Active [end] ********** --> 
 
-                   <h3 class="editorPad">Add Module...</h3>
 
-                   <!-- modInputs -->
-                   <!-- formGroupName="modInputs"  -->
-                  <div  class="editorPad1">
+
+
+
+                  <!--********** MODULES [start] ************--> 
+
+                  <!-- Add Module Button [@ position -1] --> 
+                  <div *ngIf="viewType === 'author' && !editorIsActive"  class="panel-default pad-bot-25">
+
+                    <button [disabled]="!campaignForm.controls.config.controls.header.valid || !campaignForm.controls.config.controls.logo.controls.href.valid"  *ngIf="campaignForm['controls'].approved.value !== true" type="button" (click)="OpenEditor(-1,false,moveToFormEditor)"  (mouseenter)="buttonHoverModPreview(-1,last)" (mouseleave)="buttonHoverModPreview(-1,last)"  class="btn btn-mod btn-full" > Add Module Here &#8595;</button>
+                  </div>
+                  <!-- / Add Module Button [@ position -1] --> 
+
+
+                  <!-- ****** MODULES INPUT [@ position -1] is Active ****** -->
+                  <div *ngIf="editorIsActive && currentModule === -1 && !isEditor" class="panel panel-default input-outline" >
+
+                    <div class="close-editor">
+                      <a class="glyphicon glyphicon-remove pull-right" (click)="closeEditor()"></a>
+                    </div>
+
+                    <h3 class="editor-pad">Add Module...</h3>
+
+                    <!-- modInputSelect -->
+                    <div  class="editor-pad1">
 
                       <div class="form-group" >
-                         <label>Module Type:</label>  
-                       
-                          <!-- formControlName="type" -->
-                                          <div class="select-input">
+                        <label>Module Type:</label>  
+
+                        <div class="select-input" >
 
                           <select (change)="setInputs($event.target.value)" name="type" class="form-control" id="module-select" > 
-                             <option value='' disabled selected>Select a Module Type</option>
+                            <option value='' disabled selected>Select a Module Type</option>
 
                             <option *ngFor="let mod of moduleLibrary; let i=index"
-                          [(value)]="mod.typeId">
-                              <!-- [value]="i" -->
-                                {{mod.name}}
-                            </option>
-                          </select>
-                          </div>
+                            [(value)]="mod.typeId">
+                            {{mod.name}}
+                          </option>
+                        </select>
                       </div>
-                       <!-- <div *ngIf="moduleInputs.preview" class="form-group">
-                           <div style="width:100%;text-align:center" *ngIf="optionSelectModTypeActive">
-                            <img [src]="moduleInputs.preview" width="500" style="text-align:center" />
-                          </div>
-                        </div> -->
                     </div>
-                        <!-- modInputs -->
-               
-                     <!-- HERO MODULES INPUT [start] -->
-                     <hero-form *ngIf="moduleInputs.type === 'hero'" (sendModelData)="addData($event)"> </hero-form>
-                     <!--  HERO MODULES INPUT [end]-->
 
-                     <!-- TEXT MODULES INPUT [start] -->
-                     <text-form *ngIf="moduleInputs.type === 'textMod'" (sendModelData)="addData($event)" (sendLinksData)="getChildLinks($event)"> </text-form>
-                     <!--  TEXT MODULES INPUT [end]-->
+                  </div>
+                  <!-- / modInputSelect -->
 
-                     <!-- BANNER MODULES INPUT [start] -->
-                     <banner-form *ngIf="moduleInputs.type === 'bannerMod'" (sendModelData)="addData($event)"> </banner-form>
-                     <!--  BANNER MODULES INPUT [end]-->
+                  <!-- HERO MODULES INPUT [start] -->
+                  <hero-form *ngIf="moduleInputs.type === 'hero'" (sendModelData)="addData($event)"> </hero-form>
+                  <!--  /HERO MODULES INPUT -->
 
-                     <!-- BUTTON MODULES INPUT [start] -->
-                     <button-form *ngIf="moduleInputs.type === 'buttonMod'" (sendModelData)="addData($event)" (sendLinksData)="getChildLinks($event)"> </button-form>
-                     <!--  BUTTON MODULES INPUT [end]-->
-                     
-                     <!-- FOOTER MODULES INPUT [start] -->
-                     <footer-form *ngIf="moduleInputs.type === 'footer'" (sendModelData)="addData($event)" (sendLinksData)="getChildLinks($event)"> </footer-form>
-                     <!--  FOOTER MODULES INPUT [end]-->
+                  <!-- TEXT MODULES INPUT [start] -->
+                  <text-form *ngIf="moduleInputs.type === 'textMod'" (sendModelData)="addData($event)" (sendLinksData)="getChildLinks($event)"> </text-form>
+                  <!--  /TEXT MODULES INPUT -->
 
-                      <!-- FOUR PID MODULES INPUT [start] -->
-                     <four-pid-form *ngIf="moduleInputs.type === 'fourPidMod'" (sendModelData)="addData($event)"> </four-pid-form>
-                     <!--  FOUR PID  MODULES INPUT [end]-->
+                  <!-- BANNER MODULES INPUT [start] -->
+                  <banner-form *ngIf="moduleInputs.type === 'bannerMod'" (sendModelData)="addData($event)"> </banner-form>
+                  <!--  /BANNER MODULES INPUT -->
 
-                        <!-- THREE PID MODULES INPUT [start] -->
-                     <three-pid-form *ngIf="moduleInputs.type === 'threePidMod'" (sendModelData)="addData($event)"> </three-pid-form>
-                     <!--  THREE PID  MODULES INPUT [end]-->
+                  <!-- BUTTON MODULES INPUT [start] -->
+                  <button-form *ngIf="moduleInputs.type === 'buttonMod'" (sendModelData)="addData($event)" (sendLinksData)="getChildLinks($event)"> </button-form>
+                  <!--  /BUTTON MODULES INPUT -->
 
-                   </div>
-                   <!-- ModulesInput is Active -->
-                   <!--**** NEW MODULE INPUTS [end] *****--> 
+                  <!-- FOOTER MODULES INPUT [start] -->
+                  <footer-form *ngIf="moduleInputs.type === 'footer'" (sendModelData)="addData($event)" (sendLinksData)="getChildLinks($event)"> </footer-form>
+                  <!-- /FOOTER MODULES INPUT -->
+
+                  <!-- FOUR PID MODULES INPUT [start] -->
+                  <four-pid-form *ngIf="moduleInputs.type === 'fourPidMod'" (sendModelData)="addData($event)"> </four-pid-form>
+                  <!--  /FOUR PID  MODULES INPUT -->
+
+                  <!-- THREE PID MODULES INPUT [start] -->
+                  <three-pid-form *ngIf="moduleInputs.type === 'threePidMod'" (sendModelData)="addData($event)"> </three-pid-form>
+                  <!--  /THREE PID  MODULES INPUT -->
+                  
                 </div>
-                <!-- ngFor Modules [end]-->
-                <!--********** MODULES [end] ************--> 
-              </div>
-              <!-- col-xs-8 /12 -->
+                <!-- /****** MODULES INPUT [@ position -1] is Active ****** -->
 
 
-              <!-- PREVIEW [start] col-xs-4 -->
-              <!-- *ngIf="myForm.value.logo.type||myForm.value.modules[0]" -->
-              <div class="col-xs-4 previewCol"  >
-                  <table class="table table-bordered table-header" >
-                   <thead>
-                      <tr >
-                         <th style="border-bottom:none"><span class="table-title">Template Preview</span>  
-                         </th>
+
+                <!-- NGFOR MODULES LOOP [start] --> 
+                <div *ngFor="let module of campaignForm['controls'].modules['controls']; let last=last; let i=index" >
+
+                <!-- ***** MODULES DISPLAY TABLES [start] **** --> 
+                <!-- For # page location -->  
+                <div class="anchor" id="module{{i}}">{{i}}</div>
+
+                <table class="table table-bordered modTable marg-bot-30" *ngIf="!editorIsActive || editorIsActive && currentModule !== i || !isEditor"  (mouseenter)="tableHoverModBorder(i)" (mouseleave)="tableHoverModBorder(i)" [ngClass]="{'table-outline': tableHoverModBorderActive && currentModule === i}">
+                  <thead >
+                    <tr >
+                      <th >Module</th>
+                      <th ><span class="table-title">{{module.value.name}}</span><a *ngIf="campaignForm.controls.approved.value !== true && viewType === 'author'" (click)="removeModule(i)" class="glyphicon glyphicon-remove pull-right" style="margin-top:2px;">  </a>
+                        <a *ngIf="campaignForm.controls.approved.value !== true  && viewType === 'author'" (click)="OpenEditor(i,true,moveToFormEditor)" class="pull-right details-edit"> edit </a>
+                        <div *ngIf="viewType === 'qa'"  class="pull-right qa-controls">
+                          <button *ngIf="module.value.approved === false" [disabled]="type === 'demos'"  type="button" (click)="setCampaign()"  class="btn btn-primary btn-xs">Save Comments </button>
+                          <button (click)="toggleModuleStatus(false, i)" type="button" class="btn btn-danger btn-xs">Reject</button>
+                          <button (click)="toggleModuleStatus(true, i)" type="button" class="btn btn-success btn-xs">Approve</button>
+                        </div> 
+
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody >
+                    <tr class="panel panel-default">
+                      <td width="20%"  >Status</td>
+                      <td class="values">  <a *ngIf="module.value.approved === false" class="btn btn-danger btn-xs"  ><strong>Rejected</strong> </a>
+
+                        <a *ngIf="module.value.approved === true" class="btn btn-success btn-xs" >Approved</a>
+                        <button *ngIf="module.value.approved  === ''|| module.value.approved  === null" (click)="pendingQAStatus()" type="button" class="btn btn-warning btn-xs">Pending Approval</button>
+                      </td>
+                    </tr>
+                    <tr class="panel panel-default" *ngIf="module.value.approved === false" >
+
+                      <td width="20%" class="amends-bg"  >Amends</td>
+                      <td class="values amends-bg" formArrayName="modules" > 
+                        <div class="form-group" [formGroupName]="i" >
+                          <span *ngIf="viewType == 'author'|| viewType === 'owner' && campaignForm.controls.approved.value !== false" style="white-space:pre-line;" > {{module.value.moduleAmends}}</span>
+                          <textarea *ngIf="viewType === 'qa' || viewType === 'owner' && campaignForm.controls.approved.value === false"   type="text" autosize class="form-control qaAmends" formControlName="moduleAmends" id="moduleAmends{{i}}"></textarea>
+                        </div></td> 
                       </tr>
-                    </thead>
+                      <tr class="panel panel-default">
+                        <td width="20%"  >Module No</td>
+                        <td class="values">{{i+1}}
+                          <button *ngIf="viewType === 'qa' || module.value.numberFlag == true|| viewType === 'owner' && campaignForm.controls.approved.value === false" 
+                          [disabled]="viewType === 'author' || viewType === 'owner' && campaignForm.controls.approved.value !== false || viewType === ''" 
+                          [ngClass]="{'btn-danger': module.value.numberFlag === true, 'btn-default': module.value.numberFlag !== true}" 
+                          (click)="toggleModFlag(i,module.controls.numberFlag)" 
+                          type="button" class="btn btn-xs pull-right glyphicon glyphicon-flag" ></button>
+
+                        </td>
+                      </tr>
+                      <tr *ngIf="module.value.type" class="panel panel-default">
+                        <td width="20%" >Module Type</td>
+                        <td class="values">{{module.value.type}}
+                          <button *ngIf="viewType === 'qa' || module.value.typeFlag == true|| viewType === 'owner' && campaignForm.controls.approved.value === false" 
+                          [disabled]="viewType === 'author' || viewType === 'owner' && campaignForm.controls.approved.value !== false || viewType === ''" 
+                          [ngClass]="{'btn-danger': module.value.typeFlag === true, 'btn-default': module.value.typeFlag !== true}" 
+                          (click)="toggleModFlag(i,module.controls.typeFlag)" 
+                          type="button" class="btn btn-xs pull-right glyphicon glyphicon-flag" ></button>
+                        </td>
+                      </tr>
+                      <tr *ngIf="module.value.heading" class="panel panel-default">
+                        <td width="20%"  >Heading</td>
+                        <td class="values">{{module.value.heading}}
+                          <button *ngIf="viewType === 'qa' || module.value.headingFlag == true|| viewType === 'owner' && campaignForm.controls.approved.value === false" 
+                          [disabled]="viewType === 'author' || viewType === 'owner' && campaignForm.controls.approved.value !== false || viewType === ''" 
+                          [ngClass]="{'btn-danger': module.value.headingFlag === true, 'btn-default': module.value.headingFlag !== true}" 
+                          (click)="toggleModFlag(i,module.controls.headingFlag)" 
+                          type="button" class="btn btn-xs pull-right glyphicon glyphicon-flag" ></button>
+                        </td>
+                      </tr>
+
+                      <tr *ngIf="module.value.href" class="panel panel-default">
+                        <td width="20%" >Link Url</td>
+                        <td class="values"><a href="{{module.value.href}}" target="_blank">{{module.value.href}}</a>
+                          <button *ngIf="viewType === 'qa' || module.value.hrefFlag == true|| viewType === 'owner' && campaignForm.controls.approved.value === false" 
+                          [disabled]="viewType === 'author' || viewType === 'owner' && campaignForm.controls.approved.value !== false || viewType === ''" 
+                          [ngClass]="{'btn-danger': module.value.hrefFlag === true, 'btn-default': module.value.hrefFlag !== true}" 
+                          (click)="toggleModFlag(i,module.controls.hrefFlag)" 
+                          type="button" class="btn btn-xs pull-right glyphicon glyphicon-flag" ></button>
+                        </td>
+                      </tr>
+                     
+                      <tr *ngIf="module.value.img" class="panel panel-default">
+                        <td width="20%"  >Image Name</td>
+                        <td class="values"><a href="{{module.value.src}}" target="_blank">{{module.value.img}}</a>
+                          <button *ngIf="viewType === 'qa' || module.value.imgFlag == true|| viewType === 'owner' && campaignForm.controls.approved.value === false" 
+                          [disabled]="viewType === 'author' || viewType === 'owner' && campaignForm.controls.approved.value !== false || viewType === ''" 
+                          [ngClass]="{'btn-danger': module.value.imgFlag === true, 'btn-default': module.value.imgFlag !== true}" 
+                          (click)="toggleModFlag(i,module.controls.imgFlag)" 
+                          type="button" class="btn btn-xs pull-right glyphicon glyphicon-flag" ></button>
+                        </td>
+                      </tr>
+                      <tr *ngIf="module.value.cta"  class="panel panel-default">
+                        <td width="20%" >Cta</td>
+                        <td class="values">{{module.value.cta}}
+                          <button *ngIf="viewType === 'qa' || module.value.ctaFlag == true|| viewType === 'owner' && campaignForm.controls.approved.value === false" 
+                          [disabled]="viewType === 'author' || viewType === 'owner' && campaignForm.controls.approved.value !== false || viewType === ''" 
+                          [ngClass]="{'btn-danger': module.value.ctaFlag === true, 'btn-default': module.value.ctaFlag !== true}" 
+                          (click)="toggleModFlag(i,module.controls.ctaFlag)" 
+                          type="button" class="btn btn-xs pull-right glyphicon glyphicon-flag" ></button>
+                        </td>
+                      </tr>
+                      <tr *ngIf="module.value.copy" class="panel panel-default">
+                        <td width="20%" >Copy<br/></td>
+                        <td class="values">
+                          <a class="popup modpopup glyphicon glyphicon-info-sign pull-right" (click)="infoAlert('previewPopUp', i)" >
+                            <span class="popuptext" id="previewPopUp{{i}}">
+                              <p>This preview feature is primarily for a developer to reference</p>
+                              <p >Your copy will be automatically encoded to optimize it for email client rendering.</p> 
+                              <p>No more hours of toil finding and replacing ampersands and quotation marks throughout your copy etc. etc.</p>
+                              <p>Each paragraph is split into a text node for the template building process.</p>
+                            </span>
+                          </a>
+                          <a (click)="toggleEndcodedFlag(i)" class="pull-right details-edit"  id="copy{{i}}" > Preview Encoded</a>
+                          <span style="white-space:pre-line;" *ngIf="!module.value.encodedFlag"> {{module.value.copy}}
+                          </span>
+                          <span style="white-space:pre-line;" *ngIf="module.value.encodedFlag"> {{module.value.txt|json}}
+                          </span>
+                          <button *ngIf="viewType === 'qa' || module.value.copyFlag == true|| viewType === 'owner' && campaignForm.controls.approved.value === false" 
+                          [disabled]="viewType === 'author' || viewType === 'owner' && campaignForm.controls.approved.value !== false || viewType === ''" 
+                          [ngClass]="{'btn-danger': module.value.copyFlag === true, 'btn-default': module.value.copyFlag !== true}" 
+                          (click)="toggleModFlag(i,module.controls.copyFlag)" 
+                          type="button" class="btn btn-xs pull-right glyphicon glyphicon-flag" ></button>
+                        </td>
+                      </tr>
+                      <tr *ngFor="let dk of campaignForm.controls.modules.controls[i].controls.links.controls; let j=index" >
+
+                        <td width="20%"  >Inline Link {{j+1}}</td>
+                        <td class="values" style="padding:0"  > 
+                          <table class="table table-nested" style="margin-bottom:0;" >
+
+                            <tbody >
+                              <tr >
+                                <td width="20%" >Name</td>
+                                <td class="values" colspan="2">{{dk.value.linkName}}</td>
+                              </tr>   
+                              <tr>
+                                <td width="15%"  > Text</td>
+                                <td class="values">{{dk.value.text}}</td>
+                              </tr>
+                              <tr>
+                                <td width="15%" > Url</td>
+                                <td class="values"><a href="{{dk.href}}" target="_blank">{{dk.value.href}}</a>
+                                  <button *ngIf="viewType === 'qa' || dk.value.linkFlag == true|| viewType === 'owner' && campaignForm.controls.approved.value === false" 
+                                  [disabled]="viewType === 'author' || viewType === 'owner' && campaignForm.controls.approved.value !== false || viewType === ''" 
+                                  [ngClass]="{'btn-danger': dk.value.linkFlag === true, 'btn-default': dk.value.linkFlag !== true}" 
+                                  (click)="toggleModFlag(i,dk.controls.linkFlag)" 
+                                  type="button" class="btn btn-xs pull-right glyphicon glyphicon-flag" ></button> 
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                    </tbody>
                   </table>
-                    <div class="preview-container"  #scrollMe [scrollTop]="!isLastMod ? true : scrollMe.scrollHeight">
+                  <!-- ***** MODULES DISPLAY TABLES [end] **** --> 
 
-                        <div style="padding: 15px; max-width:300px; margin: 0 auto;">
 
-                           <img [src]="logoOptions[myForm.value.config.logo.type]"  width="100%" style="padding: 0 10px;background-color: #f3f3f3;" [ngClass]="{'img-outline': tableHoverModBorderActive && currentModule === -1}" />
+                  <!-- ***** MODULES EDITOR TABLES [start] **** --> 
 
-                             <div *ngIf="buttonHoverModPreviewActive && currentModule === -1 && !isEditor " width="100%">
-                                  <button *ngIf="myForm['controls'].approved.value !== true && !moduleInputs.preview" type="button" class="btn btn-default new-mod btn-full"> Add Module Here &#8595;</button>
+                  <!-- HERO MODULES INPUT  -->
+                  <hero-form *ngIf="isEditor && editorIsActive && currentModule === i && campaignForm.controls.approved.value !== true && moduleInputs.type === 'hero'"  (sendModelData)="addData($event)"  [module]='module' [i]='i'> </hero-form>
+                  <!--  / HERO MODULES INPUT -->
 
-                                   <div *ngIf="moduleInputs.preview" >
+                  <!-- TEXT MODULES INPUT  -->
+                  <text-form *ngIf="isEditor && editorIsActive && currentModule === i && campaignForm.controls.approved.value !== true && moduleInputs.type === 'textMod'"  (sendModelData)="addData($event)" (sendLinksData)="getLinks($event)"  [module]='module' [i]='i'> </text-form>
+                  <!-- / TEXT MODULES INPUT -->
 
-                                     <div style="width:100%;text-align:center" *ngIf="optionSelectModTypeActive">
-                                     <div class="preview-outline">
-                                      <img class="prev" [src]="moduleInputs.preview" width="100%" style="padding: 0 10px;" />
-                                      </div>
-                                    </div>
-                                  </div> 
-                              </div>
-                            <div *ngFor="let module of myForm['controls'].modules['controls']; let i=index" style="background-color: #f3f3f3; ">
-                            
-                               <img [src]="moduleLibrary[module.value.typeId].preview" width="100%" style="padding: 0 10px;" [ngClass]="{'img-outline': tableHoverModBorderActive && currentModule === i}" />
+                  <!-- BANNER MODULES INPUT  -->
+                  <banner-form   *ngIf="isEditor && editorIsActive && currentModule === i && campaignForm.controls.approved.value !== true && moduleInputs.type === 'bannerMod'" (sendModelData)="addData($event)" [module]='module' [i]='i'> </banner-form>
+                  <!-- / BANNER MODULES INPUT -->
 
-                               <div *ngIf="buttonHoverModPreviewActive && currentModule === i && !isEditor" width="100%">
-                                  <button *ngIf="myForm['controls'].approved.value !== true && !moduleInputs.preview" type="button" class="btn btn-default new-mod btn-full"> Add Module Here &#8595;</button>
-                                  <div *ngIf="moduleInputs.preview" >
-                                     <div style="width:100%;text-align:center" *ngIf="optionSelectModTypeActive">
-                                     <div class="preview-outline">
-                                      <img class="prev" [src]="moduleInputs.preview" width="100%" style="padding: 0 10px;" />
-                                      </div>
-                                    </div>
-                                  </div> 
-                              </div>
-                            </div>
-                        </div>
-                    </div> 
+                  <!-- BUTTON MODULES INPUT  -->
+                  <button-form   *ngIf="isEditor && editorIsActive && currentModule === i && campaignForm.controls.approved.value !== true && moduleInputs.type === 'buttonMod'" (sendModelData)="addData($event)" [module]='module' [i]='i'> </button-form>
+                  <!-- / BUTTON MODULES INPUT -->
+
+                  <!-- FOOTER MODULES INPUT  -->
+                  <footer-form   *ngIf="isEditor && editorIsActive && currentModule === i && campaignForm.controls.approved.value !== true && moduleInputs.type === 'footer'" (sendModelData)="addData($event)" [module]='module' [i]='i'> </footer-form>
+                  <!-- / FOOTER MODULES INPUT -->
+
+                  <!-- FOUR PID MODULES INPUT  -->
+                  <four-pid-form *ngIf="isEditor && editorIsActive && currentModule === i && campaignForm.controls.approved.value !== true && moduleInputs.type === 'fourPidMod'" (sendModelData)="addData($event)"  [module]='module' [i]='i'> </four-pid-form>
+                  <!-- / FOUR PID  MODULES INPUT -->
+
+                  <!-- THREE PID MODULES INPUT  -->
+                  <three-pid-form *ngIf="isEditor && editorIsActive && currentModule === i && campaignForm.controls.approved.value !== true && moduleInputs.type === 'fourPidMod'" (sendModelData)="addData($event)"  [module]='module' [i]='i'> </three-pid-form>
+                  <!-- / THREE PID  MODULES INPUT -->
+
+                  <!-- ***** MODULES EDITOR TABLES [end] **** --> 
+
+
+
+                  <!-- Add Module Button --> 
+                  <div *ngIf="viewType === 'author' && !editorIsActive"  class="panel-default pad-bot-25">
+                    <button [disabled]="!campaignForm.controls.config.controls.header.valid || !campaignForm.controls.config.controls.logo.controls.href.valid"   *ngIf="campaignForm.controls.approved.value !== true" type="button" (click)="OpenEditor(i,false,moveToFormEditor)" (mouseenter)="buttonHoverModPreview(i,last)" (mouseleave)="buttonHoverModPreview(i,last)" class="btn btn-mod btn-full" > Add Module Here &#8595;</button>
+                  </div>
+                  <!-- / Add Module Button --> 
+
+
+                  <!-- ***** MODULES INPUT is Active ***** -->
+                  <div *ngIf="editorIsActive && currentModule === i && !isEditor" class="panel panel-default input-outline" >
+
+                    <div class="close-editor">
+                      <a class="glyphicon glyphicon-remove pull-right" (click)="closeEditor()"></a>
+                    </div>
+
+                    <h3 class="editor-pad">Add Module...</h3>
+
+                    <!-- modInputs -->
+                    <div  class="editor-pad1">
+
+                      <div class="form-group" >
+                        <label>Module Type:</label>  
+
+                        <div class="select-input">
+
+                          <select (change)="setInputs($event.target.value)" name="type" class="form-control" id="module-select" > 
+                            <option value='' disabled selected>Select a Module Type</option>
+
+                            <option *ngFor="let mod of moduleLibrary; let i=index"
+                            [(value)]="mod.typeId">
+                            {{mod.name}}
+                          </option>
+                        </select>
+                      </div>
+                    </div>
+
+                  </div>
+                  <!-- /modInputs -->
+
+                  <!-- HERO MODULES INPUT  -->
+                  <hero-form *ngIf="moduleInputs.type === 'hero'" (sendModelData)="addData($event)"> </hero-form>
+                  <!-- /HERO MODULES INPUT -->
+
+                  <!-- TEXT MODULES INPUT  -->
+                  <text-form *ngIf="moduleInputs.type === 'textMod'" (sendModelData)="addData($event)" (sendLinksData)="getChildLinks($event)"> </text-form>
+                  <!-- /TEXT MODULES INPUT -->
+
+                  <!-- BANNER MODULES INPUT  -->
+                  <banner-form *ngIf="moduleInputs.type === 'bannerMod'" (sendModelData)="addData($event)"> </banner-form>
+                  <!-- / BANNER MODULES INPUT -->
+
+                  <!-- BUTTON MODULES INPUT  -->
+                  <button-form *ngIf="moduleInputs.type === 'buttonMod'" (sendModelData)="addData($event)" (sendLinksData)="getChildLinks($event)"> </button-form>
+                  <!-- /BUTTON MODULES INPUT -->
+
+                  <!-- FOOTER MODULES INPUT  -->
+                  <footer-form *ngIf="moduleInputs.type === 'footer'" (sendModelData)="addData($event)" (sendLinksData)="getChildLinks($event)"> </footer-form>
+                  <!-- /FOOTER MODULES INPUT -->
+
+                  <!-- FOUR PID MODULES INPUT  -->
+                  <four-pid-form *ngIf="moduleInputs.type === 'fourPidMod'" (sendModelData)="addData($event)"> </four-pid-form>
+                  <!--  /FOUR PID  MODULES INPUT -->
+
+                  <!-- THREE PID MODULES INPUT  -->
+                  <three-pid-form *ngIf="moduleInputs.type === 'threePidMod'" (sendModelData)="addData($event)"> </three-pid-form>
+                  <!-- /THREE PID  MODULES INPUT -->
+
                 </div>
-               <!-- PREVIEW [end] col-xs-4-->
+                <!-- /**** MODULES INPUT is Active ***** -->
 
+              </div>
+              <!-- /NGFOR MODULES LOOP [end] -->
+              <!--********** MODULES [end] ************--> 
             </div>
-            <!-- row [end] --> 
-          </form>
-        </div>
-        <!-- col 12 main [end]-->   
+            <!-- /col-xs-8 /12 -->
+
+
+            <!-- PREVIEW col-xs-4 [start]-->
+            <!-- *ngIf="campaignForm.value.logo.type||campaignForm.value.modules[0]" -->
+            <div class="col-xs-4 preview-col"  >
+              <table class="table table-bordered table-header" >
+                <thead>
+                  <tr >
+                    <th style="border-bottom:none"><span class="table-title">Template Preview</span>  
+                    </th>
+                  </tr>
+                </thead>
+              </table>
+              <div class="preview-container"  #scrollMe [scrollTop]="!isLastMod ? true : scrollMe.scrollHeight">
+
+                <div class="preview-container-inner" >
+
+                  <img [src]="logoOptions[campaignForm.value.config.logo.type]"  width="100%" style="padding: 0 10px;background-color: #f3f3f3;" [ngClass]="{'img-outline': tableHoverModBorderActive && currentModule === -1}" />
+
+                  <div *ngIf="buttonHoverModPreviewActive && currentModule === -1 && !isEditor " width="100%">
+                    <button *ngIf="campaignForm['controls'].approved.value !== true && !moduleInputs.preview" type="button" class="btn btn-default new-mod btn-full"> Add Module Here &#8595;</button>
+
+                    <div *ngIf="moduleInputs.preview" >
+
+                      <div style="width:100%;text-align:center" *ngIf="optionSelectModTypeActive">
+                        <div class="preview-outline">
+                          <img class="prev" [src]="moduleInputs.preview" width="100%" style="padding: 0 10px;" />
+                        </div>
+                      </div>
+                    </div> 
+                  </div>
+                  <div *ngFor="let module of campaignForm['controls'].modules['controls']; let i=index" style="background-color: #f3f3f3; ">
+
+                    <img [src]="moduleLibrary[module.value.typeId].preview" width="100%" style="padding: 0 10px;" [ngClass]="{'img-outline': tableHoverModBorderActive && currentModule === i}" />
+
+                    <div *ngIf="buttonHoverModPreviewActive && currentModule === i && !isEditor" width="100%">
+                      <button *ngIf="campaignForm['controls'].approved.value !== true && !moduleInputs.preview" type="button" class="btn btn-default new-mod btn-full"> Add Module Here &#8595;</button>
+                      <div *ngIf="moduleInputs.preview" >
+                        <div style="width:100%;text-align:center" *ngIf="optionSelectModTypeActive">
+                          <div class="preview-outline">
+                            <img class="prev" [src]="moduleInputs.preview" width="100%" style="padding: 0 10px;" />
+                          </div>
+                        </div>
+                      </div> 
+                    </div>
+                  </div>
+                </div>
+              </div> 
+            </div>
+            <!-- PREVIEW  col-xs-4 [end]-->
+
+          </div>
+          <!-- /row  --> 
+        </form>
       </div>
-      <!-- row [end]-->   
+      <!-- /col 12 main -->   
     </div>
-    <!-- container page-width [end]-->
+    <!-- /row -->   
   </div>
-  <!-- container page-pad [end]-->
+  <!-- /container page-width -->
+</div>
+<!-- /container page-pad -->
 
 
-  <!--********** FOOTER BAR [start] ************-->
-  <div class="navbar-fixed-bottom view shim" >
-      <div class="container">
-         <div class="row" >
-            
-            <div class="col-xs-12 btn-group" role="group">
-              <div class="pull-left" >
-               <img *ngIf="viewsArrowDisplay" src="https://firebasestorage.googleapis.com/v0/b/ngdataformdemo.appspot.com/o/arrow_yellow_left.gif?alt=media&token=fd4cf8c1-e279-4cfd-bf00-f6df327017ff" class="arrow-guide" />
-               <div class="select-view pull-left"  [ngClass]="{'select-highlight': viewsArrowDisplay}">
-               <select  class="input-sm" name="type" (change)="setView($event.target.value)" id="slct">
-                         <option value="author">Author View</option>
-                        <option value="qa">QA View</option>
-                        <option value="owner"> Owner View</option>
-               </select>
-               </div>
-               <button *ngIf="!formPreview" type="button" (click)="openModal()" class="btn btn-sm btn-nova btm-nav-first"><span class="nomob767">Preview Email </span>Data</button><button *ngIf="formPreview" type="button" (click)="closeModal()" class="btn btn-sm btn-nova btm-nav-first"><span class="nomob767"> Hide Email </span>Data</button><a href="https://github.com/fivedoor/campaign-supernova/issues" target="blank" type="button" class="btn btn-sm btn-nova nomob467"><span class="nomob767">Report </span>Issue</a><a  *ngIf="myForm.controls.approved.value !== true && viewType === 'author' && !readyForApproval" type="button" class="btn btn-sm  btn-nova" [href]="'mailto:' + myForm.value.qaEmail +'?subject=QA request for ' + myForm.value.title + ' campaign&body=Dear ' + myForm.value.qa + ', the assets for the campaign ' + myForm.value.title + ' are ready for you to QA.'"><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;<span class="nomob767">Request </span>QA</a><a *ngIf="myForm.controls.approved.value !== true && viewType === 'author' && readyForApproval" type="button" class="btn btn-sm btn-nova" [href]="'mailto:' + myForm.value.ownerEmail + '?subject=Approval request for ' + myForm.value.title + ' campaign&body=Dear ' + myForm.value.owner + ', the assets for the campaign ' + myForm.value.title + ' are ready for you to approve.'"><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;<span class="nomob767">Request </span>Approval</a><button *ngIf="type !== 'demos'" type="button" (click)="setCampaign()" class="btn btn-sm btn-nova">Save<span class="nomob767">  Campaign</span></button><button *ngIf="myForm.controls.approved.value === true" type="button" (click)="buildCampaign()" class="btn btn-sm btn-nova">Download Campaign Data </button><button *ngIf="type === 'demos'" type="button"  (click)="demoAlert()"  class="btn btn-sm btn-super nomob467" >Demo<!-- <span class="nomob"> Campaign </span> --></button>
-            </div>
-          </div> 
+<!--********** FOOTER BAR [start] ************-->
+<div class="navbar-fixed-bottom view shim" >
+  <div class="container">
+    <div class="row" >
 
-        
+      <div class="col-xs-12 btn-group" role="group">
+        <div class="pull-left" >
+          <img *ngIf="viewsArrowDisplay" src="https://firebasestorage.googleapis.com/v0/b/ngdataformdemo.appspot.com/o/arrow_yellow_left.gif?alt=media&token=fd4cf8c1-e279-4cfd-bf00-f6df327017ff" class="arrow-guide" />
+          <div class="select-view pull-left"  [ngClass]="{'select-highlight': viewsArrowDisplay}">
+            <select  class="input-sm" name="type" (change)="setView($event.target.value)" id="slct">
+              <option value="author">Author View</option>
+              <option value="qa">QA View</option>
+              <option value="owner"> Owner View</option>
+            </select>
+          </div>
+          <button *ngIf="!formPreview" type="button" (click)="openModal()" class="btn btn-sm btn-nova btm-nav-first"><span class="nomob767">Preview Email </span>Data</button><button *ngIf="formPreview" type="button" (click)="closeModal()" class="btn btn-sm btn-nova btm-nav-first"><span class="nomob767"> Hide Email </span>Data</button><a href="https://github.com/fivedoor/campaign-supernova/issues" target="blank" type="button" class="btn btn-sm btn-nova nomob467"><span class="nomob767">Report </span>Issue</a><a  *ngIf="campaignForm.controls.approved.value !== true && viewType === 'author' && !readyForApproval" type="button" class="btn btn-sm  btn-nova" [href]="'mailto:' + campaignForm.value.qaEmail +'?subject=QA request for ' + campaignForm.value.title + ' campaign&body=Dear ' + campaignForm.value.qa + ', the assets for the campaign ' + campaignForm.value.title + ' are ready for you to QA.'"><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;<span class="nomob767">Request </span>QA</a><a *ngIf="campaignForm.controls.approved.value !== true && viewType === 'author' && readyForApproval" type="button" class="btn btn-sm btn-nova" [href]="'mailto:' + campaignForm.value.ownerEmail + '?subject=Approval request for ' + campaignForm.value.title + ' campaign&body=Dear ' + campaignForm.value.owner + ', the assets for the campaign ' + campaignForm.value.title + ' are ready for you to approve.'"><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;<span class="nomob767">Request </span>Approval</a><button *ngIf="type !== 'demos'" type="button" (click)="setCampaign()" class="btn btn-sm btn-nova">Save<span class="nomob767">  Campaign</span></button><button *ngIf="campaignForm.controls.approved.value === true" type="button" (click)="buildCampaign()" class="btn btn-sm btn-nova">Download Campaign Data </button><button *ngIf="type === 'demos'" type="button"  (click)="demoAlert()"  class="btn btn-sm btn-super nomob467" >Demo</button>
         </div>
-          <!-- row end -->
-      </div>
-       <!-- container end -->
-  </div>   
-  <!--********** FOOTER BAR [end] **********-->
+      </div> 
+
+    </div>
+    <!-- /row -->
+  </div>
+  <!-- /container  -->
+</div>   
+<!--********** FOOTER BAR [end] **********-->
 
 </div>
-<!-- page-bg [end]-->
+<!-- /page-bg -->

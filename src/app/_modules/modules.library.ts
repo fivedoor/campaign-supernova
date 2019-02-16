@@ -67,4 +67,4 @@ export const ModuleLibrary: Module[] = [
       heading: false,
       copy: true,
     }
-    ];
+    ]

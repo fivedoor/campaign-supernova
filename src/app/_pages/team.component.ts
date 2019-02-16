@@ -7,24 +7,18 @@ import { FormControl, FormBuilder, FormGroup, FormArray, Validators } from '@ang
 
 
 @Component({
- /* moduleId: module.id,*/
   selector: 'my-team',
   templateUrl: 'team.component.html',
-/*  styles: ['a.disabled { pointer-events: none; cursor: default;}'],
-*/  styleUrls: [ 'team.component.css' ]
+  styleUrls: [ 'team.component.css' ]
 })
 export class TeamComponent implements OnInit {
     
-    public memberForm: FormGroup;
-    public testTeam: any;
-    public arrayOfTeamIds: any;
-
+    public personnelForm: FormGroup;
+    public demoTeam: any;
+    public arrayOfDemoTeamIds: any;
     public customTeam: any;
     public arrayOfCustomTeamIds: any;
-
-   TeamInputisActive: boolean = false;
-
-    // objectKeys = Object.keys;
+    public TeamInputisActive: boolean = false;
 
   constructor(
     private router: Router,
@@ -42,7 +36,7 @@ export class TeamComponent implements OnInit {
 const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
       // FORM
-    this.memberForm =
+    this.personnelForm =
         this._fb.group({
                 name: ['', [Validators.required, Validators.minLength(3)]],
                 email: ['', [Validators.required, Validators.pattern(emailRegex)]],
@@ -62,13 +56,13 @@ getTeam() {
      this.dataService.getTeamData('testTeam')
       .subscribe(
         (testTeam: any) => {
-          this.testTeam = testTeam;
-             console.log('testTeam:');
-             console.log(testTeam);
-             console.log('this.testTeam:');
-             console.log(this.testTeam);
-             this.arrayOfTeamIds = Object.keys(this.testTeam);
-             console.log('this.arrayOfTeamIds:' + this.arrayOfTeamIds);
+          this.demoTeam = testTeam;
+            // console.log('testTeam:');
+            // console.log(testTeam);
+            // console.log('this.demoTeam:');
+            // console.log(this.demoTeam);
+             this.arrayOfDemoTeamIds = Object.keys(this.demoTeam);
+             console.log('this.arrayOfDemoTeamIds:' + this.arrayOfDemoTeamIds);
         });
     }
 
@@ -77,10 +71,10 @@ getTeam() {
       .subscribe(
         (customTeam: any) => {
           this.customTeam = customTeam;
-             console.log('customTeam:');
-             console.log(customTeam);
-             console.log('this.customTeam:');
-             console.log(this.customTeam);
+            // console.log('customTeam:');
+            // console.log(customTeam);
+            // console.log('this.customTeam:');
+            // console.log(this.customTeam);
              this.arrayOfCustomTeamIds = Object.keys(this.customTeam);
              console.log('this.arrayOfTeamIds:' + this.arrayOfCustomTeamIds);
         });
@@ -88,20 +82,20 @@ getTeam() {
 
  addMember() {
        console.log('FUNC: addMember()');
-       const teamMember = this.memberForm.value.name;
-       const teamMemberId = this.memberForm.value.id;
+       const teamMember = this.personnelForm.value.name;
+       const teamMemberId = this.personnelForm.value.id;
 
         this.dataService
           .writeUserData(
               teamMemberId,
-              this.memberForm
-              )
+              this.personnelForm
+              );
          // this.getTeam();
           this.getCustomTeam();
           this.clearFormData();
           this.toggleTeamInput();
          /* .subscribe(
-            (testTeam: any) => this.memberForm = (testTeam)
+            (testTeam: any) => this.personnelForm = (testTeam)
           );*/
            alert(teamMember + ' has been saved to the database');
           /* this.router.navigate(['campaign-team/']);*/
@@ -109,11 +103,10 @@ getTeam() {
     }
 
  clearFormData() {
-    // Causes tempData to repopulate ??
        console.log('FUNC: clearFormData()');
-       const nameControl =  <FormControl>this.memberForm.controls['name'];
-       const emailControl =  <FormControl>this.memberForm.controls['email'];
-       const roleControl =  <FormControl>this.memberForm.controls['role'];
+       const nameControl =  <FormControl>this.personnelForm.controls['name'];
+       const emailControl =  <FormControl>this.personnelForm.controls['email'];
+       const roleControl =  <FormControl>this.personnelForm.controls['role'];
 
        nameControl.patchValue('');
        emailControl.patchValue('');
@@ -121,6 +114,7 @@ getTeam() {
   }
 
    deleteMember(teamMemberId: any, name: string) {
+       console.log('FUNC: deleteMember()');
 
         let r = confirm("Are you sure you want to permanently delete " + name + ". Personally I'm not a fan of this loser but it's your call." );
         if (r == true) {

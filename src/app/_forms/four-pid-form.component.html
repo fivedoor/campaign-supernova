@@ -2,7 +2,7 @@
   <div [formGroup]="fourPidForm" novalidate >
 
       <!--  panel and margin-->
-        <div *ngIf="!module" class="editorPad">
+        <div *ngIf="!module" class="editor-pad">
               <!--  <pre> newModel: <br>{{newModel|json}}</pre>
                <pre> fourPidForm: <br>{{fourPidForm.value|json}}</pre> -->
 
@@ -211,7 +211,7 @@
                            <input type="text" class="form-control form-inline"  formControlName="name" [(ngModel)]="newModel.name" id="name" ></strong>
                            </div>
                            <div class="col-xs-2" style="padding:0">
-                            <a *ngIf="fourPidForm.controls.approved.value !== true  && viewType === 'author'" (click)="addData()" class="pull-right details-edit" > update </a>
+                           
                            </div>
                            <div class="col-xs-12" style="padding:0">
                            <small style="font-size:12px" [hidden]="fourPidForm.controls.name.valid" class="text-danger">name is required </small>

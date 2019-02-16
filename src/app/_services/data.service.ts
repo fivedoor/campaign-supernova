@@ -53,8 +53,7 @@ this.team = db.list('/testTeam');
 this.customTeam = db.list('/customTeam');
 
 /*this.afAuth.authState.subscribe((auth) => {
-              this.authState = auth;
-            });*/
+              this.authState = auth;});*/
 }
 
 
@@ -63,6 +62,8 @@ this.customTeam = db.list('/customTeam');
 // Get nominated Campaign
 
 getCampaignData(campaignName?: string, type?: string) {
+    console.log('FUNC: getCampaignData(' + campaignName + ', ' + type + ') ---> Data Service' );
+
     let url =  "https://ngdataformdemo.firebaseio.com/" + type + "/" + campaignName + ".json";
   return this.http.get(url);
 /*    .map((response: Response) => response.json());
@@ -70,10 +71,8 @@ getCampaignData(campaignName?: string, type?: string) {
 
 // Get all Emails
 getCampaignsData(type?: string) {
-  console.log('FUNC: getCampaignsData');
-
-    let url =  "https://ngdataformdemo.firebaseio.com/"  + type + ".json";
-  console.log('type: ' + type);
+  console.log('FUNC: getCampaignsData(' + type + ') ---> Data Service' );
+  let url =  "https://ngdataformdemo.firebaseio.com/"  + type + ".json";
 
   return this.http.get(url);
   /*  .map((response: Response) => response.json());*/
@@ -84,13 +83,14 @@ getCampaignsData(type?: string) {
 
 
 getTeamData(type?: string) {
+      console.log('FUNC: getTeamData(' + type + ') ---> Data Service');
     let url =  "https://ngdataformdemo.firebaseio.com/" + type + ".json";
   return this.http.get(url);
 /*    .map((response: Response) => response.json());
 */}
 
 getAllTeamData() {
-    console.log('FUNC: getAllTeamData');
+    console.log('FUNC: getAllTeamData() ---> Data Service');
 
     const teamUrl =  this.http.get('https://ngdataformdemo.firebaseio.com/testTeam.json');
     const customTeamUrl =  this.http.get('https://ngdataformdemo.firebaseio.com/customTeam.json');
@@ -105,10 +105,11 @@ return forkJoin([teamUrl, customTeamUrl]);
 /////// SET DATA  ///////////
 
 setTeamData(
+
     teamMemberId: number,
     teamForm: any,
     ) {
-
+  console.log('FUNC: setTeamData() ---> Data Service');
   let url =  "https://ngdataformdemo.firebaseio.com/testTeam/" + teamMemberId + ".json";
   const entry = JSON.stringify(teamForm.value);
   console.log(entry);
@@ -120,8 +121,10 @@ setTeamData(
 writeUserData(
     teamMemberId: number,
     teamForm: any) {
+   console.log('FUNC: writeUserData() ---> Data Service');
     const entry = teamForm.value;
     console.log(entry);
+
 /*  var newPostKey = firebase.database().ref().child('testTeam').push().key;
   firebase.database().ref('testTeam/' + newPostKey).set(teamForm.value);
 {teamform: {this: 'that', biff: 'baff'}}
@@ -134,7 +137,7 @@ setCampaignData(
     campaignName: string,
     myForm: any,
     ) {
-
+  console.log('FUNC: setCampaignData() ---> Data Service');
   let url =  "https://ngdataformdemo.firebaseio.com/emails/" + campaignName + ".json";
   const body = JSON.stringify(myForm.value);
       console.log(body);
@@ -147,13 +150,13 @@ setCampaignData(
 /////// DELETE DATA  ///////////
 
 deleteCampaignData(campaignName?: string) {
-      console.log(campaignName);
+    console.log('FUNC: deleteCampaignData(' + campaignName + ') ---> Data Service');
    this.campaigns.remove(campaignName);
 
 }
 
 deleteMemberData(teamMemberId: string) {
-      console.log(teamMemberId);
+      console.log('FUNC: deleteMemberData(' + teamMemberId + ') ---> Data Service');
    this.customTeam.remove(teamMemberId);
 
 }

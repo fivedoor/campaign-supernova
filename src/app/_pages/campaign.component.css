@@ -44,12 +44,12 @@ th input.form-inline {
     max-height:640px
 }
 
-.linkName {
+.link-name {
  color: seagreen;
  font-weight:bold
 }
 
-.linkText {
+.link-text {
   color: royalblue;
   font-weight:bold
 }
@@ -58,12 +58,13 @@ th input.form-inline {
   background-color:#ffe6e6 !important;
 }
 
-.qa-controls {
-  padding-bottom: 5px;
+.amends-bg p.text-danger {
+    font-size:15px
 }
 
-.padTop10 {
-  padding-top: 10px;
+
+.qa-controls {
+  padding-bottom: 5px;
 }
 
 .arrow-guide {
@@ -168,7 +169,25 @@ span.placeholder[contenteditable]:empty::before {
     font-weight: 300;
 }
 
+.pad-top-10 {
+  padding-top: 10px;
+}
 
+.marg-bot-30 {
+  margin-bottom:30px
+}
+
+.pad-bot-25 {
+  padding-bottom:25px
+}
+
+.pad-top-20 {
+  padding-top:20px
+}
+
+.pad-none {
+padding:0;
+}
 
 /* BUTTON STYLES
 -------------------------------*/
@@ -321,19 +340,26 @@ textarea[readonly] {
 .input-outline {
   border: #29AF4A solid 2px;  
   border-radius: 0; 
+  padding: 0;
 }
 .prev {
 }
 
-.closeEditor {
+.close-editor {
 padding: 10px 10px 0 0 ;
 }
 
-.editorPad {
+.editor-pad {
 padding: 0 20px 20px 20px
 }
-.editorPad1 {
+.editor-pad1 {
 padding: 0 20px 10px 20px
+}
+
+.preview-container-inner {
+ padding: 15px; 
+ max-width:300px; 
+ margin: 0 auto;
 }
 
 
@@ -583,7 +609,7 @@ letter-spacing:1px;
    color:#000000;
 }
 
-.previewCol {
+.preview-col {
 position: -webkit-sticky;
  position: sticky;
  top:56px; 

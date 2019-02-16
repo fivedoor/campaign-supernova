@@ -124,7 +124,7 @@ setModel() {
 
     /////// DISPLAY LINKS UI ///////////
 
-    getLinks (formType) {
+    getLinks(formType) {
      // formType is the destinationForLinksData
      console.log('FUNC: getLinks()');
 
@@ -146,7 +146,7 @@ setModel() {
               // p1 = p1 + '.link';
               obj['linkName'] = p1;
               obj['text'] = p2;
-              obj['linkFlag'] = false;   // p3: string, 
+              obj['linkFlag'] = false;   // p3: string,
               obj['href'] = '';
               obj['link'] = "{% import 'macros/link-macro.html' as Link -%}{{Link.declare(" + p1 + ")}}";
 
@@ -160,7 +160,7 @@ setModel() {
            this.linksNotFound = true;
         }
         else {this.linksNotFound = false;
-        };
+        }
     }
 
     buildLinks() {
@@ -174,7 +174,7 @@ setModel() {
      // build Links from newModel links
     for (const n in linksValues) {
         modLinks[n] = linksValues[n];
-       };
+       }
   	}
 
   	buildFormLinks(formType) {
@@ -266,7 +266,7 @@ setModel() {
 	      
 	      console.log('thisForm.controls.links after:');
 	      console.log(linkControl);
-	      };
+	      }
       
 	}
 

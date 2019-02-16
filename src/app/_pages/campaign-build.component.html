@@ -4,6 +4,9 @@
       <div class="row">
         <div class="col-xs-12" >
           <h1>New Campaign</h1>
+                            <pre> personnelAssignedToRole: <br>{{personnelAssignedToRole|json}}</pre>
+                            <pre> personnelAssignedToRole[qaId]: <br>{{personnelAssignedToRole['qaId']|json}}</pre>
+
           <div style="padding-top:15px">
             <p > Fill out the details for your email campaign...</p>
           </div>
@@ -43,11 +46,11 @@
                             </span>
                           </a>
                   </label>
-                 <select name="ownerId" class="selectpicker form-control" formControlName="ownerId" id="ownerId" (change)="setPersonel('owner', $event.target.value, 'ownerId')"> 
+                 <select name="ownerId" class="selectpicker form-control" formControlName="ownerId" id="ownerId" (change)="setPersonnel('owner', $event.target.value, 'ownerId')"> 
                      <option value='' disabled selected class="selectText">Select a team member</option>
 
-                    <option *ngFor="let owner of arrayOfKeys; let i=index"
-                  [(value)]="arrayOfKeys[i]" >
+                    <option *ngFor="let owner of arrayOfPersonnelIds; let i=index"
+                  [(value)]="arrayOfPersonnelIds[i]" >
                         {{testTeam[owner].name}}
                     </option>
                   </select>
@@ -68,11 +71,11 @@
                       </span>
                     </a>
                   </label>
-                   <select name="authorId" class="selectpicker form-control" formControlName="authorId" id="authorId" (change)="setPersonel('author', $event.target.value, 'authorId')"> 
+                   <select name="authorId" class="selectpicker form-control" formControlName="authorId" id="authorId" (change)="setPersonnel('author', $event.target.value, 'authorId')"> 
                      <option value='' disabled selected>Select a team member</option>
 
-                    <option *ngFor="let author of arrayOfKeys; let i=index"
-                  [(value)]="arrayOfKeys[i]" >
+                    <option *ngFor="let author of arrayOfPersonnelIds; let i=index"
+                  [(value)]="arrayOfPersonnelIds[i]" >
                         {{testTeam[author].name}}
                     </option>
                   </select>
@@ -92,11 +95,11 @@
                    </span>
                           </a>
                    </label>
-                   <select name="qaId" class="selectpicker form-control" formControlName="qaId" id="qaId" (change)="setPersonel('qa', $event.target.value, 'qaId')"> 
+                   <select name="qaId" class="selectpicker form-control" formControlName="qaId" id="qaId" (change)="setPersonnel('qa', $event.target.value, 'qaId')"> 
                      <option value='' disabled selected class="first-option">Select a team member</option>
 
-                    <option *ngFor="let qa of arrayOfKeys; let i=index"
-                  [(value)]="arrayOfKeys[i]">
+                    <option *ngFor="let qa of arrayOfPersonnelIds; let i=index"
+                  [(value)]="arrayOfPersonnelIds[i]">
                         {{testTeam[qa].name}}
                     </option>
                   </select>

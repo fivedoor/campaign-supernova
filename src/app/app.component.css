@@ -35,7 +35,7 @@ img#logo {
 }
 
 .dropdown-menu>li {
-    padding-top:10px;
+    padding:13px;
 }
 
 .dropdown ul.dropdown-menu {
@@ -74,7 +74,7 @@ img#logo {
 
 /* TYPOGRAPHY
 -------------------------------*/
-h3 {
+h1 {
  padding-top: 0 ;
   margin-top: -3px;
   margin-bottom:0;
@@ -90,10 +90,10 @@ h3 {
 }
 
 #beta {
-   color: #fd730a; 
+   /*color: #fd730a; */
     letter-spacing: 0;
-    font-weight: 700;
-   font-size: 15px; 
+    font-weight: 400;
+   font-size: 16px; 
    text-transform: lowercase;
    font-style: italic;
 }
@@ -179,9 +179,9 @@ nav span  {
 }
 
 nav a.user {
-  color: #696969; 
+  color: #3f3f3f; 
   text-transform: none ;
-  font-size: 12.5px;
+  font-size: 12px;
 }
 
 span#user-email {
@@ -205,7 +205,7 @@ nav a#nav-login {
 nav a.logout:hover {
   color: #1fbaff; 
   border-top: none;
-  padding: 11px 18px 10px 18px ;
+  padding: 14px 18px 15px 18px ;
 }
 
 nav a:hover,
@@ -265,17 +265,20 @@ nav a.focus .fa-user {
 }
 
 nav a.logout {
-  color: #7cccff ; 
+  color: #0092D3; 
   text-transform: none ; 
   font-size: 11px;
   background: none ; 
   font-weight: 400;
 }
 
+li#nav-logout-desk-user a{
+  padding-left: 36px !important;
+  padding-right: 5px !important;
+}
 
 
-
-li#mob-user {
+li#nav-logout-mob-user {
   display: none;
 }
 
@@ -314,16 +317,15 @@ nav a.user.focus {
 }
 
 nav a.logout:hover {
-  color: #1fbaff; 
   border-top: none;
   padding: 14px 5px 14px 5px;
 }
 
-li#desk-user {
+li#nav-logout-desk-user {
   display: none;
 }
 
-li#mob-user {
+li#nav-logout-mob-user {
   display: inline-block;
 }
 
