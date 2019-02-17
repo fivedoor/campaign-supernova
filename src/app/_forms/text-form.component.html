@@ -3,7 +3,7 @@
 
 
  <!--  panel and margin-->
-        <div *ngIf="!module" class="editor-pad">
+        <div *ngIf="!module" class="editorPad">
             <!-- <pre> newModel: <br>{{newModel|json}}</pre>
                  <pre> newLinks: {{newLinks|json}}</pre>
                  <pre> linksNotFound: {{linksNotFound|json}}</pre> 
@@ -23,11 +23,11 @@
                   <a class="popup modpopup glyphicon glyphicon-info-sign pull-right" (click)="infoAlert('myPopupInput', '')" >
                   <span class="popuptext" id="myPopupInput{{i}}">
                    <p >Inline links can be added to your copy in the following format:</p>
-                <h4><strong>{{bracketsOpen}}</strong><span class="linkName">link-name</span>
+                <h4><strong>{{bracketsOpen}}</strong><span class="linkName">LinkName</span>
                 <strong>|</strong>
-                <span class="link-text">word or phrase to link</span><strong>{{bracketsClose}}</strong>
+                <span class="linkText">word or phrase to link</span><strong>{{bracketsClose}}</strong>
                 </h4>
-                 <p >Click 'Check for Links' to review and define the url for each link</p>
+                 <p >Click to review and define the url for each link</p>
                   </span>
                 </a>
                 </div>
@@ -35,7 +35,7 @@
                   </div>
 
 
-                  <div class="form-group pad-top-10">   
+                  <div class="form-group padTop10">   
                        <button  type="button" (click)="getLinks(this.textForm)"   class="btn btn-default btn btn-sm"> Check for Links...</button> 
                   </div>
 
@@ -102,7 +102,7 @@
                            <input type="text" class="form-control form-inline"  formControlName="name" [(ngModel)]="newModel.name" id="name" ></strong>
                            </div>
                            <div class="col-xs-2" style="padding:0">
-                           
+                            <a *ngIf="textForm.controls.approved.value !== true  && viewType === 'author'" (click)="addData()" class="pull-right details-edit" > update </a>
                            </div>
                            <div class="col-xs-12" style="padding:0">
                            <small style="font-size:12px" [hidden]="textForm.controls.name.valid" class="text-danger">name is required </small>
@@ -151,17 +151,17 @@
                                   There were no links found in this Copy! Check that your links follow the correct format. 
                                  </small>
                                </div>
-                               <div class="form-group pad-top-10" >
+                               <div class="form-group padTop10" >
                                  <button  type="button" (click)="getLinks(textForm)"   class="btn btn-default btn btn-sm"> Check for Links...</button> 
                                 
                                   <a class="popup modpopup glyphicon glyphicon-info-sign pull-right" (click)="infoAlert('myPopup', i)" >
                                     <span class="popuptext" id="myPopup{{i}}">
                                      <p >Inline links can be added to your copy in the following format:</p>
-                                  <h4><strong>{{bracketsOpen}}</strong><span class="link-name">LinkName</span>
+                                  <h4><strong>{{bracketsOpen}}</strong><span class="linkName">LinkName</span>
                                   <strong>|</strong>
-                                  <span class="link-text">word or phrase to link</span><strong>{{bracketsClose}}</strong>
+                                  <span class="linkText">word or phrase to link</span><strong>{{bracketsClose}}</strong>
                                   </h4>
-                                   <p >Click 'Check for Links' to review and define the url for each link</p>
+                                   <p >Click to review and define the url for each link</p>
                                     </span>
                                   </a>
                                </div>

@@ -17,10 +17,10 @@
 
 
         <!-- HERO MODULES INPUT - NO MODS [start] -->
-         <div [formGroup]="personnelForm" novalidate style="padding-top:20px"  *ngIf="TeamInputisActive">
+         <div [formGroup]="memberForm" novalidate style="padding-top:20px"  *ngIf="TeamInputisActive">
             <div class="panel-border" > 
                 <div class="form-group" >
-                <label class="info"  > Name: <small [hidden]="personnelForm.controls.name.valid"  class="text-danger pull-right errors">
+                <label class="info"  > Name: <small [hidden]="memberForm.controls.name.valid"  class="text-danger pull-right errors">
                 name is required
                  </small>
                  </label>
@@ -29,7 +29,7 @@
                 </div>
 
                  <div class="form-group" >
-                <label class="info"  > Email: <small [hidden]="personnelForm.controls.email.valid"  class="text-danger pull-right errors">
+                <label class="info"  > Email: <small [hidden]="memberForm.controls.email.valid"  class="text-danger pull-right errors">
                   a valid email is required
                  </small>
                   </label>
@@ -39,7 +39,7 @@
 
                 <div class="form-group"  >
                 <label class="info"  >Role:
-                    <small [hidden]="personnelForm.controls.role.valid"  class="text-danger pull-right errors">
+                    <small [hidden]="memberForm.controls.role.valid"  class="text-danger pull-right errors">
                 role is required
                  </small>
                 </label>
@@ -49,7 +49,7 @@
                 </div>
 
               <div  class="margin-20">
-               <button [disabled]="!personnelForm.valid" type="button" (click)="addMember()" class="btn btn-success btn-full" >Add Team Member</button>
+               <button [disabled]="!memberForm.valid" type="button" (click)="addMember()" class="btn btn-success btn-full" >Add Team Member</button>
 
                <button (click)="toggleTeamInput()"  class="btn btn-full btn-close">close</button>
               </div>
@@ -57,7 +57,7 @@
          </div>
 
           <div class="col-xs-12" > 
-            <div class="table-holder">
+            <div class="tableHolder">
                <table class="table table-striped table-hover" >
                 <thead>
                   <tr >
@@ -67,10 +67,10 @@
                  </tr>
                 </thead>
                 <tbody>
-                  <tr *ngFor="let key of arrayOfDemoTeamIds">
-                      <td >{{demoTeam[key].name}}</td>
-                       <td >{{demoTeam[key].email}}</td>
-                       <td >{{demoTeam[key].role}}
+                  <tr *ngFor="let key of arrayOfTeamIds">
+                      <td >{{testTeam[key].name}}</td>
+                       <td >{{testTeam[key].email}}</td>
+                       <td >{{testTeam[key].role}}
                         <button  class="btn-super pull-right">Demo Workforce</button>
                        </td>
                   </tr>

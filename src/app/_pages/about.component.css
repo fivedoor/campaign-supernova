@@ -24,12 +24,12 @@ a#learn-anchor {
 
 /* Dimensions */
 .hero {
-  padding: 200px 0 200px 0;
+  padding: 225px 0 200px 0;
       margin: 0 auto;
 
 }
 .hero-page-width {
-    max-width: 970px;
+    max-width: 960px;
 }
 .page-width {
     max-width: 700px;
@@ -95,11 +95,11 @@ button.btn-primary{
 /* Fonts */
 
 h1 {
-   font-size: 78px;
+   font-size: 76px;
     font-style: italic;
     font-weight: 700;
     letter-spacing: 0.3px;
-    line-height: 78px;
+    line-height: 76.5px;
     text-transform: capitalize;
     color: #2f2f2f;
      margin-top:34px;
@@ -107,7 +107,7 @@ h1 {
 
 }
 .hero h2 {
-    font-size: 26.33px;
+    font-size: 25.33px;
     font-style: italic;
     font-weight: 400;
     letter-spacing: 0.3px;
@@ -122,7 +122,7 @@ h1 {
     margin: 0 auto;
 }
 .secondary h2 {
-    font-size: 41px;
+    font-size: 38px;
     font-style: normal;
     font-weight: 400;
     letter-spacing: 0.3px;
@@ -132,9 +132,9 @@ h1 {
     margin-bottom:25.5px;
 }
 .tertiary h2 {
-    font-size: 46px;
+    font-size: 38px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 700;
     letter-spacing: 0.3px;
     line-height: 34px;
     color: #ff5f00; /*B0925A;*/
@@ -142,11 +142,11 @@ h1 {
     margin-bottom:21px;
 }
 h3 {
-    font-size: 32.5px;
+    font-size: 41px;
     font-style: italic;
     font-weight: 700;
     letter-spacing: 0.3px;
-    line-height: 34px;
+    line-height: 51px;
     text-transform: none;
     color: #2f2f2f;
     margin-top:51px; 
@@ -163,7 +163,7 @@ h4 {
     margin-bottom: 8.5px;
 }
 .title-text {
-    font-size: 39px;
+    font-size: 41px;
     font-style: normal;
     font-weight: 400;
     letter-spacing: 0.3px;
@@ -229,7 +229,7 @@ ul.custom-bullet  {
 .custom-bullet li.sub {
     color:#2f2f2f; 
     font-weight: 700;
-    font-size: 19px;
+    font-size: 20px;
     line-height: 34px;
     margin-top: 2px;
     letter-spacing: 0.3px;

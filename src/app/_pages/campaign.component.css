@@ -44,12 +44,12 @@ th input.form-inline {
     max-height:640px
 }
 
-.link-name {
+.linkName {
  color: seagreen;
  font-weight:bold
 }
 
-.link-text {
+.linkText {
   color: royalblue;
   font-weight:bold
 }
@@ -58,13 +58,12 @@ th input.form-inline {
   background-color:#ffe6e6 !important;
 }
 
-.amends-bg p.text-danger {
-    font-size:15px
-}
-
-
 .qa-controls {
   padding-bottom: 5px;
+}
+
+.padTop10 {
+  padding-top: 10px;
 }
 
 .arrow-guide {
@@ -169,25 +168,7 @@ span.placeholder[contenteditable]:empty::before {
     font-weight: 300;
 }
 
-.pad-top-10 {
-  padding-top: 10px;
-}
 
-.marg-bot-30 {
-  margin-bottom:30px
-}
-
-.pad-bot-25 {
-  padding-bottom:25px
-}
-
-.pad-top-20 {
-  padding-top:20px
-}
-
-.pad-none {
-padding:0;
-}
 
 /* BUTTON STYLES
 -------------------------------*/
@@ -340,26 +321,19 @@ textarea[readonly] {
 .input-outline {
   border: #29AF4A solid 2px;  
   border-radius: 0; 
-  padding: 0;
 }
 .prev {
 }
 
-.close-editor {
+.closeEditor {
 padding: 10px 10px 0 0 ;
 }
 
-.editor-pad {
+.editorPad {
 padding: 0 20px 20px 20px
 }
-.editor-pad1 {
+.editorPad1 {
 padding: 0 20px 10px 20px
-}
-
-.preview-container-inner {
- padding: 15px; 
- max-width:300px; 
- margin: 0 auto;
 }
 
 
@@ -609,7 +583,7 @@ letter-spacing:1px;
    color:#000000;
 }
 
-.preview-col {
+.previewCol {
 position: -webkit-sticky;
  position: sticky;
  top:56px; 

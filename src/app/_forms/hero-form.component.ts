@@ -20,10 +20,12 @@ export class HeroFormComponent {
   
   // Image Upload
      @ViewChild('myInput')
-    imageInputVariable: any;
+    myInputVariable: any;
 
     selectedFiles: FileList;
     currentUpload: Upload;
+    imgHeight: number;
+    imgWidth: number;
 
    // URL Valifation
     urlRegex = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
@@ -153,11 +155,11 @@ detectFiles(event) {
 
 // http://plnkr.co/edit/0FJ0kKCVNjUP1hGaZzTt?p=preview
   resetImage() {
-    if ( this.imageInputVariable !== undefined ) {
+    if ( this.myInputVariable !== undefined ) {
 
-    console.log(this.imageInputVariable.nativeElement.files);
-    this.imageInputVariable.nativeElement.value = "";
-    console.log(this.imageInputVariable.nativeElement.files);
+    console.log(this.myInputVariable.nativeElement.files);
+    this.myInputVariable.nativeElement.value = "";
+    console.log(this.myInputVariable.nativeElement.files);
     }
     this.clearModelImageData();
   }

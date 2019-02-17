@@ -30,12 +30,12 @@
 
                         <td><a [routerLink]="['/form', 'demos', demoCampaignTitles[j]]" routerLinkActive="active" role="button" [class.disabled]="disabled ? true : null"> <button class="btn-super pull-right">Demo Campaign</button></a></td>
                       </tr>
-                      <tr *ngFor="let campaign of CampaignTitles ; let i=index" >
+                      <tr *ngFor="let campaign of arrayOfKeys ; let i=index" >
                         <td>
-                          <a [routerLink]="['/form', 'emails', CampaignTitles[i]]" routerLinkActive="active" role="button" [class.disabled]="disabled ? true : null">{{campaign}}
+                          <a [routerLink]="['/form', 'emails', arrayOfKeys[i]]" routerLinkActive="active" role="button" [class.disabled]="disabled ? true : null">{{campaign}}
                           </a></td>
                           <td style="font-size:1em">
-                          <a [routerLink]="['/form', 'emails', CampaignTitles[i]]" routerLinkActive="active" role="button" [class.disabled]="disabled ? true : null">
+                          <a [routerLink]="['/form', 'emails', arrayOfKeys[i]]" routerLinkActive="active" role="button" [class.disabled]="disabled ? true : null">
                              {{campaigns[campaign].description}}</a>
                           
                         </td>

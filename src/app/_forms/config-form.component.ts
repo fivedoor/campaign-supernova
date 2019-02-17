@@ -12,7 +12,7 @@ import { Logo } from '../_classes/logo.class';
 export class ConfigFormComponent {
       @Input() module:any;
       @Input() configInput:any;
-      @Input() campaignInputisActive:any;
+      @Input() CampaignInputisActive:any;
       @Input() viewType:string;
       @Output() sendConfigData = new EventEmitter<any>();
 
