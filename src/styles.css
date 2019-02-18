@@ -1,6 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
-/*  Loading   spinner  */  
-      body, html {
+       body, html {  
         height: 100%;
       }
       .app-loading {

@@ -3,7 +3,7 @@
 
 
  <!--  panel and margin-->
-        <div *ngIf="!module"  class="editorPad">
+        <div *ngIf="!module"  class="editor-pad">
 
             <div class="form-group" >
             <label> Module Name:</label>
@@ -34,7 +34,6 @@
                  <input type="text" class="form-control form-inline"  formControlName="name" [(ngModel)]="newModel.name" id="name" ></strong>
                  </div>
                  <div class="col-xs-2" style="padding:0">
-                  <a *ngIf="bannerForm.controls.approved.value !== true  && viewType === 'author'" (click)="addData()" class="pull-right details-edit" > update </a>
                  </div>
                  <div class="col-xs-12" style="padding:0">
                  <small style="font-size:12px" [hidden]="bannerForm.controls.name.valid" class="text-danger">name is required </small>
@@ -44,7 +43,7 @@
             </thead>
             <tbody >
             <tr class="panel panel-default">
-                <td width="20%"  >Status</td>
+                <td width="20%"  >Status BUM</td>
                  <td class="values">  <a *ngIf="module.value.approved === false" class="btn btn-danger btn-xs" style="cursor: default;" ><strong>Rejected</strong> </a>
 
              <a *ngIf="module.value.approved === true" class="btn btn-success btn-xs" style="cursor: default;" >Approved</a>

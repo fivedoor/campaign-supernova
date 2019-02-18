@@ -5,25 +5,18 @@ import { Campaign } from '../_classes/campaign.class';
 
 
 @Component({
- /* moduleId: module.id,*/
   selector: 'my-library',
   templateUrl: 'campaign-library.component.html',
-/*  styles: ['a.disabled { pointer-events: none; cursor: default;}'],
-*/  styleUrls: [ 'campaign-library.component.css' ],
+  styleUrls: [ 'campaign-library.component.css' ],
   outputs: ['campaign']
 })
 export class LibraryComponent implements OnInit {
 
   public campaign: Campaign;  // Is this needed? Class does not cover all possibiliities?
-
-  // campaign: Campaign[] = [];
-  // campaign: any[];
-
-  campaigns: any[];
-  public arrayOfKeys: any;
-
-  demoCampaigns: any[];
-  demoCampaignTitles: any;
+  public campaigns: any[];
+  public CampaignTitles: any;
+  public demoCampaigns: any[];
+  public demoCampaignTitles: any;
 
 
   constructor(
@@ -32,26 +25,17 @@ export class LibraryComponent implements OnInit {
    ) {}
 
   ngOnInit(): void {
-     // this.getCampaign();
-      //  this.getCampaignNames();
         this.getCampaigns();
         this.getDemoCampaigns();
   }
 
     deleteCampaign(campaign: any) {
-        // Prevent page clcik through
-        //  not working
-         // event.stopPropagation();
-
-        // ignores tbe button function and goes to page!
-        // return false;
-
+ 
         let r = confirm("Are you sure you want to permanently delete the data for this campaign " + campaign );
         if (r == true) {
           this.dataService
               .deleteCampaignData(campaign);
           // Refresh the loaded emails
-        //   this.getCampaignNames();
         this.getCampaigns();
         this.getDemoCampaigns();
             alert("The campaign was deleted!");
@@ -63,15 +47,6 @@ export class LibraryComponent implements OnInit {
 
     /////// GET DATA ///////////
 
-    // Get single campaign data
-    /*getCampaign(campaign: string) {
-        this.dataService
-          .getCampaignData(campaign)
-          .subscribe(
-            (campaign: any) => this.campaign = (campaign)
-          );
-           console.log(campaign);
-    }*/
 
     // Get all campaign campaigns
      getCampaigns() {
@@ -81,15 +56,14 @@ export class LibraryComponent implements OnInit {
             (campaigns: any) => {
               this.campaigns = (campaigns);
               // Get names array
-              this.arrayOfKeys = Object.keys(this.campaigns);
-            console.log('this.campaigns: ');
+              this.CampaignTitles = Object.keys(this.campaigns);
+            console.log('campaigns: ');
             console.log(this.campaigns);
-            console.log('this.arrayOfKeys: ');
-            console.log(this.arrayOfKeys);
+            console.log('CampaignTitles: ');
+            console.log(this.CampaignTitles);
 
             }
           );
-          console.log('Got email campaigns');
     }
 
 
@@ -100,24 +74,12 @@ export class LibraryComponent implements OnInit {
             (demoCampaigns: any) => {
               this.demoCampaigns = (demoCampaigns);
               this.demoCampaignTitles = Object.keys(this.demoCampaigns);
-             console.log('this.demoCampaigns: ');
+             console.log('demoCampaigns: ');
             console.log(this.demoCampaigns);
-            console.log('this.arrayOfKeys: ');
-            console.log(this.arrayOfKeys);            }
+            console.log('demoCampaignTitles: ');
+            console.log(this.demoCampaignTitles);            }
           );
-          console.log('Got demo campaigns');
     }
 
-    // Get all campaign names (keys)
-   /* getCampaignNames() {
-        this.dataService
-          .getCampaignsData()
-          .subscribe(
-            (campaigns: any) => this.campaignTitles = Object.keys(campaigns)
-            // .slice(0, 3)
-          );
-          console.log('Got campaign names');
 
-      }
-*/
 }

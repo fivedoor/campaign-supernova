@@ -2,7 +2,7 @@
   <div [formGroup]="heroForm" novalidate>
 
       <!--  panel and margin-->
-        <div *ngIf="!module" class="editorPad">
+        <div *ngIf="!module" class="editor-pad">
                 <!--  <pre> newModel: <br>{{newModel|json}}</pre>
                   <pre> heroForm: <br>{{heroForm.value|json}}</pre> -->
 
@@ -68,8 +68,7 @@
                            <input type="text" class="form-control form-inline" formControlName="name" [(ngModel)]="newModel.name" id="name" ></strong>
                            </div>
                            <div class="col-xs-2" style="padding:0">
-                            <a *ngIf="heroForm.controls.approved.value !== true  && viewType === 'author'" (click)="addData()" class="pull-right details-edit" > update </a>
-
+                          
                         
                            </div>
                            <div class="col-xs-12" style="padding:0">

@@ -11,5 +11,5 @@
       src: false,
       cta: false,
       heading: false,
-      copy: false,
-    };
+      copy: false
+      }

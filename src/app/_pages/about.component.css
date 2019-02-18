@@ -24,12 +24,12 @@ a#learn-anchor {
 
 /* Dimensions */
 .hero {
-  padding: 225px 0 200px 0;
+  padding: 200px 0 200px 0;
       margin: 0 auto;
 
 }
 .hero-page-width {
-    max-width: 960px;
+    max-width: 1040px;
 }
 .page-width {
     max-width: 700px;
@@ -95,11 +95,11 @@ button.btn-primary{
 /* Fonts */
 
 h1 {
-   font-size: 76px;
+   font-size: 78px;
     font-style: italic;
     font-weight: 700;
     letter-spacing: 0.3px;
-    line-height: 76.5px;
+    line-height: 78px;
     text-transform: capitalize;
     color: #2f2f2f;
      margin-top:34px;
@@ -107,7 +107,7 @@ h1 {
 
 }
 .hero h2 {
-    font-size: 25.33px;
+    font-size: 26.33px;
     font-style: italic;
     font-weight: 400;
     letter-spacing: 0.3px;
@@ -118,39 +118,50 @@ h1 {
 }
 
 .secondary, .tertiary {
-    padding: 34px 0 68px 0;
+    padding: 41px 0 64px 0;
     margin: 0 auto;
 }
-.secondary h2 {
-    font-size: 38px;
+.title-text {
+    font-size: 40px;
     font-style: normal;
     font-weight: 400;
-    letter-spacing: 0.3px;
-    line-height: 34px;
-    color: #ff5f00; /*B0925A;*/
-    margin-top:35px;
-    margin-bottom:25.5px;
-}
-.tertiary h2 {
-    font-size: 38px;
-    font-style: normal;
-    font-weight: 700;
-    letter-spacing: 0.3px;
-    line-height: 34px;
-    color: #ff5f00; /*B0925A;*/
-    margin-top:68px;
-    margin-bottom:21px;
-}
-h3 {
-    font-size: 41px;
-    font-style: italic;
-    font-weight: 700;
     letter-spacing: 0.3px;
     line-height: 51px;
     text-transform: none;
     color: #2f2f2f;
+    margin-bottom: 51px;
+    margin-top: 64px;
+}
+.secondary-text {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    line-height: 34px;
+    text-transform: none;
+    color: #2f2f2f;
+    margin-bottom: 17px;
+}
+h3 {
+    font-size: 41px;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    line-height: 48px;
+    text-transform: none;
+    color: #2f2f2f;
     margin-top:51px; 
     margin-bottom: 17px;
+}
+.tertiary h2 {
+    font-size: 43px;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    line-height: 34px;
+    color: #ff5f00; /*B0925A;*/
+    margin-top:68px;
+    margin-bottom:25.5px;
 }
 h4 {
     color:#2f2f2f; 
@@ -162,29 +173,20 @@ h4 {
     margin-top:0;
     margin-bottom: 8.5px;
 }
-.title-text {
-    font-size: 41px;
-    font-style: normal;
-    font-weight: 400;
-    letter-spacing: 0.3px;
-    line-height: 51px;
-    text-transform: none;
-    color: #2f2f2f;
-    margin-bottom: 51px;
-    margin-top: 68px;
-}
-.secondary-text {
-    font-size: 19px;
+
+.secondary h2 {
+    font-size: 39px;
     font-style: normal;
     font-weight: 400;
     letter-spacing: 0.3px;
     line-height: 34px;
-    text-transform: none;
-    color: #2f2f2f;
-    margin-bottom: 17px;
+    color: #ff5f00; /*B0925A;*/
+    margin-top:34px;
+    margin-bottom:34px;
 }
+
 .secondary-subhead {
-    font-size: 19px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 400;
     letter-spacing: 0.3px;
@@ -194,15 +196,14 @@ h4 {
     margin-top: 34px;
 }
 
-
 p.footnote{
     color:#2f2f2f; 
     font-weight: 300;
     letter-spacing: 0.3px;
     line-height: 31px;
-    margin-top: 17.5px;
-    margin-bottom: 17.5px;;
-    font-size: 17.5px;
+    margin-top: 17px;
+    margin-bottom: 17px;;
+    font-size: 16px;
 
 }
 
@@ -213,7 +214,7 @@ list-style-type: square;
 }
 
 ul.custom-bullet  {
-    margin-bottom: 25px;
+    margin-bottom: 34px;
 }
 .custom-bullet li {
     display: block;
@@ -228,11 +229,12 @@ ul.custom-bullet  {
 }
 .custom-bullet li.sub {
     color:#2f2f2f; 
-    font-weight: 700;
-    font-size: 20px;
+    font-weight: 400;
+    font-size: 29.5px;
     line-height: 34px;
-    margin-top: 2px;
+    margin-top: 8.5px;
     letter-spacing: 0.3px;
+    font-style: italic;
 }
 .red-bullet {
   color:#ff5f00; 
@@ -259,7 +261,7 @@ h1 {
 }
 
 button.btn-success, button.btn-primary{
-margin-top: 16px;
+margin-top: 17px;
 font-size: 14px; 
     padding: 15px 25px;
 
