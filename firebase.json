@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist",
+    "public": "dist/supernova-app",
     "ignore": [
       "firebase.json",
       "**/.*",
