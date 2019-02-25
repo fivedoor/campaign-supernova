@@ -1,14 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
 /*import { Response } from '@angular/http'; deprecated*/
 /*import { Observable } from 'rxjs/Rx'; deprecated*/
-import {Observable,of, from } from 'rxjs';
+import {Observable, of, from } from 'rxjs';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
-
 // import * as Rx from 'rxjs';
-
 /*import { forkJoin } from "rxjs/observable/forkJoin"; deprecated */
 import {forkJoin} from 'rxjs';
 
@@ -19,7 +16,7 @@ import { Campaign } from '../_classes/campaign.class';
 import { AngularFireDatabase, AngularFireObject, AngularFireList } from 'angularfire2/database';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireModule } from 'angularfire2';
-import { Router } from "@angular/router";
+// import { Router } from "@angular/router";
 
 
 declare var firebase: any;
@@ -29,23 +26,23 @@ export class DataService {
 
  // public users: FirebaseListObservable<any>;
 //  public displayName: string;
-  public email: string;
+//  public email: string;
  // public user: FirebaseObjectObservable<any>;
   campaigns: AngularFireList<any[]>;
   team: AngularFireList<any[]>;
   customTeam: AngularFireList<any[]>;
-
-  foo: any[];
 
 
 /*  authState: any = null;
 */
 
 constructor(
+    // private router: Router,
     private http: HttpClient,
     private afAuth: AngularFireAuth,
-    private db: AngularFireDatabase,
-    private router: Router) {
+    private db: AngularFireDatabase
+    ) 
+  {
 
 
 this.campaigns = db.list('/emails');
@@ -143,8 +140,8 @@ setCampaignData(
       console.log(body);
 
    return this.http.put(url, body);
-/*     .map((response: Response) => response.json());
-*/}
+/*     .map((response: Response) => response.json()); */
+}
 
 
 /////// DELETE DATA  ///////////

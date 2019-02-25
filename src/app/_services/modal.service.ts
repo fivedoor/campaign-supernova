@@ -1,4 +1,4 @@
-﻿import { without, find } from 'lodash';
+import { without, find } from 'lodash';
 
 export class ModalService {
     private modals: any[] = [];
