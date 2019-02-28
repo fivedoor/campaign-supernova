@@ -9,7 +9,7 @@ a {
     font-weight: 700;
 }
 p, li {
-    color:#333333;
+    color:#202020;
     font-weight: 400;
 }
 li {
@@ -64,10 +64,10 @@ button.btn-success, button.btn-primary{
    -webkit-border-radius: 1px;
     -moz-border-radius: 1px;
     border-radius: 1px;
-    border: 1px solid #2f2f2f;
+    border: 1px solid #202020;
     text-align: center;
     padding: 20px 33px;
-    color: #2f2f2f;
+    color: #202020;
 }
 button.btn-success:active,
 button.btn-success:focus,
@@ -101,7 +101,7 @@ h1 {
     letter-spacing: 0.3px;
     line-height: 78px;
     text-transform: capitalize;
-    color: #2f2f2f;
+    color: #202020;
      margin-top:34px;
     margin-bottom: 17px;
 
@@ -113,7 +113,7 @@ h1 {
     letter-spacing: 0.3px;
     line-height: 34px;
     text-transform: capitalize;
-    color: #2f2f2f;
+    color: #202020;
     margin-top:21.25px;
 }
 
@@ -126,10 +126,10 @@ h1 {
     font-style: normal;
     font-weight: 400;
     letter-spacing: 0.3px;
-    line-height: 51px;
+    line-height: 56.6px;
     text-transform: none;
-    color: #2f2f2f;
-    margin-bottom: 51px;
+    color: #202020;
+    margin-bottom: 45.3px;
     margin-top: 64px;
 }
 .secondary-text {
@@ -139,22 +139,22 @@ h1 {
     letter-spacing: 0.3px;
     line-height: 34px;
     text-transform: none;
-    color: #2f2f2f;
+    color: #202020;
     margin-bottom: 17px;
 }
 h3 {
-    font-size: 41px;
+    font-size: 40px;
     font-style: italic;
     font-weight: 400;
     letter-spacing: 0.3px;
     line-height: 48px;
     text-transform: none;
-    color: #2f2f2f;
-    margin-top:51px; 
-    margin-bottom: 17px;
+    color: #202020;
+    margin-top:56.6px; 
+    margin-bottom: 22.5px;
 }
 .tertiary h2 {
-    font-size: 43px;
+    font-size: 44px;
     font-style: italic;
     font-weight: 400;
     letter-spacing: 0.3px;
@@ -164,7 +164,7 @@ h3 {
     margin-bottom:25.5px;
 }
 h4 {
-    color:#2f2f2f; 
+    color:#202020; 
     font-weight: 700;
     font-size: 22px;
     line-height:  34px;
@@ -175,7 +175,7 @@ h4 {
 }
 
 .secondary h2 {
-    font-size: 39px;
+    font-size: 40px;
     font-style: normal;
     font-weight: 400;
     letter-spacing: 0.3px;
@@ -186,18 +186,18 @@ h4 {
 }
 
 .secondary-subhead {
-    font-size: 20px;
+    font-size: 21px;
     font-style: normal;
     font-weight: 400;
     letter-spacing: 0.3px;
     line-height: 34px;
     text-transform: none;
-    color: #2f2f2f;
+    color: #202020;
     margin-top: 34px;
 }
 
 p.footnote{
-    color:#2f2f2f; 
+    color:#202020; 
     font-weight: 300;
     letter-spacing: 0.3px;
     line-height: 31px;
@@ -228,9 +228,9 @@ ul.custom-bullet  {
     color:#636363; 
 }
 .custom-bullet li.sub {
-    color:#2f2f2f; 
+    color:#202020; 
     font-weight: 400;
-    font-size: 29.5px;
+    font-size: 29px;
     line-height: 34px;
     margin-top: 8.5px;
     letter-spacing: 0.3px;

@@ -15,7 +15,7 @@
 */}
 
 h1,h2,h3,h4 {
-color:#555555;
+color:#202020;
 font-weight: 300;
 }
 
@@ -37,7 +37,7 @@ box-shadow: -9px 11px 5px -6px rgba(61,59,29,1); */
 
 
 #formDetails {
-color:#555555; 
+color:#202020; 
 /*font-style: italic;
 */font-size: 19px; 
 margin-bottom: 35px;
@@ -47,7 +47,7 @@ font-weight: 400;
 a {
 /*color:  #0288d1;
 */
-color:  #555555;
+color:  #202020;
 
 }
 
@@ -96,7 +96,7 @@ display: block;
 */}
 
 label {
-color:#555555;
+color:#202020;
 font-weight: 500;
 font-size: 14px;
 text-transform: uppercase; 
@@ -235,7 +235,7 @@ textarea[readonly] {
     visibility: hidden;
     width: 450px;
     background-color: #ffdd15;
-    color: #555555;
+    color: #202020;
     text-align: left;
     border-radius: 6px;
     padding: 20px 20px;

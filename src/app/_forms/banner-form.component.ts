@@ -11,13 +11,13 @@ import { Model } from '../_classes/model.class';
 export class BannerFormComponent {
       @Input() module:any;
       @Input() i:number;
-      
+    
   @Output() sendModelData = new EventEmitter<any>();
 
     public bannerForm: FormGroup;
     newModel: Model;
+
  
-  
     constructor(
 
       private _fb: FormBuilder,
@@ -62,7 +62,7 @@ ngOnInit(): void {
 setModel() {
     console.log('FUNC: setModel()');
 
-    if (this.module){
+    if (this.module) {
       // build Model from Module
       //Source
       const modulesValues = this.module.value;

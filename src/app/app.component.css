@@ -158,7 +158,7 @@ nav {
 }
 
 nav a, nav span  {
-  color: #525252; 
+  color: #202020; 
   background: none;
   float: right;
   font-size: 13px;
@@ -177,7 +177,7 @@ nav span  {
 }
 
 nav a.user {
-  color: #3f3f3f; 
+  color: #202020; 
   text-transform: none ;
   font-size: 12px;
   font-style: italic;
@@ -210,7 +210,7 @@ nav a.logout:hover {
 nav a:hover,
 nav a.hover{
   text-decoration: none;
-  color: #444b50;
+  color: #101010;
 }
 
 nav a:active,
@@ -218,7 +218,7 @@ nav a.active {
   text-decoration: none;
   border-top: solid #444b50;
   padding: 14px 18px 16px 18px;
-  color: #444b50 ;
+  color: #101010 ;
 }
 
 

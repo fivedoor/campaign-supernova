@@ -11,12 +11,12 @@ form {
 }
 
 h1, h2,h3 {
-color:#555555;
+color:#202020;
 font-weight: 300;
 }
 
 a {
-  color:#555555;
+  color:#202020;
 }
 
 a.btn-success, a.btn-danger  {
@@ -88,12 +88,12 @@ th input.form-inline {
 
 table td  {
 font-size: 14px;
-color: #555555;
+color: #202020;
 background-color: #ffffff; 
 
 }
 table th {
-color:#555555;
+color:#202020;
 font-weight: 400;
 background-color: #eeeeee; 
 padding-top:10px;
@@ -253,7 +253,7 @@ padding:0;
   border: 1px dashed #cccccc;
   background: #ffffff;
     font-weight: 700;
-  color:#555555;
+  color:#202020;
     letter-spacing: 4px;
 }
 
@@ -502,7 +502,7 @@ textarea.qaAmends {
 }
 
 label {
-color:#555555;
+color:#202020;
 font-weight: 500;
 font-size: 13px;
 text-transform: uppercase; 

@@ -62,7 +62,7 @@ body {
     background: -o-linear-gradient(bottom right,  #ffffff, #fafafa); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(bottom right,  #ffffff, #fafafa); /* For Firefox 3.6 to 15 */
     background: linear-gradient(to bottom right,  #ffffff, #fafafa); /* Standard syntax */
-	  color:#444444 ;
+	  color:#202020 ;
 
     /* The image used */
     /*
@@ -78,7 +78,7 @@ body {
 
 a {
 cursor: pointer;
-color:#0092D3;
+color:#337ab7;
 }
 
 

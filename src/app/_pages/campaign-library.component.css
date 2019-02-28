@@ -12,7 +12,7 @@
 a.disabled { pointer-events: none; cursor: default;}
 
 h1,h2,h3,h4 {
-	color:#555555;
+	color:#202020;
 	font-weight: 300;
 }
 
@@ -22,7 +22,7 @@ p  {
 }
 
 p,span  {
-  color:#555555;
+  color:#202020;
 }
 
 
@@ -31,7 +31,7 @@ td {
 }
 
 a {
-color: #555555;
+color: #202020;
 }
 
 .table-striped>tbody>tr:nth-child(odd)>td, 
