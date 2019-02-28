@@ -67,7 +67,7 @@ export class FormComponent implements OnInit {
   // Image Upload
   @ViewChild('myInput')
   public imageInputVariable: any;
-  public selectedFiles: FileList;
+  public imageFile: FileList;
   public currentUpload: Upload;
   // Text Escaping
   public bracketsOpen: string = '{{';
@@ -133,7 +133,8 @@ export class FormComponent implements OnInit {
         this.createTxtKeys();
         this.setFormValues();
         this.readyForApprovalCheck();
-        this.dataService.getAllTeamData()
+        
+   this.dataService.getAllTeamData()
     .subscribe(
           (results: any) => {
              this.testTeam = results[0];
@@ -843,8 +844,8 @@ export class FormComponent implements OnInit {
           for(var k in event.newModel) { 
             this.newModel[k] = event.newModel[k]};
           }
-          if (event.selectedFiles) {
-            this.selectedFiles = event.selectedFiles;
+          if (event.imageFile) {
+            this.imageFile = event.imageFile;
           }
           if (event.currentUpload) {
             this.currentUpload = event.currentUpload;
@@ -853,7 +854,7 @@ export class FormComponent implements OnInit {
         const modulesArray  = <FormArray>this.campaignForm.controls['modules'];
         const currentModule  = this.currentModule;
         const currentModuleValues  = <FormGroup>this.campaignForm.value['modules'][this.currentModule];
-        const selectedFiles  = this.selectedFiles;
+        const imageFile  = this.imageFile;
         const currentUpload  = this.currentUpload;
         const newModelLinks  = this.newModel.links;
         const newModel  = this.newModel;
@@ -872,7 +873,7 @@ export class FormComponent implements OnInit {
         this.addModule(
           <FormArray>this.campaignForm.controls['modules'],          // modulesArray,
           this.currentModule,         // currentModule,
-          this.selectedFiles,         // imageData,
+          this.imageFile,         // imageData,
           this.newModel,              // newdataSource
           this.newModel.txt,         // newdataSourceTxtArray
           this.newModel.links,         // newdataSourceLinksArray,
@@ -972,7 +973,7 @@ export class FormComponent implements OnInit {
       clearImageData() {
          console.log('FUNC: clearImageData()');
         this.clearCurrentUpload();
-        this.clearSelectedFiles();
+        this.clearimageFile();
       }
 
       clearModuleInputs() {
@@ -1004,11 +1005,11 @@ export class FormComponent implements OnInit {
         }
       }
 
-      clearSelectedFiles() {
-        console.log('FUNC: clearSelectedFiles()');
-        const obj =  this.selectedFiles;
+      clearimageFile() {
+        console.log('FUNC: clearimageFile()');
+        const obj =  this.imageFile;
         if ( obj !== undefined ) {
-          console.log('selectedFiles:');
+          console.log('imageFile:');
           console.log(obj);
           // https://stackoverflow.com/questions/3144419/how-do-i-remove-a-file-from-the-filelist
           // https://stackoverflow.com/questions/12989741/the-property-value-does-not-exist-on-value-of-type-htmlelement
@@ -1016,7 +1017,7 @@ export class FormComponent implements OnInit {
           // inputValue = '';
           // document.getElementById('img').value = "";
           this.resetImage();
-          console.log('selectedFiles (after resetImage()):');
+          console.log('imageFile (after resetImage()):');
           console.log(obj);
         }
       }

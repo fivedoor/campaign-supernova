@@ -22,7 +22,7 @@ export class HeroFormComponent {
      @ViewChild('myInput')
     imageInputVariable: any;
 
-    selectedFiles: FileList;
+    imageFile: FileList;
     currentUpload: Upload;
 
    // URL Valifation
@@ -74,11 +74,11 @@ ngOnInit(): void {
  
  passModelData() {
  	 const newModel  = this.newModel;
- 	 const selectedFiles  = this.selectedFiles;
+ 	 const imageFile  = this.imageFile;
  	 const currentUpload  = this.currentUpload;
 
 
-    this.sendModelData.next({newModel,selectedFiles,currentUpload});
+    this.sendModelData.next({newModel,imageFile,currentUpload});
   }
 
  
@@ -129,18 +129,18 @@ updateModelImage() {
 detectFiles(event) {
       console.log('FUNC: detectFiles()');
 
-      this.selectedFiles = event.target.files;
-      let fileArray = Array.from(this.selectedFiles);
+      this.imageFile = event.target.files;
+      let fileArray = Array.from(this.imageFile);
      
-      console.log('selectedFiles: ');
-      console.log(this.selectedFiles);
+      console.log('imageFile: ');
+      console.log(this.imageFile);
       this.uploadSingle();
   }
 
   uploadSingle() {
     console.log('FUNC: uploadSingle()');
     //Source 
-    const file = this.selectedFiles.item(0);
+    const file = this.imageFile.item(0);
     this.currentUpload = new Upload(file);
 
     //Destination
