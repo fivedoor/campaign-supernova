@@ -827,8 +827,7 @@ export class FormComponent implements OnInit {
 
       const newConfig  = this.newConfig;
       configFormGroup.patchValue(newConfig);
-      console.log('newConfig:');
-      console.log(newConfig);
+      console.log('newConfig:', newConfig);
 
       this.closeEditor();
       this.toggleIsEditorFalse();
@@ -996,12 +995,11 @@ export class FormComponent implements OnInit {
         console.log('FUNC: clearCurrentUpload()');
         const obj =  this.currentUpload;
         if ( obj !== undefined ) {
-          console.log('clearCurrentUpload');
-          console.log(obj);
+         // console.log(obj);
           for (const prop of Object.keys(obj)) {
             delete obj[prop];
           }
-          console.log(obj);
+         // console.log(obj);
         }
       }
 
@@ -1009,16 +1007,14 @@ export class FormComponent implements OnInit {
         console.log('FUNC: clearimageFile()');
         const obj =  this.imageFile;
         if ( obj !== undefined ) {
-          console.log('imageFile:');
-          console.log(obj);
+          console.log('imageFile:', obj);
           // https://stackoverflow.com/questions/3144419/how-do-i-remove-a-file-from-the-filelist
           // https://stackoverflow.com/questions/12989741/the-property-value-does-not-exist-on-value-of-type-htmlelement
           // let inputValue = (<HTMLInputElement>document.getElementById('img')).value;
           // inputValue = '';
           // document.getElementById('img').value = "";
           this.resetImage();
-          console.log('imageFile (after resetImage()):');
-          console.log(obj);
+          console.log('imageFile (after resetImage()):', obj);
         }
       }
 
@@ -1136,8 +1132,7 @@ export class FormComponent implements OnInit {
 
         const moduleData = <FormArray>this.campaignForm.controls['modules'].value;
 
-        console.log('FUNC: buildCampaign(moduleData)');
-        console.log(moduleData);
+        console.log('FUNC: buildCampaign(moduleData)', moduleData);
 
         // Set non-module based values
         const config = <FormGroup>this.campaignForm.controls['config'];
@@ -1241,8 +1236,7 @@ export class FormComponent implements OnInit {
 
     //  const dataApproved = <FormControl> this.campaignForm.controls['dataApproved'];
     dataApproved.setValue(approvalSubmitted);
-    console.log('dataApproved: ');
-    console.log(dataApproved.value);
+    console.log('dataApproved: ', dataApproved.value);
     this.readyForApprovalCheck();
 
     // Record Date
@@ -1380,8 +1374,8 @@ export class FormComponent implements OnInit {
 
   toggleModFlag(moduleNumber, flagType): void {
     console.log('FUNC: toggleModFlag()');
-    console.log(flagType);
-    console.log(moduleNumber);
+    // console.log(flagType);
+    // console.log(moduleNumber);
 
     //     const dataApproved = <FormControl> this.campaignForm.controls['dataApproved'];
     const config = <FormGroup> this.campaignForm.controls['config'];

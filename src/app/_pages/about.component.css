@@ -45,7 +45,7 @@ a#learn-anchor {
 
 img.templates {
     width:100%; 
-    opacity: 0.25;
+    opacity: 0.15;
     max-width:830px ; 
 }
 img#logo {
@@ -118,7 +118,7 @@ h1 {
 }
 
 .secondary, .tertiary {
-    padding: 41px 0 64px 0;
+    padding: 50px 0 64px 0;
     margin: 0 auto;
 }
 .title-text {
@@ -132,8 +132,11 @@ h1 {
     margin-bottom: 45.3px;
     margin-top: 64px;
 }
+.title-text-sub {
+    margin-bottom: 64px;
+}
 .secondary-text {
-    font-size: 20px;
+    font-size: 21px;
     font-style: normal;
     font-weight: 400;
     letter-spacing: 0.3px;
@@ -145,7 +148,7 @@ h1 {
 h3 {
     font-size: 40px;
     font-style: italic;
-    font-weight: 400;
+    font-weight: 700;
     letter-spacing: 0.3px;
     line-height: 48px;
     text-transform: none;
@@ -160,7 +163,7 @@ h3 {
     letter-spacing: 0.3px;
     line-height: 34px;
     color: #ff5f00; /*B0925A;*/
-    margin-top:68px;
+    margin-top:64px;
     margin-bottom:25.5px;
 }
 h4 {
@@ -229,12 +232,12 @@ ul.custom-bullet  {
 }
 .custom-bullet li.sub {
     color:#202020; 
-    font-weight: 400;
-    font-size: 29px;
+    font-weight: 700;
+    font-size: 27px;
     line-height: 34px;
     margin-top: 8.5px;
     letter-spacing: 0.3px;
-    font-style: italic;
+    /* font-style: italic; */
 }
 .red-bullet {
   color:#ff5f00; 

@@ -149,6 +149,8 @@ padding: 3px 4px ;
     border: none !important; 
 }
 
+
+
 .hideNav {
   display:none;
 }
@@ -221,9 +223,15 @@ nav a.active {
   color: #101010 ;
 }
 
+.navbar-nav>li>a:hover {
+ /*  background-color: #efefef54; */
+ text-decoration: underline;
+}
 
 .navbar-default .navbar-nav>li>a:focus {
-border-top: solid #444b50;
+  border-top: solid #444b50;
+   background-color: transparent;
+
 }
 .navbar-default .navbar-nav>.open>a:focus {
     color: #ff7029 ;
