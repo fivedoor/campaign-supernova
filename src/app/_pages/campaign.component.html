@@ -74,10 +74,13 @@
 
                   <a class="popup mainpopup glyphicon glyphicon-info-sign pull-right" (click)="infoAlert('statusInfo','')" >
                     <span class="popuptext" id="statusInfo">
-                      <p >Only when all campaign modules and data are approved by the QA can the author request approval from the owner. </p>
-                      <p > When the owner approves or rejects a campaign the status will be updated along with a record of the owner’s id and a date stamp. </p>
-                      <p>The status value can be clicked to view these details.</p>
-                      <p >Once the owner has approved the campaign the author no longer has access to any controls to edit the campaign.</p>
+                      <p >When all campaign modules have been approved by the <strong>QA</strong> the <em>“Request Approval”</em> button will appear in the <strong>Author</strong>’s navigation bar. The <strong>Author</strong> can then request approval from the campaign Owner </p>
+
+                      <p > When the <strong>Owner</strong> approves or rejects a campaign the status will be updated along with a record of the date approved.</p>
+
+<!--                       <p>The status value can be clicked to view these details.</p>
+ -->
+                      <p >Once the <strong>Owner</strong> has approved the campaign all editing controls are locked down for that campaign.</p>
                     </span>
                   </a>
                 </td>
@@ -87,7 +90,7 @@
                 <td class="values" >{{campaignForm.value.owner}}
                   <a class="popup mainpopup glyphicon glyphicon-info-sign pull-right" (click)="infoAlert('ownerInfo','')" >
                     <span class="popuptext" id="ownerInfo">
-                      <p >The owner has controls to: </p>
+                      <p >The <strong>Owner</strong> has controls to: </p>
                       <ul>
                         <li>Approve or reject a campaign</li>
                         <li >Register feedback regarding rejection</li>
@@ -104,7 +107,7 @@
                 <td class="values" >{{campaignForm.value.author}}
                   <a class="popup mainpopup glyphicon glyphicon-info-sign pull-right" (click)="infoAlert('authorInfo','')" >
                     <span class="popuptext" id="authorInfo">
-                      <p >The author has controls to: </p>
+                      <p >The <strong>Author</strong> has controls to: </p>
                       <ul>
                         <li> Edit campaign and module data </li>
                         <li >Add or delete modules </li>
@@ -121,7 +124,7 @@
                 <td class="values">{{campaignForm.value.qa}}
                   <a class="popup mainpopup glyphicon glyphicon-info-sign pull-right" (click)="infoAlert('qaInfo','')" >
                     <span class="popuptext" id="qaInfo">
-                      <p >The QA has controls to:</p> 
+                      <p >The <strong>QA</strong> has controls to:</p> 
                       <ul>
                         <li> Approve or reject campaign data </li>
                         <li >Approve or reject each module </li>
@@ -714,7 +717,7 @@
                   </tr>
                 </thead>
               </table>
-              <div class="preview-container"  #scrollMe [scrollTop]="!isLastMod ? true : scrollMe.scrollHeight">
+              <div class="preview-container" #scrollMe [scrollTop]="!isLastMod ? true : scrollMe.scrollHeight">
 
                 <div class="preview-container-inner" >
 
@@ -725,7 +728,7 @@
 
                     <div *ngIf="moduleInputs.preview" >
 
-                      <div style="width:100%;text-align:center" *ngIf="optionSelectModTypeActive">
+                      <div style="width:100%; text-align:center" >
                         <div class="preview-outline">
                           <img class="prev" [src]="moduleInputs.preview" width="100%" style="padding: 0 10px;" />
                         </div>
@@ -739,7 +742,7 @@
                     <div *ngIf="buttonHoverModPreviewActive && currentModule === i && !isEditor" width="100%">
                       <button *ngIf="campaignForm['controls'].approved.value !== true && !moduleInputs.preview" type="button" class="btn btn-default new-mod btn-full"> Add Module Here &#8595;</button>
                       <div *ngIf="moduleInputs.preview" >
-                        <div style="width:100%;text-align:center" *ngIf="optionSelectModTypeActive">
+                        <div style="width:100%;text-align:center" >
                           <div class="preview-outline">
                             <img class="prev" [src]="moduleInputs.preview" width="100%" style="padding: 0 10px;" />
                           </div>

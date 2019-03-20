@@ -23,8 +23,8 @@ li.open {
 /* Logo */
 img#logo {
   width: 36px;
-  margin-right: 9px;
-  margin-bottom: 6px;
+  margin-right: 7px;
+  margin-bottom: 7px;
 }
 
 /* DROPDOWN
@@ -76,7 +76,7 @@ img#logo {
 -------------------------------*/
 h1 {
  padding-top: 0 ;
-  margin-top: 0;
+  margin-top: -0;
   margin-bottom:0;
   color:#3f3f3f ;  
   font-size: 16px; 
@@ -94,6 +94,7 @@ h1 {
    font-weight: 400;
    text-transform: lowercase;
    font-style: italic;
+   font-size: 11.5px;
 }
 
 
@@ -165,7 +166,7 @@ nav a, nav span  {
   float: right;
   font-size: 13px;
   font-weight: 400;
-  padding: 17px 18px 18px 18px;
+  padding: 19px 17px 21px 17px;
   border: none;
  -webkit-font-smoothing: subpixel-antialiased;
   text-transform: uppercase;
@@ -206,7 +207,7 @@ nav a#nav-login {
 nav a.logout:hover {
   color: #1fbaff; 
   border-top: none;
-  padding: 17px 18px 18px 18px;
+  padding: 19px 17px 21px 17px;
 }
 
 nav a:hover,
@@ -219,7 +220,7 @@ nav a:active,
 nav a.active {
   text-decoration: none;
   border-top: solid #444b50;
-  padding: 14px 18px 16px 18px;
+  padding: 16px 17px 21px 17px;
   color: #101010 ;
 }
 
@@ -245,7 +246,7 @@ nav a.user.active,
 nav a.user:focus,
 nav a.user.focus {
    border-top: none;
-   padding: 17px 18px 18px 18px;
+   padding: 19px 17px 21px 17px;
 /*    color: #ff7029 ;
  */color: #23527c;
   text-decoration: underline;
