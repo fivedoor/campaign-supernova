@@ -1,7 +1,11 @@
 .footer{
-  margin:40px 30px 0;
+  padding: 20px 0 0;
+  margin: 30px 30px 10px;
+/*   position: absolute;
+  bottom:0; */
+/* width:100%;*/
 }
 
-.view {
-
+.logo-font, .attribution {
+	font-size:0.7em
 }

@@ -57,7 +57,7 @@
 
               <tr class="panel panel-default ">
                 <td width="20%"  >Title  </td>
-                <td class="values">{{campaignForm.value.title}}</td>
+                <td class="values table-title" >{{campaignForm.value.title}}</td>
               </tr>
               <tr class="panel panel-default ">
                 <td width="20%"  >Version</td>
@@ -152,8 +152,8 @@
                 </tr>
               </thead>
               <tr class="panel panel-default ">
-                <td width="20%"  >Title  </td>
-                <td class="values" > 
+                <td width="20%">Title </td>
+                <td class="values table-title" > 
                   <input type="text" class="form-control" formControlName="title" id="title" >
                   <small [hidden]="campaignForm.controls.title.valid" class="text-danger">
                     title is required
@@ -269,7 +269,7 @@
                 </tr>
                 <tr> 
                   <td width="20%"  >Module</td>
-                  <td  ><span class="table-title"> Header </span>
+                  <td  ><span class="table-title"> header </span>
                     <div  class="pull-right" >
                       <img *ngIf="viewType === 'author'" src="https://firebasestorage.googleapis.com/v0/b/ngdataformdemo.appspot.com/o/red-arrow1.gif?alt=media&token=e7c8e7ea-fc67-41d9-b1a4-d649aec6d16f" class="arrow-guide" [hidden]="campaignForm.controls.config.controls.header.valid && campaignForm.controls.config.controls.logo.controls.href.valid" /> 
                       <a *ngIf="campaignForm.controls.approved.value !== true && viewType === 'author'" (click)="toggleCampaignConfigInput('open')" class="details-edit">edit</a>
@@ -318,7 +318,7 @@
 
                   </tr>
                   <tr class="panel panel-default ">
-                    <td width="20%"  >Header</td>
+                    <td width="20%"  >header</td>
                     <td class="values" ><span class="placeholder" contenteditable="false" data-placeholder="Introductory sentence which will appear at the top of the email" >{{campaignForm.value.config.header}}</span> 
                       <button *ngIf="viewType === 'qa' || campaignForm.controls.config.controls.headerFlag.value == true|| viewType === 'owner' && campaignForm.controls.approved.value === false" 
                       [disabled]="viewType === 'author' || viewType === 'owner' && campaignForm.controls.approved.value !== false || viewType === ''" 

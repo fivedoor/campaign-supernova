@@ -1,10 +1,13 @@
 <div class="hero-bg" >
   <div class="container hero" >
     <div class="container hero-page-width hero-center" >
+      <span class="sub-head-small">for email</span>
+      <h1>Rocket Science</h1>
 
+      <div class="sub-head-width" >
+      <h2>Coordinate layouts, assets &amp; approvals <!--process--> for html&nbsp;emails</h2>
+      </div>
 
-      <h1>brief, build &amp; manage&nbsp;emails</h1>
-      <h2> Coordinate layouts, assets &amp; approvals process for modular&nbsp;emails</h2>
       <button role="button" class="btn btn-lg btn-primary" (click)="goToLearn()" >Teach Me!</button>
       <button *ngIf="authService.currentUser" routerLink="/new-form" routerLinkActive="active" role="button" class="btn btn-lg btn-success" >Let's Get Started</button>
       <button *ngIf="!authService.currentUser" routerLink="/login" routerLinkActive="active" role="button" class="btn btn-lg btn-success" >Let's Get Started</button>
@@ -13,18 +16,33 @@
   </div>
 </div>  
 
+
 <div><a id="learn-anchor"></a></div>
 
 <div class="secondary-bg" >
   <div class="container secondary" >
-    <div class="container page-width" >
+    <div class="container secondary-page-width" >
 
       <p class="title-text"  >
-       <strong>Campaign Supernova</strong> provides a simple user interface to devise and brief layouts for email campaign templates; store and edit all your assets; and get layouts and assets reviewed and approved by other members of your&nbsp;team.</p>
+       <strong class="supernova">Campaign Supernova</strong> provides a simple user interface to devise and brief layouts for email campaign templates; store and edit all your assets; and get layouts and assets reviewed and approved by other members of your&nbsp;team.</p>
 
-      <p class="secondary-text title-text-sub">Data for each email gets stored to <a target="_blank" href="https://firebase.google.com"> Firebase's database</a> and can be exported ready to compile an html email to your exact&nbsp;spec. </p>
+      <p class="title-text">Data for each email gets stored to <a target="_blank" href="https://firebase.google.com"> Firebase's database</a> and can be exported ready to compile an html email to your exact&nbsp;spec. </p>
 
-      <h3> So this isn't an email build&nbsp;tool?</h3>
+     
+
+    </div>
+  </div>
+</div> 
+
+
+
+<div class="tertiary-bg" >
+  <div class="container secondary" >
+    <div class="container page-width" >
+          <h1 >Faq </h1>
+
+
+      <h3 class="first"> So this isn't an email build&nbsp;tool?</h3>
 
       <p class="secondary-text" >CS functions as a companion tool to an email builder, specifically one that generates and populates email templates based on a set of <em>reference&nbsp;data</em>.</p> 
 
@@ -50,21 +68,20 @@
   </div>
 </div> 
 
-
-<div class="secondary-bg" >
+<!-- <div class="secondary-bg" >
    <div class="container hero-image" >
      <img class="templates" src="https://firebasestorage.googleapis.com/v0/b/ngdataformdemo.appspot.com/o/emails-trans1.png?alt=media&token=fe8e42c2-c933-4c72-b6d0-2e8b53cd1ea8" />
    </div>
 </div>
+ -->
 
 
-
-<div class="hero-bg" >
+<div class="secondary-bg" >
 <div class="container tertiary" >
     <div class="container page-width">
 
-          <h1 >Features... </h1>
-          <h2>Compose</h2>
+          <h1 >Features </h1>
+          <h2 class="first">Compose</h2>
           <h4>Compose bespoke emails</h4>
 
          <p class="secondary-text">
@@ -103,20 +120,20 @@
   </div>
 
 
-<div class="hero-bg" >
+<!-- <div class="hero-bg" >
      <div class="container hero-image" >
  
  <img class="templates" src="https://firebasestorage.googleapis.com/v0/b/ngdataformdemo.appspot.com/o/emails-trans1.png?alt=media&token=fe8e42c2-c933-4c72-b6d0-2e8b53cd1ea8" />
 
    </div>
-</div>
+</div> -->
 
 
-<div class="secondary-bg">
+<div class="tertiary-bg">
   <div class="container secondary" >
     <div class="container page-width" >
     
-     <h1>Controls... </h1>
+     <h1>Controls</h1>
 
      <p class="secondary-subhead" > Campaign Supernova allows registered users to be assigned one of three different types of profile when initiating a campaign. Each of these profiles have a unique set of privileges when accessing a&nbsp;campaign:</p>
 
@@ -151,22 +168,22 @@
   </div>
 </div>
 
-<div class="secondary-bg" >
+<!-- <div class="secondary-bg" >
   <div class="container hero-image" >
      <img class="templates" src="https://firebasestorage.googleapis.com/v0/b/ngdataformdemo.appspot.com/o/emails-trans1.png?alt=media&token=fe8e42c2-c933-4c72-b6d0-2e8b53cd1ea8" />
   </div>
 </div>
+ -->
 
-
-<div class="hero-bg">
+<div class="secondary-bg">
   <div class="container secondary" >
     <div class="container page-width">
 
-      <h1 >Demonstration... </h1>
+      <h1 >Try it</h1>
 
       <p class="secondary-subhead">When logging into the demo version and accessing a campaign you can toggle between <strong>Author</strong>, <strong>Owner</strong> and <strong>QA</strong> view to experience their&nbsp;controls.</p>
 
-      <p class="secondary-subhead">
+      <p class="secondary-text">
       Excited? Confused? Check out the <a *ngIf="authService.currentUser"  routerLink="/campaign-library" routerLinkActive="active" >demo campaigns</a><a *ngIf="!authService.currentUser"  routerLink="/login" routerLinkActive="active" >demo campaigns</a> to explore further. Have a play, use, abuse, send feedback or abusive messages.&nbsp;Enjoy!</p>
 
        <button *ngIf="authService.currentUser" routerLink="/campaign-library" routerLinkActive="active" role="button" class="btn btn-lg btn-success" >Let's Get Started</button>

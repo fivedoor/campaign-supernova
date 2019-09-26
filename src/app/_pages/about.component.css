@@ -1,12 +1,15 @@
 
 .hero-bg {
-    background: #ffe01b ; /* #f3f3f3 #FFF5F0; #fdf6f2; #fff4ee ;*/
+    background: #fde327; /* #ffdb43  fde9e9 ; #e9f0fd;  ffe01b #f3f3f3 #FFF5F0; #fdf6f2; #fff4ee ;*/
 }
 .secondary-bg {
     background: #ffffff;
 }
+.tertiary-bg {
+    background: #fbfbfb;
+}
 a {
-    font-weight: 700;
+    font-weight: 400;
 }
 p, li {
     color:#202020;
@@ -21,18 +24,34 @@ a#learn-anchor {
     top: -50px;
     visibility: hidden;
 }
+.supernova {
+    font-weight: 900;
+    background-color: #fde228;
+    padding: 16px;
+}
 
 /* Dimensions */
 .hero {
-  padding: 200px 0 200px 0;
-      margin: 0 auto;
-
+    padding: 175px 0 135px; /* 176px 0 112px; */
+    margin: 0 auto;
 }
+.secondary, .tertiary {
+    padding: 160px 0 160px;  /* 86px 0 88px; */
+    margin: 0 auto;
+}
+
 .hero-page-width {
-    max-width: 1040px;
+    max-width: 1140px;
+}
+.sub-head-width{
+/*     background-color: #AAEE00;
+ */   /*  max-width: 400px; */
 }
 .page-width {
-    max-width: 700px;
+    max-width: 620px;
+}
+.secondary-page-width {
+    max-width: 760px;
 }
 .hero-image {
     text-align:center;
@@ -55,20 +74,29 @@ img#logo {
 
 /* Buttons */
 
-button.btn-success, button.btn-primary{
-    margin-top: 25.5px;
-    font-size: 13.5px; 
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    font-weight: 900;
-   -webkit-border-radius: 1px;
-    -moz-border-radius: 1px;
+ button.btn-primary,
+ button.btn-success  {
+    margin-top: 21px;
+    margin-bottom: 28px;
+    font-size: 16px;
+    text-transform: capitalize;
+    letter-spacing: .3px;
+    font-weight: 700;
     border-radius: 1px;
-    border: 1px solid #202020;
     text-align: center;
-    padding: 20px 33px;
-    color: #202020;
+    padding: 20px 38px;
+} 
+button.btn-success {
+    border: 1px solid #4cae4c;
+    color: #ffffff;
 }
+button.btn-primary{
+      background-color: #337ab7;
+ /* #ff7029; */  
+    border: 1px solid #337ab7;
+    color: #ffffff;
+    margin-right:24px;
+} 
 button.btn-success:active,
 button.btn-success:focus,
 button.btn-success:hover {
@@ -79,133 +107,150 @@ button.btn-success:hover {
 button.btn-primary:active,
 button.btn-primary:focus,
 button.btn-primary:hover {
-        background-color: #ff5f00;
-        border: 1px solid #ff5f00;
+        background-color: #4a90cc;
+        border: 1px solid #4a90cc;
         color: #ffffff;
 }
-button.btn-success {
-    background-color: transparent; /* #73b333; */ 
-}
-button.btn-primary{
-    background-color: transparent; /* #ff7029; */  
-     margin-right:12px;
-} 
 
 
 /* Fonts */
+.hero h1{
+    font-size: 126px;
+    margin-bottom: 14px;
+    line-height: 112px;
+    padding: 0;
+
+}
+.sub-head-small {
+    font-style: italic;
+    font-family: 'Gochi Hand';
+    font-weight: 400;
+    font-size: 29px;
+    text-transform: uppercase;
+    position: relative;
+    top: 49px;
+    left: 367px;
+    letter-spacing: 2px;
+    width: 70px;
+}
 
 h1 {
-   font-size: 78px;
+    font-size: 119px;
     font-style: italic;
     font-weight: 700;
-    letter-spacing: 0.3px;
-    line-height: 78px;
-    text-transform: capitalize;
-    color: #202020;
-     margin-top:34px;
-    margin-bottom: 17px;
-
-}
-.hero h2 {
-    font-size: 26.33px;
-    font-style: italic;
-    font-weight: 400;
-    letter-spacing: 0.3px;
-    line-height: 34px;
-    text-transform: capitalize;
-    color: #202020;
-    margin-top:21.25px;
-}
-
-.secondary, .tertiary {
-    padding: 50px 0 64px 0;
-    margin: 0 auto;
-}
-.title-text {
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 400;
-    letter-spacing: 0.3px;
-    line-height: 56.6px;
+    letter-spacing: .3px;
+    line-height: 70px;
     text-transform: none;
     color: #202020;
-    margin-bottom: 45.3px;
-    margin-top: 64px;
+    margin-top: 12px;
+    margin-bottom: 56px;
+    background-color: #fde228;
+    padding: 35px;
+}
+
+.hero h2 {
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    line-height: 28px;
+    margin-top: 28px;
+    margin-bottom: 21px;
+    color: #212121;
+    font-style: italic;
+    /* text-transform: capitalize; */
+}
+
+.title-text {
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: .3px;
+    text-transform: none;
+    color: #202020;
+    margin-bottom: 32px;
+    margin-top: 14px;
+    line-height: 46px;
+    text-align: center;
 }
 .title-text-sub {
     margin-bottom: 64px;
 }
 .secondary-text {
-    font-size: 21px;
+    font-size: 16.5px;
     font-style: normal;
     font-weight: 400;
     letter-spacing: 0.3px;
-    line-height: 34px;
+    line-height: 28px;
     text-transform: none;
     color: #202020;
-    margin-bottom: 17px;
+    margin-bottom: 14px;
 }
 h3 {
-    font-size: 40px;
-    font-style: italic;
-    font-weight: 700;
+    font-size: 29px;
+    font-weight: 800;
     letter-spacing: 0.3px;
-    line-height: 48px;
-    text-transform: none;
+    line-height: 35px;
     color: #202020;
-    margin-top:56.6px; 
-    margin-bottom: 22.5px;
+    margin-top: 49px;
+    margin-bottom: 21px;
+    font-style: italic;
+
+}
+h3.first{
+    margin-top: 70px;
 }
 .tertiary h2 {
-    font-size: 44px;
+    font-size: 30px;
     font-style: italic;
-    font-weight: 400;
-    letter-spacing: 0.3px;
-    line-height: 34px;
-    color: #ff5f00; /*B0925A;*/
-    margin-top:64px;
-    margin-bottom:25.5px;
+    font-weight: 700;
+    letter-spacing: .3px;
+    line-height: 28px;
+    color: #202020;
+    margin-top: 49px;
+    margin-bottom: 21px;
+}
+.tertiary h2.first{
+    margin-top: 64px;
 }
 h4 {
-    color:#202020; 
+color: #202020;
+    font-size: 19px;
+    line-height: 28px;
+    letter-spacing: 0.3px;
+    margin-top: 21px;
+    font-style: italic;
+    margin-bottom: 7px;
     font-weight: 700;
-    font-size: 22px;
-    line-height:  34px;
-    margin-top: 0;
-    letter-spacing: 0.3px;
-    margin-top:0;
-    margin-bottom: 8.5px;
-}
 
+}
 .secondary h2 {
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 400;
-    letter-spacing: 0.3px;
-    line-height: 34px;
-    color: #ff5f00; /*B0925A;*/
-    margin-top:34px;
-    margin-bottom:34px;
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 28px;
+    color: #202020;
+    margin-top: 35px;
+    margin-bottom: 21px;
 }
-
 .secondary-subhead {
-    font-size: 21px;
+    font-size: 16.5px;
     font-style: normal;
     font-weight: 400;
     letter-spacing: 0.3px;
-    line-height: 34px;
+    line-height: 28px;
     text-transform: none;
     color: #202020;
-    margin-top: 34px;
+    margin-top: 56px;
 }
 
 p.footnote{
     color:#202020; 
     font-weight: 300;
     letter-spacing: 0.3px;
-    line-height: 31px;
+    line-height: 35px;
     margin-top: 17px;
-    margin-bottom: 17px;;
+    margin-bottom: 17px;
     font-size: 16px;
 
 }
@@ -217,47 +262,68 @@ list-style-type: square;
 }
 
 ul.custom-bullet  {
-    margin-bottom: 34px;
+    margin-bottom: 28px;
 }
 .custom-bullet li {
     display: block;
 }
 .custom-bullet li:before {
-    content: none;
-    font-family: 'Glyphicons Halflings';
-    font-size: 24px;
-    float: left;
-    margin-bottom: 0;
-    color:#636363; 
+     color: #202020;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 35px;
+    letter-spacing: 0.3px;
 }
 .custom-bullet li.sub {
-    color:#202020; 
-    font-weight: 700;
-    font-size: 27px;
-    line-height: 34px;
-    margin-top: 8.5px;
+    color: #202020;
+    font-size: 22px;
+    line-height: 35px;
     letter-spacing: 0.3px;
-    /* font-style: italic; */
+    font-style: italic;
 }
 .red-bullet {
   color:#ff5f00; 
 }
 
 
+@media(max-width:991px){
+.sub-head-small {
+    font-size: 28px;
+    text-transform: uppercase;
+    top: 165px;
+    left: 153px;
+    letter-spacing: 2px;
+    }
+}
 
 
-@media(max-width:767px){
-  
+
+@media(max-width:533px){
+ 
+ .sub-head-small {
+      font-size: 22px;
+    text-transform: uppercase;
+    position: relative;
+    top: 115px;
+    left: 114px;
+    letter-spacing: 2px;
+    width: 70px;
+} 
 .hero {
-    padding: 100px 0 100px 0
+    padding: 96px 0 120px 0
 }
 
 h1 {
-    font-size: 3em;
-    line-height: 50px;
+    font-size: 6em;
+    line-height: 50px; 
+    padding:  14px;
+}
+.hero h1 {
+    font-size: 6em;
+    line-height: 76px; 
 }
 .hero h2 {
-
+    font-size: 19px;
 }
 .hero .secondary-text {
     font-size: 16px;
