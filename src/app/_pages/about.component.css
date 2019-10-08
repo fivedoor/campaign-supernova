@@ -76,11 +76,10 @@ img#logo {
 
  button.btn-primary,
  button.btn-success  {
-    margin-top: 19.5px;
-    margin-bottom: 26px;
-    font-size: 14px;
+    margin-top: 18px;
+    margin-bottom: 18px;
+    font-size: 14.5px;
     text-transform: uppercase;
-    letter-spacing: .3px;
     font-weight: 700;
     border-radius: 1px;
     text-align: center;
@@ -150,13 +149,13 @@ font-size: 112px;
 }
 
 .hero h2 {
-font-size: 19.5px;
+    font-size: 19.5px;
     font-weight: 400;
     letter-spacing: .3px;
-    line-height: 26px;
-    margin-top: 26px;
-    margin-bottom: 26px;
-    color: #202020;
+    line-height: 27px;
+    margin-top: 27px;
+    margin-bottom: 27px;
+    color: #212121;
 }
 
 .title-text {
@@ -166,75 +165,75 @@ font-size: 19.5px;
     letter-spacing: .3px;
     text-transform: none;
     color: #202020;
-    margin-bottom: 26px;
-    margin-top: 19.5px;
-    line-height: 45.5px;
+    margin-bottom: 27px;
+    margin-top: 18px;
+    line-height: 45px;
     text-align: center;
 }
 .title-text-sub {
-    margin-bottom: 65px;
+    margin-bottom: 63px;
 }
 .secondary-text {
     font-size: 16.5px;
     font-style: normal;
     font-weight: 400;
     letter-spacing: .3px;
-    line-height: 26px;
+    line-height: 27px;
     text-transform: none;
     color: #202020;
-    margin-bottom: 13px;
+    margin-bottom: 13.5px;
 }
 h3 {
-    font-size: 23px;
+    font-size: 24px;
     font-weight: 800;
     letter-spacing: .3px;
-    line-height: 32.5px;
+    line-height: 36px;
     color: #202020;
     margin-top: 52px;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 }
 h3.first{
     margin-top: 70px;
 }
 .tertiary h2 {
-  font-size: 28px;
+font-size: 30px;
     font-style: italic;
     font-weight: 700;
     letter-spacing: .3px;
-    line-height: 26px;
+    line-height: 27px;
     color: #202020;
-    margin-top: 45px;
-    margin-bottom: 19.5px;
+    margin-top: 52px;
+    margin-bottom: 27px;
 }
 .tertiary h2.first{
     margin-top: 64px;
 }
 h4 {
-    color: #202020;
-    font-size: 16.5px;
-    line-height: 26px;
+ color: #202020;
+    font-size: 18.5px;
+    line-height: 27px;
     letter-spacing: .3px;
-    margin-top: 13px;
+    margin-top: 13.5px;
     /* font-style: italic; */
-    margin-bottom: 6.5px;
+    margin-bottom: 9px;
     font-weight: 700;
 }
 .secondary h2 {
-    font-size: 28px;
+    font-size: 30px;
     font-style: italic;
     font-weight: 700;
     letter-spacing: 0;
-    line-height: 26px;
+    line-height: 27px;
     color: #202020;
-    margin-top: 26px;
-    margin-bottom: 19.5px;
+    margin-top: 27px;
+    margin-bottom: 18px;
 }
 .secondary-subhead {
     font-size: 16.5px;
     font-style: normal;
     font-weight: 400;
     letter-spacing: .3px;
-    line-height: 26px;
+    line-height: 27px;
     text-transform: none;
     color: #202020;
     margin-top: 52px;
@@ -268,12 +267,12 @@ ul.custom-bullet  {
     font-weight: 700;
     font-size: 18.5px;
     line-height: 27px;
-    letter-spacing: 0.3px;
+    letter-spacing: .3px;
 }
 .custom-bullet li.sub {
     color: #202020;
     font-size: 18.5px;
-    line-height: 26px;
+    line-height: 27px;
     letter-spacing: .3px;
    
 }
