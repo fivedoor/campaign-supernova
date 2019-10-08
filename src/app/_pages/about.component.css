@@ -76,25 +76,26 @@ img#logo {
 
  button.btn-primary,
  button.btn-success  {
-    margin-top: 18px;
-    margin-bottom: 27px;
-    font-size: 16px;
-    text-transform: capitalize;
+    margin-top: 19.5px;
+    margin-bottom: 26px;
+    font-size: 14px;
+    text-transform: uppercase;
     letter-spacing: .3px;
     font-weight: 700;
     border-radius: 1px;
     text-align: center;
-    padding: 20px 38px;
+    padding: 19.5px 38px;
+    letter-spacing: 1px;
 } 
 button.btn-success {
     border: 1px solid #4cae4c;
-    color: #ffffff;
+   color: #fffad7;
 }
 button.btn-primary{
       background-color: #337ab7;
  /* #ff7029; */  
     border: 1px solid #337ab7;
-    color: #ffffff;
+   color: #fffad7;
     margin-right:24px;
 } 
 button.btn-success:active,
@@ -102,22 +103,22 @@ button.btn-success:focus,
 button.btn-success:hover {
         background-color: #6ebc20;
         border: 1px solid #6ebc20;
-        color: #ffffff;
+       color: #fffad7;
 }
 button.btn-primary:active,
 button.btn-primary:focus,
 button.btn-primary:hover {
         background-color: #4a90cc;
         border: 1px solid #4a90cc;
-        color: #ffffff;
+       color: #fffad7;
 }
 
 
 /* Fonts */
 .hero h1{
-    font-size: 126px;
-    margin-bottom: 14px;
-    line-height: 112px;
+    font-size: 112px;
+    margin-bottom: 13px;
+    line-height: 117px;
     padding: 0;
 
 }
@@ -130,34 +131,32 @@ button.btn-primary:hover {
     position: relative;
     top: 49px;
     left: 367px;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     width: 70px;
 }
 
 h1 {
-    font-size: 116px;
+font-size: 112px;
     font-style: italic;
     font-weight: 700;
     letter-spacing: .3px;
-    line-height: 70px;
+    line-height: 71.5px;
     text-transform: none;
     color: #202020;
-    margin-top: 9px;
-    margin-bottom: 56px;
+    margin-top: 6.5px;
+    margin-bottom: 58.5px;
     background-color: #fde228;
-    padding: 35px;
+    padding: 39px;
 }
 
 .hero h2 {
-    font-size: 20px;
+font-size: 19.5px;
     font-weight: 400;
-    letter-spacing: 0.3px;
-    line-height: 27px;
-    margin-top: 27px;
-    margin-bottom: 27px;
-    color: #212121;
-/*     font-style: italic;
- */    /* text-transform: capitalize; */
+    letter-spacing: .3px;
+    line-height: 26px;
+    margin-top: 26px;
+    margin-bottom: 26px;
+    color: #202020;
 }
 
 .title-text {
@@ -167,58 +166,57 @@ h1 {
     letter-spacing: .3px;
     text-transform: none;
     color: #202020;
-    margin-bottom: 27px;
-    margin-top: 18px;
-    line-height: 45px;
+    margin-bottom: 26px;
+    margin-top: 19.5px;
+    line-height: 45.5px;
     text-align: center;
 }
 .title-text-sub {
-    margin-bottom: 63px;
+    margin-bottom: 65px;
 }
 .secondary-text {
     font-size: 16.5px;
     font-style: normal;
     font-weight: 400;
     letter-spacing: .3px;
-    line-height: 27px;
+    line-height: 26px;
     text-transform: none;
     color: #202020;
-    margin-bottom: 18px;
+    margin-bottom: 13px;
 }
 h3 {
-    font-size: 20.5px;
+    font-size: 23px;
     font-weight: 800;
     letter-spacing: .3px;
-    line-height: 27px;
+    line-height: 32.5px;
     color: #202020;
-    margin-top: 54px;
-    margin-bottom: 9px;
-
+    margin-top: 52px;
+    margin-bottom: 15px;
 }
 h3.first{
     margin-top: 70px;
 }
 .tertiary h2 {
-    font-size: 28px;
+  font-size: 28px;
     font-style: italic;
     font-weight: 700;
     letter-spacing: .3px;
-    line-height: 27px;
+    line-height: 26px;
     color: #202020;
     margin-top: 45px;
-    margin-bottom: 18px;
+    margin-bottom: 19.5px;
 }
 .tertiary h2.first{
     margin-top: 64px;
 }
 h4 {
-color: #202020;
+    color: #202020;
     font-size: 16.5px;
-    line-height: 27px;
+    line-height: 26px;
     letter-spacing: .3px;
-    margin-top: 9px;
+    margin-top: 13px;
     /* font-style: italic; */
-    margin-bottom: 4.5px;
+    margin-bottom: 6.5px;
     font-weight: 700;
 }
 .secondary h2 {
@@ -226,20 +224,20 @@ color: #202020;
     font-style: italic;
     font-weight: 700;
     letter-spacing: 0;
-    line-height: 27px;
+    line-height: 26px;
     color: #202020;
-    margin-top: 27px;
-    margin-bottom: 18px;
+    margin-top: 26px;
+    margin-bottom: 19.5px;
 }
 .secondary-subhead {
     font-size: 16.5px;
     font-style: normal;
     font-weight: 400;
     letter-spacing: .3px;
-    line-height: 27px;
+    line-height: 26px;
     text-transform: none;
     color: #202020;
-    margin-top: 54px;
+    margin-top: 52px;
 }
 
 p.footnote{
@@ -273,9 +271,9 @@ ul.custom-bullet  {
     letter-spacing: 0.3px;
 }
 .custom-bullet li.sub {
-color: #202020;
+    color: #202020;
     font-size: 18.5px;
-    line-height: 27px;
+    line-height: 26px;
     letter-spacing: .3px;
    
 }
@@ -284,7 +282,7 @@ color: #202020;
 }
 
 
-@media(max-width:991px){
+@media(max-width:739px){
 .sub-head-small {
     font-size: 28px;
     text-transform: uppercase;
