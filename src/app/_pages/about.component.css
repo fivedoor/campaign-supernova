@@ -36,7 +36,7 @@ a#learn-anchor {
     margin: 0 auto;
 }
 .secondary, .tertiary {
-    padding: 144px;  /* 86px 0 88px; */
+    padding: 144px 0;  /* 86px 0 88px; */
     margin: 0 auto;
 }
 
@@ -119,7 +119,7 @@ button.btn-primary:hover {
     font-size: 112px;
     margin-bottom: 13px;
     line-height: 117px;
-    padding: 0;
+    padding: 0 39px;
 
 }
 .sub-head-small {
@@ -146,7 +146,7 @@ font-size: 112px;
     margin-top: 6.5px;
     margin-bottom: 58.5px;
     background-color: #fde228;
-    padding: 39px;
+    padding: 32.5px;
 }
 
 .hero h2 {
@@ -282,7 +282,7 @@ ul.custom-bullet  {
 }
 
 
-@media(max-width:739px){
+@media(max-width:991px){
 .sub-head-small {
     font-size: 28px;
     text-transform: uppercase;
