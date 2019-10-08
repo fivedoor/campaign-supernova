@@ -32,11 +32,11 @@ a#learn-anchor {
 
 /* Dimensions */
 .hero {
-    padding: 175px 0 135px; /* 176px 0 112px; */
+    padding: 196px 0 144px; /* 176px 0 112px; */
     margin: 0 auto;
 }
 .secondary, .tertiary {
-    padding: 160px 0 160px;  /* 86px 0 88px; */
+    padding: 144px;  /* 86px 0 88px; */
     margin: 0 auto;
 }
 
@@ -76,8 +76,8 @@ img#logo {
 
  button.btn-primary,
  button.btn-success  {
-    margin-top: 21px;
-    margin-bottom: 28px;
+    margin-top: 18px;
+    margin-bottom: 27px;
     font-size: 16px;
     text-transform: capitalize;
     letter-spacing: .3px;
@@ -135,29 +135,29 @@ button.btn-primary:hover {
 }
 
 h1 {
-    font-size: 119px;
+    font-size: 116px;
     font-style: italic;
     font-weight: 700;
     letter-spacing: .3px;
     line-height: 70px;
     text-transform: none;
     color: #202020;
-    margin-top: 12px;
+    margin-top: 9px;
     margin-bottom: 56px;
     background-color: #fde228;
     padding: 35px;
 }
 
 .hero h2 {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 400;
     letter-spacing: 0.3px;
-    line-height: 28px;
-    margin-top: 28px;
-    margin-bottom: 21px;
+    line-height: 27px;
+    margin-top: 27px;
+    margin-bottom: 27px;
     color: #212121;
-    font-style: italic;
-    /* text-transform: capitalize; */
+/*     font-style: italic;
+ */    /* text-transform: capitalize; */
 }
 
 .title-text {
@@ -167,81 +167,79 @@ h1 {
     letter-spacing: .3px;
     text-transform: none;
     color: #202020;
-    margin-bottom: 32px;
-    margin-top: 14px;
-    line-height: 46px;
+    margin-bottom: 27px;
+    margin-top: 18px;
+    line-height: 45px;
     text-align: center;
 }
 .title-text-sub {
-    margin-bottom: 64px;
+    margin-bottom: 63px;
 }
 .secondary-text {
     font-size: 16.5px;
     font-style: normal;
     font-weight: 400;
-    letter-spacing: 0.3px;
-    line-height: 28px;
+    letter-spacing: .3px;
+    line-height: 27px;
     text-transform: none;
     color: #202020;
-    margin-bottom: 14px;
+    margin-bottom: 18px;
 }
 h3 {
-    font-size: 29px;
+    font-size: 20.5px;
     font-weight: 800;
-    letter-spacing: 0.3px;
-    line-height: 35px;
+    letter-spacing: .3px;
+    line-height: 27px;
     color: #202020;
-    margin-top: 49px;
-    margin-bottom: 21px;
-    font-style: italic;
+    margin-top: 54px;
+    margin-bottom: 9px;
 
 }
 h3.first{
     margin-top: 70px;
 }
 .tertiary h2 {
-    font-size: 30px;
+    font-size: 28px;
     font-style: italic;
     font-weight: 700;
     letter-spacing: .3px;
-    line-height: 28px;
+    line-height: 27px;
     color: #202020;
-    margin-top: 49px;
-    margin-bottom: 21px;
+    margin-top: 45px;
+    margin-bottom: 18px;
 }
 .tertiary h2.first{
     margin-top: 64px;
 }
 h4 {
 color: #202020;
-    font-size: 19px;
-    line-height: 28px;
-    letter-spacing: 0.3px;
-    margin-top: 21px;
-    font-style: italic;
-    margin-bottom: 7px;
+    font-size: 16.5px;
+    line-height: 27px;
+    letter-spacing: .3px;
+    margin-top: 9px;
+    /* font-style: italic; */
+    margin-bottom: 4.5px;
     font-weight: 700;
-
 }
 .secondary h2 {
-    font-size: 32px;
+    font-size: 28px;
     font-style: italic;
     font-weight: 700;
     letter-spacing: 0;
-    line-height: 28px;
+    line-height: 27px;
     color: #202020;
-    margin-top: 35px;
-    margin-bottom: 21px;
+    margin-top: 27px;
+    margin-bottom: 18px;
 }
 .secondary-subhead {
     font-size: 16.5px;
     font-style: normal;
     font-weight: 400;
-    letter-spacing: 0.3px;
-    line-height: 28px;
+    letter-spacing: .3px;
+    line-height: 27px;
     text-transform: none;
     color: #202020;
-    margin-top: 56px;
+    margin-top: 54px;
 }
 
 p.footnote{
@@ -270,16 +268,16 @@ ul.custom-bullet  {
 .custom-bullet li:before {
      color: #202020;
     font-weight: 700;
-    font-size: 22px;
-    line-height: 35px;
+    font-size: 18.5px;
+    line-height: 27px;
     letter-spacing: 0.3px;
 }
 .custom-bullet li.sub {
-    color: #202020;
-    font-size: 22px;
-    line-height: 35px;
-    letter-spacing: 0.3px;
-    font-style: italic;
+color: #202020;
+    font-size: 18.5px;
+    line-height: 27px;
+    letter-spacing: .3px;
+   
 }
 .red-bullet {
   color:#ff5f00; 
