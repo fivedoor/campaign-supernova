@@ -226,7 +226,7 @@ h4 {
     line-height: 27px;
     color: #202020;
     margin-top: 27px;
-    margin-bottom: 18px;
+    margin-bottom: 27px;
 }
 .secondary-subhead {
     font-size: 16.5px;
@@ -263,16 +263,17 @@ ul.custom-bullet  {
     display: block;
 }
 .custom-bullet li:before {
-     color: #202020;
-    font-weight: 700;
-    font-size: 18.5px;
+    color: #202020;
+    font-size: 17.5px;
     line-height: 27px;
+    font-weight: bold;
     letter-spacing: .3px;
 }
 .custom-bullet li.sub {
     color: #202020;
-    font-size: 18.5px;
+    font-size: 17.5px;
     line-height: 27px;
+    font-weight: bold;
     letter-spacing: .3px;
    
 }
