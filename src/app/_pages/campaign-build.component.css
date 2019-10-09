@@ -1,10 +1,4 @@
 
-.page-bg {
-    background: -webkit-linear-gradient(left top, #ffffff, #fafafa); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(bottom right,  #ffffff, #fafafa); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(bottom right,  #ffffff, #fafafa); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to bottom right,  #ffffff, #fafafa); /* Standard syntax */
-}
 
 .page-pad {
     padding: 85px 0 300px 0;
@@ -21,18 +15,11 @@ font-weight: 300;
 
 .panel-default, .panel {
   padding: 20px;
-/*   background:  #0288d1; 
-*/   background:  #ffffff; 
+ background:  #ffffff; 
 border-bottom: none;
   padding-bottom: none;
   margin-bottom: none; 
 
-/*border: 1px solid  #000000;
-*/
-/* -webkit-box-shadow: -9px 11px 5px -6px rgba(61,59,29,1);
--moz-box-shadow: -9px 11px 5px -6px rgba(61,59,29,1);
-box-shadow: -9px 11px 5px -6px rgba(61,59,29,1); */
--webkit-box-shadow: 0px 2px 5px rgba(150, 150, 150, 1);
 }
 
 

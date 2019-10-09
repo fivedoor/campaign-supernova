@@ -1,4 +1,5 @@
-       body, html {  
+ /*  Loading   spinner   */  
+      body, html {  
         height: 100%;
       }
       .app-loading {
@@ -57,11 +58,8 @@ font-family: 'Lato', 'Gotham', sans-serif !important;
 
 body {
     
-    background: #f8f8f8;
-    background: -webkit-linear-gradient(left top, #ffffff, #fafafa); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(bottom right,  #ffffff, #fafafa); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(bottom right,  #ffffff, #fafafa); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to bottom right,  #ffffff, #fafafa); /* Standard syntax */
+    background: #ffffff;
+
 	  color:#202020 ;
 
     /* The image used */
@@ -110,9 +108,6 @@ border-width: 1px !important;
 box-shadow: inset 0px 0px 36px 0px rgba(255,223,13,0.45) !important;*/
 }
 
-/*button {
-  outline: 1px solid #f9d852  !important;
-}*/
 
 /* MODAL STYLES
 -------------------------------*/
@@ -179,3 +174,4 @@ body.modal-open {
   /* body overflow is hidden to hide main scrollbar when modal window is open */
   overflow: hidden;
 }
+
