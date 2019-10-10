@@ -22,10 +22,9 @@ li.open {
 
 /* Logo */
 img#logo {
-
     width: 30px;
-    margin-right: 3px;
-    margin-bottom: 10px;
+    margin-right: 4px;
+    margin-bottom: 12px;
 }
 
 /* DROPDOWN
@@ -76,17 +75,17 @@ img#logo {
 /* TYPOGRAPHY
 -------------------------------*/
 h1 {
-    padding-top: 3px;
+padding-top: 2px;
     margin-top: 0;
     margin-bottom: 0;
-    color: #3f3f3f;
-    font-size: 18.5px;
+    color: #1d1d1d;
+    font-size: 19px;
     line-height: 20px;
-    font-weight: 900;
+    font-weight: 700;
     font-family: Lato,sans-serif;
     -webkit-font-smoothing: subpixel-antialiased;
     -moz-osx-font-smoothing: antialiased;
-    letter-spacing: -0.3px;
+    letter-spacing: -0.5px;
 }
 
 
@@ -165,9 +164,9 @@ nav a, nav span  {
 color: #202020;
     background: 0 0;
     float: right;
-    font-size: 14px;
+    font-size: 13.5px;
     font-weight: 400;
-    padding: 20px 20px 20px 20px;
+    padding: 20px 10px;
     border: none;
     -webkit-font-smoothing: subpixel-antialiased;
     letter-spacing: 0.3px;
@@ -182,9 +181,8 @@ nav span  {
 nav a.user {
   color: #202020; 
   text-transform: none ;
-  font-size: 12px;
-  font-style: italic;
-}
+  font-size: 11px;
+/*   font-style: italic;*/}
 
 span#user-email {
   color: #e3dfc9; 
@@ -207,7 +205,7 @@ nav a#nav-login {
 nav a.logout:hover {
   color: #1fbaff; 
   border-top: none;
-  padding: 19px 20px 20px 20px;
+  padding: 19px 11px 20px 11px;
 }
 
 nav a:hover,
@@ -220,7 +218,7 @@ nav a:active,
 nav a.active {
     text-decoration: none;
     border-top: solid #444b50;
-    padding: 17px 20px 20px 20px;
+    padding: 17px 11px 20px;
     color: #101010;
 }
 
@@ -246,7 +244,7 @@ nav a.user.active,
 nav a.user:focus,
 nav a.user.focus {
    border-top: none;
-    padding:  20px 20px 20px 20px;
+    padding:  20px 11px;
   /*    color: #ff7029 ;
  */color: #23527c;
   text-decoration: underline;
@@ -289,7 +287,7 @@ nav a.logout {
 }
 
 li#nav-logout-desk-user a{
-  padding-left: 27px !important;
+  padding-left: 17px !important;
 }
 
 

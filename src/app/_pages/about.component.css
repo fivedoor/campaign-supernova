@@ -1,6 +1,6 @@
 
 .hero-bg {
-    background: #fde327; /* #ffdb43  fde9e9 ; #e9f0fd;  ffe01b #f3f3f3 #FFF5F0; #fdf6f2; #fff4ee ;*/
+    background: #ffea55; /*   #fde327; #ffdb43  fde9e9 ; #e9f0fd;  ffe01b #f3f3f3 #FFF5F0; #fdf6f2; #fff4ee ;*/
 }
 .secondary-bg {
     background: #ffffff;
@@ -25,14 +25,15 @@ a#learn-anchor {
     visibility: hidden;
 }
 .supernova {
+        font-family: 'Big Shoulders Text';
     font-weight: 900;
-    background-color: #fde228;
-/*     padding: 16px;
- */}
+    background-color: #ffea55;
+    font-size: 30px;
+/*     padding: 16px */}
 
 /* Dimensions */
 .hero {
-    padding: 196px 0 144px; /* 176px 0 112px; */
+    padding: 187px 0 144px; /* 176px 0 112px; */
     margin: 0 auto;
 }
 .secondary, .tertiary {
@@ -51,7 +52,7 @@ a#learn-anchor {
     max-width: 620px;
 }
 .secondary-page-width {
-    max-width: 730px;
+    max-width: 700px ;
 }
 .hero-image {
     text-align:center;
@@ -76,19 +77,19 @@ img#logo {
 
  button.btn-primary,
  button.btn-success  {
-margin: 18px 12px;
+    margin: 27px 0;
     font-size: 14px;
-    font-weight: bold;
+    font-weight: 700;
     text-transform: uppercase;
     border-radius: 1px;
     text-align: center;
-    padding: 21.5px 38px;
+    padding: 20.5px 37px;
     letter-spacing: 1px;
 } 
 
 button.btn-success {
     border: 1px solid #3b9a3b;
- background-color: #3b9a3b;
+    background-color: #3b9a3b;
    color: #ffffff;
 
 }
@@ -113,58 +114,63 @@ button.btn-primary:hover {
        color: #ffffff;
 }
 
-
-/* Fonts */
-.hero h1{
-    font-size: 109px;
-    margin-bottom: 29px;
-    line-height: 93px;
-    padding: 0 39px;
+.hero button.btn-primary,
+.hero button.btn-success  {
+        margin: 27px 12px;
 
 }
+/* Fonts */
+.hero h1{
+    font-size: 104px;
+    margin-bottom: 0px;
+    line-height: 90px;
+    padding: 0 39px;
+    font-family: 'Big Shoulders Text';
+    font-style: normal;
+}
 .sub-head-small {
-font-style: italic;
+ font-style: italic;
     font-family: 'Gochi Hand';
     font-weight: 400;
-    font-size: 25px;
+    font-size: 28px;
     text-transform: uppercase;
     position: relative;
-    top: 39px;
-    left: 298px;
+    top: 26px;
+    left: 252px;
     letter-spacing: 1px;
     width: 70px;
 }
 
 h1 {
-font-size: 106px;
-    font-style: italic;
+ font-size: 104px;
+    /* font-style: italic; */
     font-weight: 700;
     letter-spacing: .3px;
     line-height: 71.5px;
     text-transform: none;
+    background-color: #ffea55;
     color: #202020;
     margin-top: 6.5px;
-    margin-bottom: 58.5px;
-    background-color: #fde228;
-    padding: 32.5px;
-}
+    margin-bottom: 36.5px;
+    padding: 28.5px;
+    font-family: 'Big Shoulders Text';
 
+}
 .hero h2 {
-    font-size: 22px;
+    font-size: 20.5px;
     font-weight: 500;
-    /* font-style: italic; */
-    letter-spacing: .3px;
+    /* letter-spacing: .3px; */
     line-height: 27px;
-    margin-top: 32px;
+    margin-top: 27px;
     margin-bottom: 27px;
     color: #212121;
 }
 
 .title-text {
-     font-size: 22px;
+    font-size: 22px;
     font-style: normal;
     font-weight: 400;
-    letter-spacing: .3px;
+    /* letter-spacing: .3px; */
     text-transform: none;
     color: #202020;
     margin-bottom: 27px;
@@ -176,32 +182,37 @@ font-size: 106px;
     margin-bottom: 63px;
 }
 .secondary-text {
-    font-size: 16.5px;
+     font-size: 17.5px;
     font-style: normal;
     font-weight: 400;
-    letter-spacing: .3px;
+    /* letter-spacing: .3px; */
     line-height: 27px;
     text-transform: none;
     color: #202020;
-    margin-bottom: 13.5px;
+    margin-top: 27px;
+    margin-bottom: 27px;
+}
+.features-text {
+   margin-top: 0;
+
 }
 h3 {
-    font-size: 24px;
-    font-weight: 800;
-    letter-spacing: .3px;
-    line-height: 36px;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: -0.7px;
+    line-height: 35px;
     color: #202020;
-    margin-top: 52px;
-    margin-bottom: 18px;
+    margin-top: 63px;
+    margin-bottom: 27px;
 }
 h3.first{
-    margin-top: 70px;
+    margin-top: 63px;
 }
 .tertiary h2 {
-    font-size: 28px;
+    font-size: 30px;
     font-style: italic;
-    font-weight: 700;
-    letter-spacing: .3px;
+    font-weight: 900;
+    /* letter-spacing: .3px; */
     line-height: 27px;
     color: #202020;
     margin-top: 52px;
@@ -221,7 +232,7 @@ h4 {
     font-weight: 700;
 }
 .secondary h2 {
-    font-size: 30px;
+    font-size: 34px;
     font-style: italic;
     font-weight: 700;
     letter-spacing: 0;
@@ -231,14 +242,15 @@ h4 {
     margin-bottom: 27px;
 }
 .secondary-subhead {
-    font-size: 16.5px;
+font-size: 17.5px;
     font-style: normal;
     font-weight: 400;
     letter-spacing: .3px;
     line-height: 27px;
     text-transform: none;
     color: #202020;
-    margin-top: 52px;
+    margin-top: 35px;
+    margin-bottom: 37px;
 }
 
 p.footnote{
@@ -268,14 +280,14 @@ ul.custom-bullet  {
     color: #202020;
     font-size: 17.5px;
     line-height: 27px;
-    font-weight: bold;
+    font-weight: normal;
     letter-spacing: .3px;
 }
 .custom-bullet li.sub {
     color: #202020;
     font-size: 17.5px;
     line-height: 27px;
-    font-weight: bold;
+    font-weight: normal;
     letter-spacing: .3px;
    
 }
@@ -285,7 +297,7 @@ ul.custom-bullet  {
 
 
 
-@media(max-width:991px){
+@media(max-width:711px){
 .sub-head-small {
    font-size: 25px;
     text-transform: uppercase;
