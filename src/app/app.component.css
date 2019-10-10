@@ -22,8 +22,9 @@ li.open {
 
 /* Logo */
 img#logo {
-    width: 29px;
-    margin-right: 4px;
+
+    width: 30px;
+    margin-right: 3px;
     margin-bottom: 10px;
 }
 
@@ -75,11 +76,11 @@ img#logo {
 /* TYPOGRAPHY
 -------------------------------*/
 h1 {
-    padding-top: 0;
+    padding-top: 3px;
     margin-top: 0;
     margin-bottom: 0;
     color: #3f3f3f;
-    font-size: 18px;
+    font-size: 18.5px;
     line-height: 20px;
     font-weight: 900;
     font-family: Lato,sans-serif;
@@ -161,12 +162,12 @@ nav {
 }
 
 nav a, nav span  {
-    color: #202020;
+color: #202020;
     background: 0 0;
     float: right;
     font-size: 14px;
     font-weight: 400;
-    padding: 16px 20px 16px 20px;
+    padding: 20px 20px 20px 20px;
     border: none;
     -webkit-font-smoothing: subpixel-antialiased;
     letter-spacing: 0.3px;
@@ -219,7 +220,7 @@ nav a:active,
 nav a.active {
     text-decoration: none;
     border-top: solid #444b50;
-    padding: 13px 20px 16px 20px;
+    padding: 17px 20px 20px 20px;
     color: #101010;
 }
 
@@ -245,7 +246,7 @@ nav a.user.active,
 nav a.user:focus,
 nav a.user.focus {
    border-top: none;
-    padding: 16px 20px 16px 20px;
+    padding:  20px 20px 20px 20px;
   /*    color: #ff7029 ;
  */color: #23527c;
   text-decoration: underline;

@@ -27,8 +27,8 @@ a#learn-anchor {
 .supernova {
     font-weight: 900;
     background-color: #fde228;
-    padding: 16px;
-}
+/*     padding: 16px;
+ */}
 
 /* Dimensions */
 .hero {
@@ -36,7 +36,7 @@ a#learn-anchor {
     margin: 0 auto;
 }
 .secondary, .tertiary {
-    padding: 144px 0;  /* 86px 0 88px; */
+    padding: 114px 0;  /* 86px 0 88px; */
     margin: 0 auto;
 }
 
@@ -51,7 +51,7 @@ a#learn-anchor {
     max-width: 620px;
 }
 .secondary-page-width {
-    max-width: 760px;
+    max-width: 730px;
 }
 .hero-image {
     text-align:center;
@@ -76,66 +76,67 @@ img#logo {
 
  button.btn-primary,
  button.btn-success  {
-    margin-top: 18px;
-    margin-bottom: 18px;
-    font-size: 14.5px;
+margin: 18px 12px;
+    font-size: 14px;
+    font-weight: bold;
     text-transform: uppercase;
-    font-weight: 700;
     border-radius: 1px;
     text-align: center;
-    padding: 19.5px 38px;
+    padding: 21.5px 38px;
     letter-spacing: 1px;
 } 
+
 button.btn-success {
-    border: 1px solid #4cae4c;
-   color: #fffad7;
+    border: 1px solid #3b9a3b;
+ background-color: #3b9a3b;
+   color: #ffffff;
+
 }
 button.btn-primary{
       background-color: #337ab7;
  /* #ff7029; */  
     border: 1px solid #337ab7;
-   color: #fffad7;
-    margin-right:24px;
+   color: #ffffff;
 } 
 button.btn-success:active,
 button.btn-success:focus,
 button.btn-success:hover {
-        background-color: #6ebc20;
-        border: 1px solid #6ebc20;
-       color: #fffad7;
+        background-color: #4cae4c;
+        border: 1px solid #4cae4c;
+       color: #ffffff;
 }
 button.btn-primary:active,
 button.btn-primary:focus,
 button.btn-primary:hover {
         background-color: #4a90cc;
         border: 1px solid #4a90cc;
-       color: #fffad7;
+       color: #ffffff;
 }
 
 
 /* Fonts */
 .hero h1{
-    font-size: 112px;
-    margin-bottom: 13px;
-    line-height: 117px;
+    font-size: 109px;
+    margin-bottom: 29px;
+    line-height: 93px;
     padding: 0 39px;
 
 }
 .sub-head-small {
-    font-style: italic;
+font-style: italic;
     font-family: 'Gochi Hand';
     font-weight: 400;
-    font-size: 29px;
+    font-size: 25px;
     text-transform: uppercase;
     position: relative;
-    top: 49px;
-    left: 367px;
+    top: 39px;
+    left: 298px;
     letter-spacing: 1px;
     width: 70px;
 }
 
 h1 {
-font-size: 112px;
+font-size: 106px;
     font-style: italic;
     font-weight: 700;
     letter-spacing: .3px;
@@ -149,17 +150,18 @@ font-size: 112px;
 }
 
 .hero h2 {
-    font-size: 19.5px;
-    font-weight: 400;
+    font-size: 22px;
+    font-weight: 500;
+    /* font-style: italic; */
     letter-spacing: .3px;
     line-height: 27px;
-    margin-top: 27px;
+    margin-top: 32px;
     margin-bottom: 27px;
     color: #212121;
 }
 
 .title-text {
-    font-size: 25px;
+     font-size: 22px;
     font-style: normal;
     font-weight: 400;
     letter-spacing: .3px;
@@ -167,7 +169,7 @@ font-size: 112px;
     color: #202020;
     margin-bottom: 27px;
     margin-top: 18px;
-    line-height: 45px;
+    line-height: 41px;
     text-align: center;
 }
 .title-text-sub {
@@ -210,7 +212,7 @@ h3.first{
 }
 h4 {
  color: #202020;
-    font-size: 18.5px;
+    font-size: 18px;
     line-height: 27px;
     letter-spacing: .3px;
     margin-top: 13.5px;
@@ -285,11 +287,11 @@ ul.custom-bullet  {
 
 @media(max-width:991px){
 .sub-head-small {
-    font-size: 28px;
+   font-size: 25px;
     text-transform: uppercase;
-    top: 165px;
-    left: 153px;
-    letter-spacing: 2px;
+    top: 132px;
+    left: 156px;
+    letter-spacing: 1px;
     }
 }
 
