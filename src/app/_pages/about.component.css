@@ -196,14 +196,14 @@ h3.first{
     margin-top: 70px;
 }
 .tertiary h2 {
-font-size: 30px;
+    font-size: 28px;
     font-style: italic;
     font-weight: 700;
     letter-spacing: .3px;
     line-height: 27px;
     color: #202020;
     margin-top: 52px;
-    margin-bottom: 27px;
+    margin-bottom: 18px;
 }
 .tertiary h2.first{
     margin-top: 64px;
