@@ -131,8 +131,8 @@ td.table-title,
 span.table-title, 
 div.table-title {  
 /*     text-transform: uppercase;
- */ letter-spacing: 1px;
-    font-size: 17px;
+ */ letter-spacing: 0;
+    font-size: 18px;
     font-weight: 700;
 
 }

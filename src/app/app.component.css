@@ -75,7 +75,7 @@ img#logo {
 /* TYPOGRAPHY
 -------------------------------*/
 h1 {
-padding-top: 2px;
+padding-top: 4px;
     margin-top: 0;
     margin-bottom: 0;
     color: #1d1d1d;
@@ -164,9 +164,9 @@ nav a, nav span  {
 color: #202020;
     background: 0 0;
     float: right;
-    font-size: 13.5px;
+    font-size: 14px;
     font-weight: 400;
-    padding: 20px 10px;
+    padding: 22px 11px;
     border: none;
     -webkit-font-smoothing: subpixel-antialiased;
     letter-spacing: 0.3px;
@@ -218,7 +218,7 @@ nav a:active,
 nav a.active {
     text-decoration: none;
     border-top: solid #444b50;
-    padding: 17px 11px 20px;
+    padding: 19px 11px 20px;
     color: #101010;
 }
 
@@ -244,7 +244,7 @@ nav a.user.active,
 nav a.user:focus,
 nav a.user.focus {
    border-top: none;
-    padding:  20px 11px;
+    padding:  22px 11px;
   /*    color: #ff7029 ;
  */color: #23527c;
   text-decoration: underline;
