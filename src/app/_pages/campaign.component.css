@@ -18,14 +18,14 @@ color:#202020;
 font-weight: 400;
 }
 
+h1 {
+font-weight: 200;
+}
+
 a {
   color:#202020;
 }
 
-a.btn-success, a.btn-danger  {
-  color:#ffffff;
-
-}
 
 th input.form-inline {
 }
@@ -64,7 +64,6 @@ th input.form-inline {
 .amends-bg p.text-danger {
     font-size:15px
 }
-
 
 .qa-controls {
   padding-bottom: 5px;
@@ -132,14 +131,14 @@ span.table-title,
 div.table-title {  
 /*     text-transform: uppercase;
  */ letter-spacing: 0;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
 
 }
 table.details span.table-title, 
 table.table-header span.table-title
  {  
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 400;
 }
 
@@ -177,22 +176,19 @@ span.placeholder[contenteditable]:empty::before {
     font-weight: 300;
 }
 
-.pad-top-10 {
-  padding-top: 10px;
-}
 
 .marg-bot-30 {
   margin-bottom:30px
 }
-
 .pad-bot-25 {
   padding-bottom:25px
 }
-
 .pad-top-20 {
   padding-top:20px
 }
-
+.pad-top-10 {
+  padding-top: 10px;
+}
 .pad-none {
 padding:0;
 }
@@ -205,11 +201,27 @@ padding:0;
 
 }
 
-.btn-success, .btn-danger {
+a.btn-success, a.btn-danger  {
+  color:#ffffff;
+
+}
+
+.btn-warning {
+    color: #212121;
+    background-color: #ffe45c;
+    border-color: #ffe45c;
+   font-weight: 700;
+    text-transform: uppercase;
+    font-size: 11.5px;
+}
+
+
+.btn-success, 
+.btn-danger {
   text-transform: uppercase;
   font-size: 11px;
-  letter-spacing: 0.5px;
-}
+/*   letter-spacing: 0.5px;
+ */}
 
 .btn-full {
   color:#ffffff;
@@ -221,7 +233,7 @@ padding:0;
 
 .btn-mod{
   border: 3px dashed #ffffff;   
-  padding: 20px 0 20px 0 ;
+  padding: 10px 0 10px 0 ;
 }
 
 .btn.btn-danger[disabled] {
@@ -266,8 +278,8 @@ padding:0;
   border: 1px dashed #cccccc;
   background: #ffffff;
   font-weight: 700;
-  color:#909090;
-  letter-spacing: 4px;
+  color:#202020;
+  letter-spacing: 1px;
 }
 
 .btn-mod:hover {
@@ -280,7 +292,7 @@ button.new-mod {
   color: #ffffff;
   background: #29AF4A;
   font-weight: 700;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
 }
 .btn-upload {
   margin-left: 5px;
@@ -395,7 +407,7 @@ padding: 0 20px 10px 20px
   text-transform: none;
     visibility: hidden;
     width: 450px;
-    background-color: #ffdd15;
+    background-color: #f3f3f3;
     color: #444444;
     text-align: left;
     border-radius: 6px;
@@ -524,7 +536,6 @@ letter-spacing:1px;
 
 /* SELECT STYLES
 -------------------------------*/
-
 
 .select-table {
     width: 100%;

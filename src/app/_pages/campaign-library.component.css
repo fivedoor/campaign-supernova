@@ -55,16 +55,3 @@ table-bordered {
 border: none;
 }
 
-.btn-super {
-  border: 1px solid #ffd735;
-  font-size: 11px;
-   background: #ffd735;
-  font-weight: 700;
-  text-transform: uppercase;
-    letter-spacing: 1px;
-  color:#30373D;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-  cursor: default;
-}

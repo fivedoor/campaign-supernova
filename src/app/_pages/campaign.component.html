@@ -40,7 +40,7 @@
                 <tr >
                   <th colspan="2" ><span class="table-title" [ngClass]="{'inline': viewType === 'owner'}">Campaign Details</span> 
 
-                    <a *ngIf="campaignForm.controls.approved.value !== true" (click)="toggleDetailsInput()" class="pull-right details-edit" > edit </a>
+                    <a *ngIf="campaignForm.controls.approved.value !== true" (click)="toggleDetailsInput()" class="glyphicon glyphicon-pencil pull-right details-edit" >  </a>
 
                     <span *ngIf="viewType === 'owner'"  class="pull-right qa-controls">
                       <button *ngIf="campaignForm.controls.approved.value === false" [disabled]="campaignType === 'demos'" type="button" (click)="setCampaign()"  class="btn btn-primary btn-xs">Save Comments </button>
@@ -147,7 +147,7 @@
               <thead>
                 <tr >
                   <th colspan="2" ><span class="table-title" [ngClass]="{'inline': viewType === 'owner'}">Campaign Details</span> 
-                    <a *ngIf="campaignForm.controls.approved.value !== true" (click)="toggleDetailsInput()" class="pull-right details-edit" > update </a>
+                    <a *ngIf="campaignForm.controls.approved.value !== true" (click)="toggleDetailsInput()" class="glyphicon glyphicon-pencil pull-right details-edit" > </a>
                   </th>
                 </tr>
               </thead>
@@ -272,7 +272,7 @@
                   <td  ><span class="table-title"> header </span>
                     <div  class="pull-right" >
                       <img *ngIf="viewType === 'author'" src="https://firebasestorage.googleapis.com/v0/b/ngdataformdemo.appspot.com/o/red-arrow1.gif?alt=media&token=e7c8e7ea-fc67-41d9-b1a4-d649aec6d16f" class="arrow-guide" [hidden]="campaignForm.controls.config.controls.header.valid && campaignForm.controls.config.controls.logo.controls.href.valid" /> 
-                      <a *ngIf="campaignForm.controls.approved.value !== true && viewType === 'author'" (click)="toggleCampaignConfigInput('open')" class="details-edit">edit</a>
+                      <a *ngIf="campaignForm.controls.approved.value !== true && viewType === 'author'" (click)="toggleCampaignConfigInput('open')" class="glyphicon glyphicon-pencil pull-right details-edit"></a>
                     </div>
 
                     <div *ngIf="viewType === 'qa'"  class="pull-right qa-controls" >
@@ -447,8 +447,11 @@
                   <thead >
                     <tr >
                       <th >Module</th>
-                      <th ><span class="table-title">{{module.value.name}}</span><a *ngIf="campaignForm.controls.approved.value !== true && viewType === 'author'" (click)="removeModule(i)" class="glyphicon glyphicon-remove pull-right" style="margin-top:2px;">  </a>
-                        <a *ngIf="campaignForm.controls.approved.value !== true  && viewType === 'author'" (click)="OpenEditor(i,true,moveToFormEditor)" class="pull-right details-edit"> edit </a>
+                      <th ><span class="table-title">{{module.value.name}}</span>
+                        <a *ngIf="campaignForm.controls.approved.value !== true && viewType === 'author'" (click)="removeModule(i)" class="glyphicon glyphicon-remove pull-right" style="margin-top:2px;"> </a>
+
+                        <a *ngIf="campaignForm.controls.approved.value !== true  && viewType === 'author'" (click)="OpenEditor(i,true,moveToFormEditor)" class="glyphicon glyphicon-pencil pull-right details-edit"> </a>
+
                         <div *ngIf="viewType === 'qa'"  class="pull-right qa-controls">
                           <button *ngIf="module.value.approved === false" [disabled]="campaignType === 'demos'"  type="button" (click)="setCampaign()"  class="btn btn-primary btn-xs">Save Comments </button>
                           <button (click)="toggleModuleStatus(false, i)" type="button" class="btn btn-danger btn-xs">Reject</button>

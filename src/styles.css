@@ -59,17 +59,7 @@ font-family: 'Lato', 'Gotham', sans-serif !important;
 body {
     
     background: #ffffff;
-
 	  color:#202020 ;
-
-    /* The image used */
-    /*
-    background-image: url("https://firebasestorage.googleapis.com/v0/b/ngdataformdemo.appspot.com/o/bg.png?alt=media&token=8261d9c9-278e-42c4-9742-e1e81b7e7f23");
-    height: 100%; 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    */
 }
 
 
@@ -107,6 +97,36 @@ border-width: 1px !important;
 -moz-box-shadow: inset 0px 0px 36px 0px rgba(255,223,13,0.45) !important;
 box-shadow: inset 0px 0px 36px 0px rgba(255,223,13,0.45) !important;*/
 }
+
+/* GLYPH STYLES
+-------------------------------*/
+
+.glyphicon-remove:before {
+  color: red;
+}
+
+.glyphicon-info-sign:before {
+color: #969696;
+}
+
+.glyphicon-pencil:before {
+    color: #969696;
+  }
+
+/* BUTTON STYLES
+-------------------------------*/
+.btn-super {
+    border: 1px solid #ffeb00;
+    font-size: 14px;
+    background: #ffeb00;
+    font-weight: 400;
+    text-transform: capitalize;
+    letter-spacing: 0px;
+    color: #212121;
+    border-radius: 0;
+    cursor: default;
+}
+
 
 
 /* MODAL STYLES
