@@ -29,7 +29,8 @@ a#learn-anchor {
     font-weight: 900;
     background-color: #ffea55;
     font-size: 30px;
-/*     padding: 16px */}
+     padding: 0 7px 
+ }
 
 /* Dimensions */
 .hero {
@@ -52,7 +53,7 @@ a#learn-anchor {
     max-width: 620px;
 }
 .secondary-page-width {
-    max-width: 700px ;
+    max-width: 720px ;
 }
 .hero-image {
     text-align:center;
@@ -197,7 +198,7 @@ h1 {
 
 }
 h3 {
-    font-size: 30px;
+    font-size: 29px;
     font-weight: 600;
     letter-spacing: -0.7px;
     line-height: 35px;
@@ -209,13 +210,13 @@ h3.first{
     margin-top: 63px;
 }
 .tertiary h2 {
-    font-size: 30px;
+    font-size: 29px;
     font-style: italic;
     font-weight: 900;
     /* letter-spacing: .3px; */
     line-height: 27px;
     color: #202020;
-    margin-top: 52px;
+    margin-top: 63px;
     margin-bottom: 18px;
 }
 .tertiary h2.first{
@@ -232,7 +233,7 @@ h4 {
     font-weight: 700;
 }
 .secondary h2 {
-    font-size: 34px;
+    font-size: 35px;
     font-style: italic;
     font-weight: 700;
     letter-spacing: 0;
@@ -249,8 +250,8 @@ font-size: 17.5px;
     line-height: 27px;
     text-transform: none;
     color: #202020;
-    margin-top: 35px;
-    margin-bottom: 37px;
+    margin-top: 36px;
+    margin-bottom: 36px;
 }
 
 p.footnote{
@@ -271,7 +272,7 @@ list-style-type: square;
 }
 
 ul.custom-bullet  {
-    margin-bottom: 28px;
+    margin-bottom: 27px;
 }
 .custom-bullet li {
     display: block;
