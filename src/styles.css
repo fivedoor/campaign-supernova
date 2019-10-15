@@ -60,7 +60,7 @@ body {
 }
 a {
 cursor: pointer;
-color:#337ab7;
+color:#2a6394;
 }
 
 /* SELECT STYLES
@@ -75,7 +75,10 @@ p {
 html, body {
     font-size: 17px;
     line-height: 27px;
-}
+    -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+/*     -moz-osx-font-smoothing: antialiased;
+ */}
 h1 {
     font-size: 4em;
     margin-top: 1em;

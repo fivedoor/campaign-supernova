@@ -1,12 +1,14 @@
 
 .hero-bg {
-    background: #ffe73f; /*  #ffea55 #fde327; #ffdb43  fde9e9 ; #e9f0fd;  ffe01b #f3f3f3 #FFF5F0; #fdf6f2; #fff4ee ;*/
+    background: #ffeb5e /*  #ffe73f;  #ffea55 #fde327; #ffdb43  fde9e9 ; #e9f0fd;  ffe01b #f3f3f3 #FFF5F0; #fdf6f2; #fff4ee ;*/
 }
 .secondary-bg {
     background: #ffffff;
+
 }
 .tertiary-bg {
-    background: #ffffff;  /* fbfbfb */
+    background: #f4f4f4;  /* fbfbfb */
+
 }
 a {
     font-weight: 600;
@@ -28,19 +30,20 @@ a#learn-anchor {
 
 /* Dimensions */
 .hero {
-   padding: 13em 0 12em;
+    padding: 14.5em 0 12em; /* 13em 0 13em; */
     margin: 0 auto;
 }
 .secondary {
-    padding:10em  0 8em 0;  /* 86px 0 88px; */
+    padding: 14em 0 15em; /*  12em 0 13em;   10em  0 8em 0;    86px 0 88px; */
     margin: 0 auto;
+
 }
 .tertiary,
 .fourth,
 .fifth,
 .sixth
  {
-    padding:6em  0 6em 0;  /* 86px 0 88px; */
+    padding:2em  0 8em 0;  /* 86px 0 88px; */
     margin: 0 auto;
 }
 
@@ -49,16 +52,16 @@ a#learn-anchor {
     max-width: 820px;
 }
 .secondary-page-width {
-    max-width: 820px ;
+    max-width: 770px ;
 }
 .tertiary-page-width,
 .fourth-page-width,
 .fifth-page-width,
 .sixth-page-width {
-    max-width: 720px;
+    max-width: 770px;
 }
 .page-width {
-    max-width: 720px;
+    max-width: 770px;
 }
 
 .hero-image {
@@ -85,13 +88,14 @@ img#logo {
  button.btn-primary,
  button.btn-success  {
     margin: 18px 0;
-    font-size: 0.8em;
-    font-weight: 800;
+    font-size: .8em;
+    font-weight: 600;
     text-transform: uppercase;
     border-radius: 1px;
     text-align: center;
     padding: 1.75em 2.75em;
     letter-spacing: 1px;
+     -webkit-font-smoothing: auto;
 } 
 
 button.btn-success {
@@ -101,23 +105,23 @@ button.btn-success {
 
 }
 button.btn-primary{
-      background-color: #337ab7;
+      background-color: #227787; /* #337ab7; */
  /* #ff7029; */  
-    border: 1px solid #337ab7;
+    border: 1px solid #227787; /* #337ab7; */
    color: #ffffff;
 } 
 button.btn-success:active,
 button.btn-success:focus,
 button.btn-success:hover {
-        background-color: #4cae4c;
-        border: 1px solid #4cae4c;
+        background-color: #2d9b2d;
+        border: 1px solid #2d9b2d;
        color: #ffffff;
 }
 button.btn-primary:active,
 button.btn-primary:focus,
 button.btn-primary:hover {
-        background-color: #4a90cc;
-        border: 1px solid #4a90cc;
+        background-color: #248597; /* #4a90cc; */
+        border: 1px solid #248597; /*  #4a90cc; */
        color: #ffffff;
 }
 
@@ -127,72 +131,73 @@ button.btn-primary:hover {
 }
 /* Fonts */
 .hero h1{
-    font-size: 8.5em;
+    font-size: 7.9em;
     line-height: 1em;
     padding: 0 18px;
     margin-bottom: .4em;
     font-family: 'Big Shoulders Text';
     font-style: normal;
-    font-weight: 400;
-}
+    font-weight: 500;
+    /* letter-spacing: 0.5px;*/
+    }
 .sub-head-small {
 font-style: italic;
     font-family: 'Gochi Hand';
     font-weight: 400;
-    font-size: 2em;
+    font-size: 1.75em;
     text-transform: capitalize;
     position: relative;
-    top: 23px;
-    left: 315px;
-    letter-spacing: 0.5px;
+    top: 21px;
+    left: 299px;
+    letter-spacing: .5px;
     width: 70px;
-}
+    }
 
 h1 {
-font-size: 8.5em;
+    font-size: 14em;
     font-weight: 400;
     line-height: 1em;
     text-transform: none;
-    background-color: #ffe73f;
+    /* background-color: #ffe73f; */
     color: #202020;
     margin-top: 0;
     margin-bottom: 0;
-    padding: .3em;
+    padding: 0.2em 0;
+    /* letter-spacing: -0.5px; */
     font-family: 'Big Shoulders Text';
 }
 
-
-
 .hero h2 {
-    font-size: 1.75em;
+font-size: 1.6em;
     font-weight: 300;
-    line-height: 1.5em;
-    padding: 0px 18px;
-    margin-top: -1.3em;
-    margin-bottom: 0.8em;
-    letter-spacing: -0.3px;
+    line-height: 1.65em;
+    padding: 0 18px;
+    margin-top: -1.45em;
+    margin-bottom: 0.75em;
     color: #212121;
+    -webkit-font-smoothing: auto;
+    /* font-style: italic; */
 }
 
 .title-text {
-    font-size: 2em;
+    font-size: 1.6em;
     font-style: normal;
     font-weight: 300;
     text-transform: none;
     color: #202020;
     margin-bottom: 1.55em;
     margin-top: 1.55em;
-    line-height: 2em;
+    line-height: 1.65em;
     text-align: center;
-    font-family: -webkit-pictograph;
+    -webkit-font-smoothing: auto;
     letter-spacing: -.3px;
 }
 
 .supernova {
-font-family: 'Big Shoulders Text';
-    font-weight: 700;
+    font-family: 'Big Shoulders Text';
+    font-weight: 800;
     background-color: #ffea55;
-    font-size: 1.7em;
+    font-size: 1.5em;
     padding: 0 6px;
 }
 
@@ -200,47 +205,56 @@ font-family: 'Big Shoulders Text';
     margin-bottom: 64px;
 }
 .secondary-text {
-font-size: 1em;
+   /*   font-size: 1.215em ;   1.05em;1.15rem; */
+    font-size: 1.15em;
     font-style: normal;
     font-weight: 400;
-    line-height: 1.7em;
+    line-height: 1.6em;
     text-transform: none;
     color: #202020;
-    margin-top: 1.55em;
+    margin-top: 1.6em;
     letter-spacing: .3px;
-    margin-bottom: 1.55em;
+    margin-bottom: 1.6em;
 }
 
-h3 {
-    font-size: 1.9em;
-    line-height: 1em;
-    letter-spacing: -0.5px;
-    color: #202020;
-    margin-top: 1.9em;
-}
 h3.first{
-  margin-top: 1.9em;
+  margin-top: 1.75em;
 }
+h3 {
+    font-size: 2.215em;
+    line-height: 1em;
+    /* letter-spacing: -0.3px; */
+    margin-top: 2.215em;
+    font-weight: 700;
+    font-family: 'Big Shoulders Text';
+    margin-bottom: 1em;
+}
+
 
 h4 {
     color: #202020;
-    font-size: 1.1em;
+    font-size: 1.215em;
     line-height: 1.5em;
-    margin-top: .9em;
-    font-weight: 300;
+    margin-top: 1em;
+    /* letter-spacing: 0.3px; */
+    font-weight: 400;
     font-family: sans-serif;
-    font-style: italic;
+     font-style: italic; 
     text-transform: capitalize;
 }
 
 .features h2 {
-    font-weight: 500;
-    font-size: 1.8em;
+    font-weight: 700;
+    font-size: 2em;
+    letter-spacing: 0.3px;
     line-height: 1.1em;
-    margin-top: 1.8em;
+    margin-top: 2em;
+    font-family: 'Big Shoulders Text';
 }
+
 .features .secondary-text {
-    line-height: 1.5em;
+line-height: 1.5em;
+    font-size: 1.115em;
    
 }
 .features-text {
@@ -248,32 +262,32 @@ h4 {
     line-height: 1.5em;
 }
 .controls h2 {
-     font-size: 2.1em;
-    font-weight: 500;
-    letter-spacing: 0;
-    line-height: 1em;
-    color: #202020;
-    margin-top: 1.5em;
-    margin-bottom: 0.75em;
-    letter-spacing: -.7px;
+      font-size: 2.8em;
+    font-weight: 700;
+    line-height: 1.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    /* letter-spacing: 0.3px; */
+    /* background-color: #ffe73f; */
+    font-family: 'Big Shoulders Text';
 }
 
 .secondary-subhead {
-font-size: 1.1em;
+    font-size: 1.15em;
     font-style: normal;
     font-weight: 400;
-    line-height: 1.7em;
+    line-height: 1.6em;
     text-transform: none;
     color: #202020;
     margin-top: 3em;
-    margin-bottom: 1.7em;
+    margin-bottom: 1.6em;
 }
 
 p.footnote{
     color:#202020; 
     font-weight: 300;
-/*     letter-spacing: 0.3px;
- */    line-height: 35px;
+/*     letter-spacing: 0.3px;*/    
+    line-height: 35px;
     margin-top: 17px;
     margin-bottom: 17px;
     font-size: 16px;
@@ -294,21 +308,15 @@ ul.custom-bullet  {
 }
 .custom-bullet li:before {
     color: #202020;
-    font-size: 1.3em;
-    line-height: 1.55em;
+    font-size: 1.25em;
+    line-height: 1.6em;
     font-weight: 400;
-    /* font-style: italic;
-    /* font-weight: 600; */
- 
 }
 .custom-bullet li.sub {
     color: #202020;
-    font-size: 1.3em;
-    line-height: 1.55em;
+    font-size: 1.25em;
+    line-height: 1.6em;
     font-weight: 400;
-    /* font-style: italic;
-    /* font-weight: 600; */
-
 }
 .red-bullet {
   color:#ff5f00; 
@@ -318,10 +326,10 @@ ul.custom-bullet  {
 
 @media(max-width:991px){
 .sub-head-small {
-font-size: 1.7em;
+    font-size: 1.7em;
     text-transform: uppercase;
-    top: 173px;
-    left: 141px;
+    top: 163px;
+    left: 128px;
     letter-spacing: 1px;
     }
 }
@@ -355,13 +363,8 @@ h1 {
 .hero h2 {
     font-size: 1.2em;
 }
-/* .hero .secondary-text {
-    font-size: 16px;
-}
- */
+
 button.btn-success, button.btn-primary{
-
     padding: 15px 25px;
-
-  }
+    }
 }

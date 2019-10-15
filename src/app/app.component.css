@@ -75,18 +75,17 @@ img#logo {
 /* TYPOGRAPHY
 -------------------------------*/
 h1 {
-    padding-top: 3px;
+        padding-top: 2px;
     margin-top: 0;
     margin-bottom: 0;
     color: #1d1d1d;
-    font-size: 20px;
+    font-size: 21.5px;
     line-height: 20px;
     font-weight: 700;
     font-family: Lato,sans-serif;
-    -webkit-font-smoothing: subpixel-antialiased;
-    -moz-osx-font-smoothing: antialiased;
-    letter-spacing: -.5px;
-}
+    letter-spacing: -1px;
+        -webkit-font-smoothing: auto;
+  }
 
 
 #beta {
@@ -165,11 +164,10 @@ nav a, nav span  {
     color: #202020;
     background: 0 0;
     float: right;
-    font-size: 13.5px;
+    font-size: 14px;
     font-weight: 400;
-    padding: 20px 14px 22px;
+    padding: 20.25px 1em 20.25px;
     border: none;
-    -webkit-font-smoothing: subpixel-antialiased;
     letter-spacing: .3px;
 }
 
@@ -219,21 +217,15 @@ nav a.hover{
 nav a:active,
 nav a.active {
     text-decoration: none;
-/*     border-top: solid #444b50;
-    padding: 19px 11px 20px; */
     color: #101010;
 }
 
 .navbar-nav>li>a:hover {
- /*  background-color: #efefef54; */
      text-decoration: none;
-/*     border-top: solid #e0e0e0;
-    padding: 19px 11px 20px; */
     color: #337ab7;
 }
 
 .navbar-default .navbar-nav>li>a:focus {
-/*   border-top: solid #444b50; */
    background-color: transparent;
 
 }
@@ -249,9 +241,8 @@ nav a.user.active,
 nav a.user:focus,
 nav a.user.focus {
    border-top: none;
-    padding:  20px 14px;
-  /*    color: #ff7029 ;
- */color: #23527c;
+    padding:  20.25px 1em;
+  color: #23527c;
   text-decoration: none;
 }
 .navbar-default .navbar-nav>.open>a.user:focus,
