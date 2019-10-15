@@ -41,7 +41,7 @@
 										<li><a class="logout" (click)="logout()">Log Out </a></li>
 									</ul>
 							</li>
-							<li id="nav-logout-mob-user"><a class="logout"(click)="logout()">Log Out </a></li>
+							<li id="nav-logout-mob-user"  *ngIf="authService.currentUser" ><a class="logout"(click)="logout()">Log Out </a></li>
 						</ul>
 
 					</div>

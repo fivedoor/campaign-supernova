@@ -13,14 +13,16 @@ form {
     padding-top:20px;
 }
 
-h1, h2,h3 {
+h3 { 
+font-size: 25px }
+/* h1, h2,h3 {
 color:#202020;
 font-weight: 400;
 }
 
 h1 {
 font-weight: 200;
-}
+} */
 
 a {
   color:#202020;
@@ -227,7 +229,7 @@ a.btn-success, a.btn-danger  {
   color:#ffffff;
   text-transform: uppercase;
   font-size: 12px;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   width: 100%;
 }
 
@@ -277,7 +279,7 @@ a.btn-success, a.btn-danger  {
 .btn-mod {
   border: 1px dashed #cccccc;
   background: #ffffff;
-  font-weight: 700;
+  font-weight: 900;
   color:#202020;
   letter-spacing: 1px;
 }
@@ -378,100 +380,13 @@ padding: 10px 10px 0 0 ;
 padding: 0 20px 20px 20px
 }
 .editor-pad1 {
-padding: 0 20px 10px 20px
+padding: 0 20px 0 20px
 }
 
 .preview-container-inner {
  padding: 15px; 
  max-width:300px; 
  margin: 0 auto;
-}
-
-
-/* POPUP STYLES
--------------------------------*/
-
-/* Popup container */
-.popup {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-}
-
-/* The actual popup (appears on top) */
-.popup .popuptext {
-	font-family: sans-serif;
-	 font-size: 16px;
-  line-height: 1.2em;
-  font-weight:400;
-  text-transform: none;
-    visibility: hidden;
-    width: 450px;
-    background-color: #f3f3f3;
-    color: #444444;
-    text-align: left;
-    border-radius: 6px;
-    padding: 20px 20px;
-    position: absolute;
-    z-index: 1;
-    left: -450px;
--webkit-box-shadow: -2px 2px 5px 1px rgba(102,108,117,0.44);
--moz-box-shadow: -2px 2px 5px 1px rgba(102,108,117,0.44);
-box-shadow: -2px 2px 5px 1px rgba(102,108,117,0.44);
-       /* margin-left: -80px;*/
-}
-
-.mainpopup, .modpopup  {
-  text-decoration: none;
-}
-
-.mainpopup .popuptext {
-    left: -450px;
-    bottom: 125%;
-}
-
-.modpopup .popuptext {
-    left: -250px;
-    bottom: 125%;
-}
-
-.popup .popuptext p {
-	font-weight:normal;
-}
-.popup .popuptext li {
-	padding-bottom: 5px;
-	font-weight:normal;
-
-}
-/* Popup arrow */
-.popup .popuptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #ffdd15 transparent transparent transparent;
-}
-
-/* Toggle this class when clicking on the popup container (hide and show the popup) */
-.popup .show {
-    visibility: visible;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s
-}
-
-
-/* Add animation (fade in the popup) */
-@-webkit-keyframes fadeIn {
-    from {opacity: 0;} 
-    to {opacity: 1;}
-}
-
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity:1 ;}
 }
 
 
@@ -483,7 +398,7 @@ input, select, option, select option, textarea {
 }
 input, textarea {
 border: none;
-  background-color: #D7EAD3; 
+  background-color: #f3f3f3; 
   color: #444444;
   font-weight: 400;
   -webkit-border-radius: 0;
@@ -493,7 +408,7 @@ border: none;
 }
 
 input.img-input:hover  {
-    background-color: #D7EAD3; 
+    background-color: #f3f3f3; 
 
 }
 
@@ -501,7 +416,7 @@ th input {
   border: 1px solid #cccccc;
     border: none;
 
-background-color: #D7EAD3; 
+background-color: #f3f3f3; 
 }
 
 table.tempData input,
@@ -510,7 +425,7 @@ table.tempData textarea  {
   border: 1px solid #cccccc;
     border: none;
 
- background-color: #D7EAD3;  
+ background-color: #f3f3f3;  
 
 
 }
@@ -529,9 +444,10 @@ textarea.qaAmends {
 label {
 color:#202020;
 font-weight: 400;
-font-size: 13px;
-text-transform: uppercase; 
-letter-spacing:1px;
+font-size: 16px;
+text-transform: capitalize; 
+letter-spacing:0;
+font-style: italic;
 }
 
 /* SELECT STYLES
@@ -586,6 +502,7 @@ letter-spacing:1px;
     background: transparent;
     background-image: none;
     -webkit-appearance: none;
+    background-color: #f3f3f3;
 }
 
 .select-input select option{

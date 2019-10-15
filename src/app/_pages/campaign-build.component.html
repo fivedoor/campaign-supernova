@@ -7,20 +7,20 @@
                            <!--  <pre> personnelAssignedToRole: <br>{{personnelAssignedToRole|json}}</pre>
                             <pre> personnelAssignedToRole[qaId]: <br>{{personnelAssignedToRole['qaId']|json}}</pre> -->
 
-          <div style="padding-top:15px">
-            <p > Fill out the details for your email campaign...</p>
+          <div>
+            <p class="description"> Fill out the details for your email campaign...</p>
           </div>
         </div>
         <div class="col-xs-12" >
           <form [formGroup]="myForm" novalidate (ngSubmit)="setCampaign()">
               <div class="panel-border" > 
                 <div class="form-group">
-                    <label>Title:</label>         
+                    <label>Title</label>         
                    <input type="text" class="form-control" formControlName="title" id="title"  >
                 </div>
 
                 <div class="form-group">
-                  <label class="info"  >Version:<a class="popup mainpopup glyphicon glyphicon-info-sign pull-right" (click)="infoAlert('versionInfo', '')" style="text-decoration:none">
+                  <label class="info"  >Version<a class="popup mainpopup glyphicon glyphicon-info-sign pull-right" (click)="infoAlert('versionInfo', '')" style="text-decoration:none">
                     <span class="popuptext" id="versionInfo">
                      <p style="font-weight:bold" >Apply a mandatory version number </p>
                     <p > If you want to imply minor version iterations please use <span class="text-success" style="font-weight:bold">underscores</span> for separation rather than <span class="text-danger" style="font-weight:bold"> full stops</span> which are currently not supported.</p>
@@ -33,7 +33,7 @@
                 </div> 
 
                 <div class="form-group">
-                  <label class="info" > Owner: <a class="popup mainpopup glyphicon glyphicon-info-sign pull-right" (click)="infoAlert('ownerInfo', '')" style="text-decoration:none">
+                  <label class="info" > Owner<a class="popup mainpopup glyphicon glyphicon-info-sign pull-right" (click)="infoAlert('ownerInfo', '')" style="text-decoration:none">
                             <span class="popuptext" id="ownerInfo">
                              <p >The <strong>owner</strong> will have controls to: </p>
                              <ul>
@@ -57,7 +57,7 @@
                 </div>
 
                 <div class="form-group">
-                  <label class="info">Author:
+                  <label class="info">Author
                     <a class="popup mainpopup glyphicon glyphicon-info-sign pull-right" (click)="infoAlert('authorInfo', '')" style="text-decoration:none">
                       <span class="popuptext" id="authorInfo">
                        <p >The <strong>author</strong> will have controls to: </p>
@@ -82,7 +82,7 @@
                 </div>
 
                  <div class="form-group">
-                  <label class="info"> QA: <a class="popup mainpopup glyphicon glyphicon-info-sign pull-right" (click)="infoAlert('qaInfo', '')" style="text-decoration:none">
+                  <label class="info"> QA<a class="popup mainpopup glyphicon glyphicon-info-sign pull-right" (click)="infoAlert('qaInfo', '')" style="text-decoration:none">
                     <span class="popuptext" id="qaInfo">
                      <p >The <strong>QA</strong> will have controls to:</p> 
                      <ul>
@@ -106,7 +106,7 @@
                 </div>
 
                 <div class="form-group">
-                 <label class="info">Description: <a class="popup mainpopup glyphicon glyphicon-info-sign pull-right" (click)="infoAlert('descriptionInfo', '')" style="text-decoration:none">
+                 <label class="info">Description<a class="popup mainpopup glyphicon glyphicon-info-sign pull-right" (click)="infoAlert('descriptionInfo', '')" style="text-decoration:none">
                       <span class="popuptext" id="descriptionInfo">
                        <p>Write a description. Minimum 10 characters</p> 
                      </span>

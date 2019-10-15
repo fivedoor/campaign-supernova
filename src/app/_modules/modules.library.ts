@@ -4,7 +4,7 @@ export const ModuleLibrary: Module[] = [
 
      {
       type: 'hero',
-      name: 'HERO MODULE',
+      name: 'Hero Module',
       file: 'macros/hero-macro.html',
       preview: 'https://firebasestorage.googleapis.com/v0/b/ngdataformdemo.appspot.com/o/hero_mod.png?alt=media&token=1db3df86-07bb-432c-9af2-7390f6bf7c6b',
       typeId: 0,
@@ -17,7 +17,7 @@ export const ModuleLibrary: Module[] = [
     },
     {
       type: 'textMod',
-      name: 'TEXT MODULE',
+      name: 'Text Module',
       file: 'macros/1uptext-macro.html',
       preview: 'https://firebasestorage.googleapis.com/v0/b/ngdataformdemo.appspot.com/o/text_mod_ccc.png?alt=media&token=d89b43d0-613a-485b-ad6c-aed407097dbb',
       typeId: 1,
@@ -30,7 +30,7 @@ export const ModuleLibrary: Module[] = [
     },
     {
       type: 'buttonMod',
-      name: 'BUTTON MODULE',
+      name: 'Button Module',
       file: 'macros/1upcta-macro.html',
       preview: 'https://firebasestorage.googleapis.com/v0/b/ngdataformdemo.appspot.com/o/button_mod_ccc.png?alt=media&token=29fa42d4-e78d-462d-b5cc-cddab6f9ef14',
       typeId: 2,
@@ -43,7 +43,7 @@ export const ModuleLibrary: Module[] = [
     },
     {
       type: 'bannerMod',
-      name: 'BANNER MODULE',
+      name: 'Banner Module',
       file: 'macros/1upbox-macro.html',
       preview: 'https://firebasestorage.googleapis.com/v0/b/ngdataformdemo.appspot.com/o/reg_banner_lo.jpg?alt=media&token=8691f9f0-63c7-4303-90f3-ec43917d137c',
       typeId: 3,
@@ -56,7 +56,7 @@ export const ModuleLibrary: Module[] = [
     },
     {
       type: 'footer',
-      name: 'FOOTER MODULE',
+      name: 'Footer Module',
       file: 'macros/footer-macro.html',
       preview: 'https://firebasestorage.googleapis.com/v0/b/ngdataformdemo.appspot.com/o/footer_mod_ccc.png?alt=media&token=8e40e349-f2f0-4396-8264-975917a2e45d',
       typeId: 4,
