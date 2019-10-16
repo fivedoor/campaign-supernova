@@ -63,6 +63,16 @@ cursor: pointer;
 color:#2a6394;
 }
 
+.Site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.Site-content {
+  flex: 1;
+}
+
 /* SELECT STYLES
 -------------------------------*/
 

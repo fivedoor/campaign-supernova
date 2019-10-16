@@ -38,7 +38,7 @@ th input.form-inline {
   text-decoration: underline; 
   font-weight:bold;
   cursor: pointer; 
-  font-size: 12px;
+  font-size: 11px;
 }
 
 .preview-container {
@@ -75,8 +75,9 @@ th input.form-inline {
   width: 30px;
 }
 
-
-
+.glyphicon-remove:before {
+    font-size: 15px;
+}
 /* TABLE STYLES
 -------------------------------*/
 
@@ -197,6 +198,10 @@ padding:0;
 
 /* BUTTON STYLES
 -------------------------------*/
+
+.btn-group .btn+.btn, .btn-group .btn+.btn-group, .btn-group .btn-group+.btn, .btn-group .btn-group+.btn-group {
+    margin-left: 0;
+  }
 .btn {
     font-size: 12px;
     margin: 0 1px;
@@ -231,6 +236,7 @@ a.btn-success, a.btn-danger  {
   font-size: 12px;
   letter-spacing: 1px;
   width: 100%;
+  font-weight: 600;
 }
 
 .btn-mod{
@@ -243,15 +249,15 @@ a.btn-success, a.btn-danger  {
 }
 
 .btn-nova {
-    font-size: 11px;
-  border: none;
-  border-right: 2px solid #f2efe0;
-  background: #494949; /*1877ca 278be3 fffceb d9f1fb  */
-  color:#f2efe0;
-  padding: 10px 17px;
-  margin:0;
-  letter-spacing: 1px;
-  font-weight: 400;
+    font-size: 12.5px;
+    border: none;
+    border-right: 2px solid #ffffff;
+    background: #494949;
+    color: #ffffff;
+    padding: 10px 18px;
+    margin: 0;
+    /* letter-spacing: 1px; */
+    font-weight: 600;
  
 
 }
@@ -263,15 +269,15 @@ a.btn-success, a.btn-danger  {
     border-left: 1px solid #f2efe0;
 }
 .btn-super {
-  border: none;
-  font-size: 10px;
-   background: #FFD522;  /* FFD522; FEDF1D  */
-  font-weight: 800;
-  text-transform: uppercase;
-    letter-spacing: 1px;
-  color:#30373D;
+    border: none;
+    font-size: 12.5px;
+    background: none;
+    font-weight: 800;
+    font-style: italic;
+    letter-spacing: 0px;
+    color: #ffd522;
     padding: 11px 17px;
-  margin:0;
+    margin: 0;
  
 }
 
@@ -437,7 +443,7 @@ textarea.qaAmends {
 }
 
 .details input, .details textarea{
-  background-color: #F9ECA8; 
+  background-color: #f3f3f3; 
   padding: 15px;
 }
 
@@ -484,7 +490,7 @@ font-style: italic;
     border: none;
     width: 100%;
     overflow: hidden;
-    background: #eeeeee url("https://firebasestorage.googleapis.com/v0/b/ngdataformdemo.appspot.com/o/arrow-down-grey.png?alt=media&token=ada21096-c9fc-4a04-bfb3-66da7a8aa62c") no-repeat 98% 50%;
+    background: #f3f3f3 url("https://firebasestorage.googleapis.com/v0/b/ngdataformdemo.appspot.com/o/arrow-down-grey.png?alt=media&token=ada21096-c9fc-4a04-bfb3-66da7a8aa62c") no-repeat 98% 50%;
     margin-right: 3px;
     padding-bottom: 2px;
 }
@@ -525,17 +531,16 @@ font-style: italic;
   background: #30373D  url("https://firebasestorage.googleapis.com/v0/b/ngdataformdemo.appspot.com/o/arrow-down-light.png?alt=media&token=eeab63c8-55ec-482d-a7da-9df1d210d75a") no-repeat 90% 58%;
 }
 .select-view select {
-    color:#f2efe0;
-      font-size: 11px !important;
+color: #ffffff;
+    font-size: 12.5px!important;
     padding: 0 8px;
     width: 130%;
     border: none;
     box-shadow: none;
-    background: transparent;
-    background-image: none;
+    background: 0 0;
     -webkit-appearance: none;
-    letter-spacing: 1px;
-    font-weight: 400;
+    letter-spacing: 0;
+    font-weight: 600;
   
 }
 .select-view select:hover {

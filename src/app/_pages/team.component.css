@@ -15,9 +15,10 @@ p,span  {
 	color:#202020;
 }
 
-td {
-	font-size: 14px
+td, th, a {
+    font-size: 0.95em
 }
+
 
 a {
 color: #202020;

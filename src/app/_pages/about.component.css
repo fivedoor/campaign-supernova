@@ -1,6 +1,6 @@
 
 .hero-bg {
-    background: #ffeb5e /*  #ffe73f;  #ffea55 #fde327; #ffdb43  fde9e9 ; #e9f0fd;  ffe01b #f3f3f3 #FFF5F0; #fdf6f2; #fff4ee ;*/
+    background: #ffe73f  /*  #ffeb5e  #ffe73f;  #ffea55 #fde327; #ffdb43  fde9e9 ;;*/
 }
 .secondary-bg {
     background: #ffffff;
@@ -30,7 +30,7 @@ a#learn-anchor {
 
 /* Dimensions */
 .hero {
-    padding: 14.5em 0 12em; /* 13em 0 13em; */
+    padding: 12.5em 0 12em; /* 13em 0 13em; */
     margin: 0 auto;
 }
 .secondary {
@@ -323,7 +323,7 @@ ul.custom-bullet  {
 
 
 
-@media(max-width:991px){
+@media(max-width:759px){
 .sub-head-small {
     font-size: 1.7em;
     text-transform: uppercase;

@@ -1,67 +1,37 @@
-h1,h2,h3,h4 {
-color:#555555;
-font-weight: 400;
-}
-
-
-.page-bg {
-    background: -webkit-linear-gradient(left top, #ffffff, #fafafa); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(bottom right,  #ffffff, #fafafa); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(bottom right,  #ffffff, #fafafa); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to bottom right,  #ffffff, #fafafa); /* Standard syntax */
-}
 
 .page-pad {
-    padding: 150px 0 200px 0;
+    padding: 240px 0 450px 0;
 
 }
 .page-width {
     max-width: 650px;
 }
 
-/*.wrapper {
-
- margin-top: 50px;
- padding: 0 20px;
-}
-*/
-
 
 form{
   margin-bottom: 30px;
 }
 
-a {
-color:  #555555;
+
+.account {
+  margin-top: 27px;
 }
 
-
-.btn-success {
-  width:100%;
-  text-transform: uppercase;
-  font-weight: bold;
-  letter-spacing: 2px;
-  padding-top: 13px;
-  padding-bottom: 13px;
-  /*-webkit-box-shadow:inset 0 0 20px #7f7f7f;
-  -moz-box-shadow:inset 0 0 20px #7f7f7f;
-  box-shadow:inset 0 0 20px #7f7f7f;*/
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-
+.form-control {
+  height: 41px;
 }
-
 
 
 label {
-color:#555555;
-font-weight: 600;
-font-size: 14px;
-text-transform: uppercase; 
-letter-spacing:1px;
-}
+    color: #202020;
+    font-weight: 200;
+    font-size: 19px;
+    font-style: italic;
+    text-transform: capitalize;
+    letter-spacing: 0px;
+    -webkit-font-smoothing: auto;
 
+}
 
 small {
   background-color: #ffffff;
@@ -69,15 +39,10 @@ small {
   font-weight: 400;
 }
 
-
-
 input {
-/*  background-color: #ececec; 
-*/  border: none;
-  background-color: #f6f3d1; 
-/*  padding-top: 18px ;
-  padding-bottom: 20px;*/
-  color: #444444;
+ border: none;
+  background-color: #f3f3f3; 
+  color: #202020;
   font-size: 18px;
   font-weight: 500;
 /*  -webkit-box-shadow:inset 0 0 20px #7f7f7f;
@@ -87,9 +52,7 @@ input {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
-
   margin-bottom: 24px;
-
 }
 
 *:focus {
@@ -110,6 +73,22 @@ textarea[readonly] {
 
 .btn.btn-danger[disabled] {
     background-color: #CC0000;
+}
+
+.btn-success {
+    width: 100%;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 18px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    border-radius: 0;
+    margin-top: 27px;
+  /*-webkit-box-shadow:inset 0 0 20px #7f7f7f;
+  -moz-box-shadow:inset 0 0 20px #7f7f7f;
+  box-shadow:inset 0 0 20px #7f7f7f;*/
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0; 
 }
 
 /* Add animation (fade in the popup) */
