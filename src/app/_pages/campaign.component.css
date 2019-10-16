@@ -215,8 +215,8 @@ a.btn-success, a.btn-danger  {
 
 .btn-warning {
     color: #212121;
-    background-color: #ffe45c;
-    border-color: #ffe45c;
+    background-color: #ffeb00;
+    border-color: #ffeb00;
    font-weight: 700;
     text-transform: uppercase;
     font-size: 11.5px;
@@ -266,7 +266,7 @@ a.btn-success, a.btn-danger  {
     background: #30373D;
 }
 .btm-nav-first {
-    border-left: 1px solid #f2efe0;
+    border-left: 2px solid #f2efe0;
 }
 .btn-super {
     border: none;
@@ -278,14 +278,14 @@ a.btn-success, a.btn-danger  {
     color: #ffd522;
     padding: 11px 17px;
     margin: 0;
- 
+ text-transform: capitalize;
 }
 
 
 .btn-mod {
   border: 1px dashed #cccccc;
   background: #ffffff;
-  font-weight: 900;
+  font-weight: 700;
   color:#202020;
   letter-spacing: 1px;
 }

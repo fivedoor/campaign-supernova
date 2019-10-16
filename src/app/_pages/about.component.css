@@ -30,7 +30,7 @@ a#learn-anchor {
 
 /* Dimensions */
 .hero {
-    padding: 12.5em 0 12em; /* 13em 0 13em; */
+    padding:    13.5em 0 12em; /* 13em 0 13em; */
     margin: 0 auto;
 }
 .secondary {
@@ -131,23 +131,23 @@ button.btn-primary:hover {
 }
 /* Fonts */
 .hero h1{
-font-size: 7.7em;
+font-size: 8.2em;
     line-height: 1em;
     padding: 0 18px;
-    margin-bottom: .4em;
+    margin-bottom: 0;
     font-family: 'Big Shoulders Text';
     font-style: normal;
-    font-weight: 500;
-    /* letter-spacing: 0.5px;*/
+    /* font-weight: 500; */
+
     }
 .sub-head-small {
     font-style: italic;
     font-family: 'Gochi Hand';
     font-weight: 400;
     font-size: 1.75em;
-    text-transform: capitalize;
+    text-transform: uppercase;
     position: relative;
-    top: 22px;
+    top: 24px;
     left: 299px;
     letter-spacing: 0;
     width: 70px;
@@ -168,11 +168,11 @@ h1 {
 }
 
 .hero h2 {
-font-size: 1.65em;
+        font-size: 1.65em;
     font-weight: 300;
     line-height: 1.65em;
     padding: 0 18px;
-    margin-top: -1.55em;
+    margin-top: 0.5em;
     margin-bottom: .75em;
     color: #212121;
     -webkit-font-smoothing: auto;
@@ -194,9 +194,8 @@ font-size: 1.65em;
 
 .supernova {
     font-family: 'Big Shoulders Text';
-    font-weight: 800;
     background-color: #ffea55;
-    font-size: 1.5em;
+    font-size: 1.7em;
     padding: 0 6px;
 }
 
@@ -323,7 +322,7 @@ ul.custom-bullet  {
 
 
 
-@media(max-width:759px){
+@media(max-width:991px){
 .sub-head-small {
     font-size: 1.7em;
     text-transform: uppercase;
