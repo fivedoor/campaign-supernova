@@ -131,7 +131,7 @@ button.btn-primary:hover {
 }
 /* Fonts */
 .hero h1{
-font-size: 8.1em;
+   font-size: 8.05em;
     line-height: 1em;
     padding: 0 18px;
     margin-bottom: 0;
@@ -141,6 +141,7 @@ font-size: 8.1em;
 
     }
 .sub-head-small {
+
     font-style: italic;
     font-family: 'Gochi Hand';
     font-weight: 400;
@@ -148,7 +149,7 @@ font-size: 8.1em;
     text-transform: uppercase;
     position: relative;
     top: 22px;
-    left: 299px;
+    left: 292px;
     letter-spacing: 0;
     width: 70px;
     }
@@ -168,12 +169,12 @@ h1 {
 }
 
 .hero h2 {
-font-size: 1.63em;
+    font-size: 1.65em;
     font-weight: 300;
     line-height: 1.65em;
     padding: 0 18px;
-    margin-top: .6em;
-    margin-bottom: .75em;
+    margin-top: .3em;
+    margin-bottom: .7em;
     color: #212121;
     -webkit-font-smoothing: auto;
 }
