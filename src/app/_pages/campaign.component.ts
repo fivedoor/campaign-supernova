@@ -199,6 +199,8 @@ export class FormComponent implements OnInit {
     // Apply imported logo Controls to imported config Controls
     this.addLogoControls();
 
+    // Set PersonnelAssignedToRoles based on values in rolesrecord
+    this.setPersonnelAssignedToRole();
 
   }
 
@@ -380,7 +382,12 @@ export class FormComponent implements OnInit {
 
   toggleDetailsInput(): void {
     console.log('FUNC: toggleDetailsInput()');
-    this.setPersonnelAssignedToRole();
+  
+  // setPersonnelAssignedToRole function prevents personnel being updated via Camapins details input
+  // When removed the updates are carried over to the presentation table from the edit table 
+  // Seems to reset to orginal values which are baed on rolesrecord values 
+
+  //  this.setPersonnelAssignedToRole(); Commenting this out! 
     this.detailsInputisActive = !this.detailsInputisActive;
     // location.hash = '#details';
   }
@@ -596,28 +603,37 @@ export class FormComponent implements OnInit {
     this.moduleInputs.copy = this.moduleLibrary[selectedModule]['copy'];
   }
 
-  setPersonnel(role, personnelId, IdTitle) {
+  setPersonnel(role, personnelId, personnelIdKey) {
     console.log('FUNC: setPersonnel()');
     // Set Personnel data based on id
     console.log('role: ' + role);
     console.log('personnelId: ' + personnelId);
-    console.log('IdTitle: ' + IdTitle);
+    console.log('personnelIdKey: ' + personnelIdKey);
 
     const roleEmail = role + 'Email';
     console.log(roleEmail);
 
+    const roleId = role + 'Id';
+    console.log(roleId);
+
     const roleControl = <FormControl>this.campaignForm.controls[role];
     const roleEmailControl = <FormControl>this.campaignForm.controls[roleEmail];
+    const roleIdControl = <FormControl>this.campaignForm.controls[roleId];
 
-    roleControl.setValue(this.testTeam[personnelId].name);
-    roleEmailControl.setValue(this.testTeam[personnelId].email);
+    roleControl.setValue(this.fullTeam[personnelId].name);
+    roleEmailControl.setValue(this.fullTeam[personnelId].email);
+    roleIdControl.setValue(personnelId);
+
+    console.log('roleControl: ' + roleControl.value);
+    console.log('roleEmailControl: ' + roleEmailControl.value);
+    console.log('roleIdControl: ' + roleIdControl.value);
 
     // Prevent selecting same team member twice
     // http://jsfiddle.net/nDGu8/8/
-    if (this.personnelAssignedToRole[IdTitle]) {
+    if (this.personnelAssignedToRole[personnelIdKey]) {
       console.log('Found Existing Team Members');
 
-      let s = document.querySelectorAll('option[value="' + this.personnelAssignedToRole[IdTitle] + '"]');
+      let s = document.querySelectorAll('option[value="' + this.personnelAssignedToRole[personnelIdKey] + '"]');
       [].forEach.call(s, function (option) {
         option.disabled = false;
       });
@@ -628,7 +644,7 @@ export class FormComponent implements OnInit {
         option.disabled = true;
       }
     }, this);
-    this.personnelAssignedToRole[IdTitle] = personnelId;
+    this.personnelAssignedToRole[personnelIdKey] = personnelId;
 
   }
 
@@ -639,24 +655,24 @@ export class FormComponent implements OnInit {
     const rolesRecord = <FormControl>this.campaignForm.controls['rolesrecord'].value;
    // const personnelAssignedToRole  = this.personnelAssignedToRole;
 
-/*    for (const n in rolesRecord) {
-      this.personnelAssignedToRole[n] = rolesRecord[n];
-    }*/
+ for (const n in rolesRecord) {
+      this.personnelAssignedToRole[n] = rolesRecord[n]; }
 
+console.log('personnelAssignedToRole:' + rolesRecord);
    // const authorId = personnelAssignedToRole['authorId'];
    // const ownerId = personnelAssignedToRole['ownerId'];
   //  const qaId = personnelAssignedToRole['qaId'];
    //  console.log('rolesRecord.authorId');
     // console.log(rolesRecord['authorId']);
-
    //  console.log('personnelAssignedToRole');
    //  console.log(this.personnelAssignedToRole);
    //  console.log('personnelAssignedToRole.authorId');
     // console.log(this.personnelAssignedToRole['authorId']);
-     // These ids should  be variable not defined here! 
-    this.setPersonnel('author', rolesRecord['authorId'], 'authorId');
-    this.setPersonnel('owner', rolesRecord['ownerId'], 'ownerId');
-    this.setPersonnel('qa', rolesRecord['qaId'], 'qaId');
+     // These ids should  be variable not defined here!
+
+ //   this.setPersonnel('author', rolesRecord['authorId'], 'authorId');
+ //   this.setPersonnel('owner', rolesRecord['ownerId'], 'ownerId');
+  //  this.setPersonnel('qa', rolesRecord['qaId'], 'qaId');
 
   }
 

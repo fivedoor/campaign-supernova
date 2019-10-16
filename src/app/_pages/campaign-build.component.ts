@@ -115,7 +115,7 @@ export class NewFormComponent implements OnInit {
 
   /////// DISPLAY EDITOR ///////////
 
-  setPersonnel(role, personnelId, Idtype) {
+  setPersonnel(role, personnelId, personnelIdKey) {
     console.log('Func: setPersonnel()');
     console.log('personnelId: ' + personnelId);
     console.log('role: ' + role);
@@ -129,8 +129,8 @@ export class NewFormComponent implements OnInit {
 
     // Prevent selecting same team member twice
     // http://jsfiddle.net/nDGu8/8/
-    if (this.personnelAssignedToRole[Idtype]) {
-      let s = document.querySelectorAll('option[value="' + this.personnelAssignedToRole[Idtype] + '"]');
+    if (this.personnelAssignedToRole[personnelIdKey]) {
+      let s = document.querySelectorAll('option[value="' + this.personnelAssignedToRole[personnelIdKey] + '"]');
       [].forEach.call(s, function (option) {
         option.disabled = false;
       });
@@ -141,7 +141,7 @@ export class NewFormComponent implements OnInit {
         option.disabled = true;
       }
     }, this);
-    this.personnelAssignedToRole[Idtype] = personnelId;
+    this.personnelAssignedToRole[personnelIdKey] = personnelId;
 
   }
 

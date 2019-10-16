@@ -5,7 +5,8 @@
         <div class="col-xs-12" >
 
           <h1> {{campaignId}} </h1>
-
+<!-- <pre> personnelAssignedToRole: <br>{{personnelAssignedToRole|json}}</pre>
+                            <pre> personnelAssignedToRole[qaId]: <br>{{personnelAssignedToRole['qaId']|json}}</pre> -->
           <!-- ********** Modal Data Preview ********** -->
           <modal id="custom-modal">
             <div class="modal-bg">
@@ -13,7 +14,11 @@
                 <div class="modal-body">
 
                   <pre> campaignForm: {{campaignForm.value|json}}</pre> 
-                <!--    <pre> personnelAssignedToRole: <br>{{personnelAssignedToRole|json}}</pre>
+                   <pre> testTeam: {{testTeam|json}}</pre> 
+                  <pre> customTeam: {{customTeam|json}}</pre> 
+                  <pre> fullTeam: {{fullTeam|json}}</pre> 
+              <!--      <pre> arrayOfPersonnelIds: {{arrayOfPersonnelIds|json}}</pre> 
+                 <pre> personnelAssignedToRole: <br>{{personnelAssignedToRole|json}}</pre>
                   <pre> newModel: <br>{{newModel|json}}</pre>
                   <pre> newLinks: {{newLinks|json}}</pre> 
                   <pre> moduleInputs: <br>{{moduleInputs|json}}</pre>
@@ -186,7 +191,7 @@
 
                       <option *ngFor="let owner of arrayOfPersonnelIds; let i=index"
                       [(value)]="arrayOfPersonnelIds[i]">
-                      {{testTeam[owner].name}}
+                      {{fullTeam[owner].name}}
                     </option>
                   </select>
                 </div>
@@ -202,7 +207,7 @@
 
                     <option *ngFor="let author of arrayOfPersonnelIds; let i=index"
                     [(value)]="arrayOfPersonnelIds[i]">
-                    {{testTeam[author].name}}
+                    {{fullTeam[author].name}}
                   </option>
                 </select>
               </div>
@@ -219,7 +224,7 @@
 
                   <option *ngFor="let qa of arrayOfPersonnelIds; let i=index"
                   [(value)]="arrayOfPersonnelIds[i]">
-                  {{testTeam[qa].name}}
+                  {{fullTeam[qa].name}}
                 </option>
               </select>
             </div>         
