@@ -30,11 +30,11 @@ a#learn-anchor {
 
 /* Dimensions */
 .hero {
-    padding:    13.3em 0 12em; /* 13em 0 13em; */
+    padding:   13.7em 0 11.3em; /* 13em 0 13em; */
     margin: 0 auto;
 }
 .secondary {
-    padding: 14em 0 15em; /*  12em 0 13em;   10em  0 8em 0;    86px 0 88px; */
+    padding: 13.6em 0 11.8em; /*  12em 0 13em;   10em  0 8em 0;    86px 0 88px; */
     margin: 0 auto;
 
 }
@@ -43,7 +43,7 @@ a#learn-anchor {
 .fifth,
 .sixth
  {
-    padding:2em  0 8em 0;  /* 86px 0 88px; */
+    padding: 2.9em 0 9.7em;  /* 86px 0 88px; */
     margin: 0 auto;
 }
 
@@ -93,7 +93,7 @@ img#logo {
     text-transform: uppercase;
     border-radius: 1px;
     text-align: center;
-    padding: 1.75em 2.75em;
+    padding: 1.9em 2.75em;
     letter-spacing: 1px;
      -webkit-font-smoothing: auto;
 } 
@@ -127,7 +127,7 @@ button.btn-primary:hover {
 
 .hero button.btn-primary,
 .hero button.btn-success  {
-    margin: 0.75em 0.75em;
+    margin: 0.5em;
 }
 /* Fonts */
 .hero h1{
@@ -140,15 +140,14 @@ button.btn-primary:hover {
     font-weight: 500;
     }
 .sub-head-small {
-font-style: italic;
+    font-style: italic;
     font-family: 'Gochi Hand';
     font-weight: 400;
     font-size: 1.85em;
-    /* text-transform: uppercase; */
     position: relative;
     top: 19px;
     left: 290px;
-    letter-spacing: 0px;
+    letter-spacing: 0;
     width: 70px;
     }
 
@@ -169,10 +168,10 @@ h1 {
 .hero h2 {
     font-size: 1.6em;
     font-weight: 300;
-    line-height: 1.65em;
+    line-height: 1.35em;
     padding: 0 18px;
-    margin-top: .35em;
-    margin-bottom: .7em;
+    margin-top: .7em;
+    margin-bottom: 1.15em;
     color: #212121;
     -webkit-font-smoothing: auto;
 }
@@ -185,7 +184,7 @@ h1 {
     color: #202020;
     margin-bottom: 1.55em;
     margin-top: 1.55em;
-    line-height: 1.65em;
+    line-height: 1.655em;
     text-align: center;
     -webkit-font-smoothing: auto;
     letter-spacing: -.3px;
@@ -206,7 +205,7 @@ h1 {
     font-size: 1.1em;
     font-style: normal;
     font-weight: 400;
-    line-height: 1.6em;
+    line-height: 1.65em;
     text-transform: none;
     color: #202020;
     margin-top: 1.6em;
@@ -215,16 +214,15 @@ h1 {
 }
 
 h3.first{
-  margin-top: 1.75em;
+  margin-top: 1.9em;
 }
 h3 {
     font-size: 2.215em;
     line-height: 1em;
-    /* letter-spacing: -0.3px; */
     margin-top: 2.215em;
     font-weight: 700;
     font-family: 'Big Shoulders Text';
-    margin-bottom: 1em;
+    /* margin-bottom: 1.25em; */
 }
 
 
@@ -232,26 +230,28 @@ h4 {
     color: #202020;
     font-size: 1.215em;
     line-height: 1.5em;
-    margin-top: 1em;
-    /* letter-spacing: 0.3px; */
+    margin-top: 1.25em;
     font-weight: 400;
     font-family: sans-serif;
-     font-style: italic; 
+    font-style: italic;
     text-transform: capitalize;
+    margin-bottom: 0.3em;
 }
 
 .features h2 {
     font-weight: 700;
     font-size: 2em;
-    letter-spacing: 0.3px;
+    letter-spacing: .3px;
     line-height: 1.1em;
-    margin-top: 2em;
+    margin-top: 2.15em;
     font-family: 'Big Shoulders Text';
+
 }
 
 .features .secondary-text {
 line-height: 1.5em;
     font-size: 1.115em;
+    margin-bottom: -0.65em;
    
 }
 .features-text {
@@ -259,13 +259,11 @@ line-height: 1.5em;
     line-height: 1.5em;
 }
 .controls h2 {
-      font-size: 2.8em;
+     font-size: 2.8em;
     font-weight: 700;
-    line-height: 1.5em;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    /* letter-spacing: 0.3px; */
-    /* background-color: #ffe73f; */
+    line-height: 1.7em;
+    margin-top: 0.25em;
+    margin-bottom: 0.465em;
     font-family: 'Big Shoulders Text';
 }
 
@@ -298,21 +296,21 @@ list-style-type: square;
 }
 
 ul.custom-bullet  {
-    margin-bottom: 2em;
+    margin-bottom: 1.4em;
 }
 .custom-bullet li {
     display: block;
 }
 .custom-bullet li:before {
-    color: #202020;
+     color: #202020;
     font-size: 1.25em;
-    line-height: 1.6em;
+    line-height: 1.45em;
     font-weight: 400;
 }
 .custom-bullet li.sub {
-    color: #202020;
+      color: #202020;
     font-size: 1.25em;
-    line-height: 1.6em;
+    line-height: 1.45em;
     font-weight: 400;
 }
 .red-bullet {
@@ -321,11 +319,10 @@ ul.custom-bullet  {
 
 
 
-@media(max-width:991px){
+@media(max-width:759px){
 .sub-head-small {
     font-size: 1.7em;
-    text-transform: uppercase;
-    top: 163px;
+    top: 161px;
     left: 128px;
     letter-spacing: 1px;
     }
@@ -343,7 +340,6 @@ h1 {
  
  .sub-head-small {
     font-size: 1.45em;
-    text-transform: uppercase;
     position: relative;
     top: 147px;
     left: 112px;

@@ -31,7 +31,7 @@ img#logo {
 -------------------------------*/
 
 .dropdown-menu>li>a {
-    color:#428bca;
+    color:#2b6494;
 }
 
 .dropdown-menu>li {
@@ -39,16 +39,16 @@ img#logo {
 }
 
 .dropdown ul.dropdown-menu {
-    border-radius:4px;
-    box-shadow:none;
-    margin-top:20px;
-     background-color:#30373D;
-     width: 200px;
+      border-radius: 4px;
+    box-shadow: none;
+    margin-top: 20px;
+    background-color: #f3f3f3;
+    width: 200px;
 
 }
 .dropdown ul.dropdown-menu:before {
-    content: "";
-    border-bottom: 10px solid #30373D;
+  content: "";
+    border-bottom: 10px solid #f3f3f3;
     border-right: 10px solid transparent;
     border-left: 10px solid transparent;
     position: absolute;
@@ -59,7 +59,7 @@ img#logo {
 }
 .dropdown ul.dropdown-menu:after {
     content: "";
-    border-bottom: 12px solid #30373D;
+    border-bottom: 12px solid #f3f3f3;
     border-right: 12px solid transparent;
     border-left: 12px solid transparent;
     position: absolute;
@@ -75,7 +75,7 @@ img#logo {
 /* TYPOGRAPHY
 -------------------------------*/
 h1 {
-        padding-top: 2px;
+    padding-top: 0;
     margin-top: 0;
     margin-bottom: 0;
     color: #1d1d1d;
@@ -115,7 +115,7 @@ h1 {
 }
 
 .navbar-brand{
-  padding-top: 9px;
+  padding-top: 6px;
   float: none;
 }
 
@@ -164,9 +164,9 @@ nav a, nav span  {
     color: #202020;
     background: 0 0;
     float: right;
-    font-size: 0.83em;
+    font-size: .83em;
     font-weight: 400;
-    padding: 20.25px 1em 20.25px;
+    padding: 16.25px 1em;
     border: none;
     letter-spacing: .3px;
 }
@@ -184,8 +184,8 @@ nav a.user {
 /*   font-style: italic;*/}
 
 span#user-email {
-  color: #e3dfc9; 
-  font-size:9px ;
+  color: #232323; 
+  font-size:10px ;
   text-align: right; 
   text-transform: lowercase ; 
   padding-left: 10px;
@@ -193,7 +193,7 @@ span#user-email {
 }
 
 nav a#nav-login {
-  color: #0092D3 ; 
+  color: #227787 ; 
   text-transform: none ; 
   font-size: 12px;
   background: none ; 
@@ -202,9 +202,9 @@ nav a#nav-login {
 
 
 nav a.logout:hover {
-  color: #1fbaff; 
-  border-top: none;
-  padding: 19px 11px 20px 11px;
+     color: #0071d0;
+    border-top: none;
+    padding: 20.25px 1em 20px;
 }
 
 nav a:hover,
@@ -241,7 +241,7 @@ nav a.user.active,
 nav a.user:focus,
 nav a.user.focus {
    border-top: none;
-    padding:  20.25px 1em;
+    padding: 16.25px 1em;
   color: #23527c;
   text-decoration: none;
 }
@@ -275,7 +275,7 @@ nav a.focus .fa-user {
 }
 
 nav a.logout {
-  color: #0092D3; 
+  color: #2b6494; 
   text-transform: none ; 
   font-size: 11px;
   background: none ; 
