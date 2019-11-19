@@ -9,12 +9,14 @@
       <h2>Manage layouts, assets &amp; approvals <!--process--> for html&nbsp;emails</h2>
       </div>
 
-      <button role="button" class="btn btn-lg btn-primary" (click)="goToLearn()" >Teach Me!</button>
+     <!--  <button role="button" class="btn btn-lg btn-primary" (click)="goToLearn()" >Teach Me!</button> -->
       <button *ngIf="authService.currentUser" routerLink="/new-form" routerLinkActive="active" role="button" class="btn btn-lg btn-success" >Let's Get Started</button>
       <button *ngIf="!authService.currentUser" routerLink="/login" routerLinkActive="active" role="button" class="btn btn-lg btn-success" >Let's Get Started</button>
-    
+        <div  class="learn-more">learn more &darr;</div>
+
     </div>
   </div>
+
 </div>  
 
 
