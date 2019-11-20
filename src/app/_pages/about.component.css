@@ -31,11 +31,11 @@ a#learn-anchor {
 
 /* Dimensions */
 .hero {
-    padding: 17vw 0 15vw; /* 13em 0 13em; */
+    padding: 16.75vw 0 15vw; /* 13em 0 13em; */
     margin: 0 auto;
 }
 .secondary {
-    padding: 15.6em 0 13.8em; /*  12em 0 13em;   10em  0 8em 0;    86px 0 88px; */
+    padding: 17.6em 0 15.8em; /*  12em 0 13em;   10em  0 8em 0;    86px 0 88px; */
     margin: 0 auto;
 }
 .tertiary,
@@ -51,16 +51,16 @@ a#learn-anchor {
     max-width: 100%;
 }
 .secondary-page-width {
-    max-width: 808px ;
+    max-width: 774px ;
 }
 .tertiary-page-width,
 .fourth-page-width,
 .fifth-page-width,
 .sixth-page-width {
-    max-width: 808px;
+    max-width: 774px;
 }
 .page-width {
-    max-width: 808px;
+    max-width: 774px;
 }
 
 .hero-image {
@@ -86,13 +86,13 @@ img#logo {
 
 
 /* Buttons */
-
+/*  1.9em 3em; */
 button.btn-primary,
 button.btn-success {
-    padding: 1.9em 3em;
+    padding: 1.85em 2.8em;
     margin: 1em 0;
 
-    font-size: .88em;
+    font-size: .85em;
     -webkit-font-smoothing: auto;
     font-weight: 600;
 
@@ -183,7 +183,7 @@ h1 {
     margin-top: .9em;
     margin-bottom: 1.1em;
 
-    font-size: 1.4em;
+    font-size: 1.33em;
     -webkit-font-smoothing: auto;
     font-weight: 400;
     line-height: 1.35em;
@@ -197,7 +197,7 @@ h1 {
     margin-top: 1.55em;
     margin-bottom: 1.5em;
 
-    font-size: 1.475em;
+    font-size: 1.45em;
     -webkit-font-smoothing: auto;
     font-style: normal;
     font-weight: 400;
@@ -211,10 +211,9 @@ h1 {
 }
 
 .learn-more {
-    /*    position: fixed;
-    right: 0;
-    bottom: 25px;
-    left: 0; */
+    position: relative;
+    top: 12vw;
+
     width: 100px;
     margin-right: auto;
     margin-left: auto;
@@ -224,7 +223,7 @@ h1 {
     padding: 0 6px;
 
     font-family: "Big Shoulders Text";
-    font-size: 2em;
+    font-size: 2.1em;
 
     background-color: #ffea55;
 }
@@ -237,7 +236,7 @@ h1 {
     margin-bottom: 1.6em;
     /*   font-size: 1.215em ;   1.05em;1.15rem; */
 
-    font-size: 1.15em;
+    font-size: 1.13em;
     font-style: normal;
     font-weight: 400;
     line-height: 1.65em;
@@ -304,7 +303,7 @@ h4 {
     margin-bottom: .465em;
 
     font-family: "Big Shoulders Text";
-    font-size: 2.8em;
+    font-size: 2.75em;
     font-weight: 700;
     line-height: 1.7em;
 }
@@ -313,7 +312,7 @@ h4 {
     margin-top: 3em;
     margin-bottom: 1.6em;
 
-    font-size: 1.15em;
+    font-size: 1.13em;
     font-style: normal;
     font-weight: 400;
     line-height: 1.6em;
@@ -348,14 +347,14 @@ ul.custom-bullet {
     display: block;
 }
 .custom-bullet li:before {
-    font-size: 1.25em;
+    font-size: 1.13em;
     font-weight: 400;
     line-height: 1.45em;
 
     color: #202020;
 }
 .custom-bullet li.sub {
-    font-size: 1.25em;
+    font-size: 1.13em;
     font-weight: 400;
     line-height: 1.45em;
 
@@ -367,7 +366,7 @@ ul.custom-bullet {
 
 
 
-@media(max-width:999px) {
+@media(max-width:1200px) {
     .hero h1 {
         padding: 0 18px;
         margin-bottom: 0;
@@ -378,7 +377,9 @@ ul.custom-bullet {
         font-weight: 600;
         line-height: 1em;
     }
-
+    .hero button {
+        padding-top: 1.7em 2.7em;
+    }
     .sub-head-small {
         top: 16px;
         left: 278px;
