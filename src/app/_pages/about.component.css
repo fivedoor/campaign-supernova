@@ -89,7 +89,7 @@ img#logo {
 /*  1.9em 3em; */
 button.btn-primary,
 button.btn-success {
-    padding: 1.85em 2.8em;
+    padding: 1.95em 3em;
     margin: 1em 0;
     font-size: .8em;
     -webkit-font-smoothing: auto;
@@ -132,7 +132,7 @@ button.btn-primary:hover {
 }
 /* Fonts */
 .hero h1 {
-    padding: 0 18px;
+padding: 0 18px;
     margin-bottom: 0;
     font-family: "Big Shoulders Text";
     font-size: 8em;
@@ -142,7 +142,7 @@ button.btn-primary:hover {
     letter-spacing: 0;
 }
 .sub-head-small {
-    position: relative;
+position: relative;
     top: 16px;
     left: 326px;
     width: 70px;
@@ -172,10 +172,10 @@ h1 {
 }
 
 .hero h2 {
-padding: 0 18px;
+    padding: 0 18px;
     margin-top: 1.1em;
     margin-bottom: 1.1em;
-    font-size: 1.2em;
+    font-size: 1.22em;
     -webkit-font-smoothing: auto;
     font-weight: 400;
     line-height: 1.35em;
@@ -241,7 +241,7 @@ h3 {
     margin-top: 2.25em;
 
     font-family: "Big Shoulders Text";
-    font-size: 2.215em;
+    font-size: 2.1em;
     font-weight: 700;
     line-height: 1em;
     /* margin-bottom: 1.25em; */
@@ -267,7 +267,7 @@ h4 {
     margin-top: 2.25em;
 
     font-family: "Big Shoulders Text";
-    font-size: 2em;
+    font-size: 2.1em;
     font-weight: 700;
     line-height: 1.1em;
 
@@ -334,14 +334,14 @@ ul.custom-bullet {
     display: block;
 }
 .custom-bullet li:before {
-    font-size: 1.13em;
+    font-size: 1.2em;
     font-weight: 400;
     line-height: 1.45em;
 
     color: #202020;
 }
 .custom-bullet li.sub {
-    font-size: 1.13em;
+    font-size: 1.2em;
     font-weight: 400;
     line-height: 1.45em;
 
