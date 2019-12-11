@@ -22,7 +22,7 @@ li.open {
 
 /* Logo */
 img#logo {
-    width: 30px;
+    width: 31px;
     margin-right: 4px;
     margin-bottom: 14px;
 }
@@ -82,7 +82,7 @@ h1 {
     margin-bottom: 0;
 
     font-family: Lato,sans-serif;
-    font-size: 20px;
+    font-size: 19px;
     -webkit-font-smoothing: auto;
     font-weight: 700;
     line-height: 20px;
@@ -174,7 +174,7 @@ nav span {
     float: right;
     padding: 19.25px 1.2em;
 
-    font-size: .85em;
+    font-size: .8em;
     font-weight: 400;
 
     letter-spacing: 0;
