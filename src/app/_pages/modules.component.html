@@ -41,7 +41,7 @@
                 <tbody>
                   <tr *ngFor="let mod of moduleTypeArray; let i=index">
                     <td align="left">{{mod.name}}</td>
-                     <td align="left" style="font-size:12px">{{mod.description}}</td>
+                     <td align="left">{{mod.description}}</td>
                      <td style="width:200px;" align="right">
                       <a (click)="openModal(i+1)">
                         <img style="max-width:100%;" src="{{mod.preview}}"/>

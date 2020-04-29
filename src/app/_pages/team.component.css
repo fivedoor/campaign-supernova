@@ -12,11 +12,11 @@
 a.disabled { pointer-events: none; cursor: default;}
 
 p,span  {
-	color:#202020;
+  color:#282828;
 }
 
 td, th, a {
-    font-size: 0.95em
+    font-size: 0.85em
 }
 
 
@@ -39,10 +39,9 @@ display: block;
 
 
 label {
-    color: #202020;
-    font-weight: 200;
-    font-size: 21px;
-    font-style: italic;
+color: #202020;
+    font-weight: 400;
+    font-size: 14px;
     text-transform: capitalize;
     letter-spacing: 0px;
     margin-bottom: 5px;
@@ -54,7 +53,7 @@ input {
     height: 47px;
     color: #444444;
     font-size: 19px;
-    font-weight: 400;
+    font-weight: 600;
     border-radius: 0;
     margin-bottom: 22px;
     -webkit-border-radius: 0;
@@ -85,23 +84,11 @@ border: none;
 
 }
 
-.btn-success {
-    margin: 18px 0;
-    font-size: 13.5px;
-    font-weight: 700;
-    text-transform: uppercase;
-    border-radius: 1px;
-    text-align: center;
-/*     padding: 22.5px 36px;
- */    letter-spacing: 1px;
-    background-color: #3b9a3b;
-    border-collapse: #3b9a3b;
-}
-
+/* 
  .btn-group-sm>.btn, .btn-sm {
     padding: 18px 29px;
-    font-size: 13.5px;
-} 
+    font-size: 12.5px;
+}  */
 
 .errors {
     text-transform: capitalize;

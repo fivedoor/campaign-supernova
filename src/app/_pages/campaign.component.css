@@ -14,7 +14,7 @@ form {
 }
 
 h3 { 
-font-size: 25px }
+font-size: 22px }
 /* h1, h2,h3 {
 color:#202020;
 font-weight: 400;
@@ -38,7 +38,7 @@ th input.form-inline {
   text-decoration: underline; 
   font-weight:bold;
   cursor: pointer; 
-  font-size: 11px;
+  font-size: 10px;
 }
 
 .preview-container {
@@ -165,7 +165,7 @@ table.table-header {
   border-bottom:none
 }
 table.table-header th{
-border-bottom: 2px solid #29AF4A  !important;
+border-bottom: 2px solid #6f9d3c  !important;
     font-size: 15px;
 }
 
@@ -214,12 +214,15 @@ a.btn-success, a.btn-danger  {
 }
 
 .btn-warning {
-    color: #212121;
-    background-color: #ffeb00;
-    border-color: #ffeb00;
-   font-weight: 700;
+/* border: none;
+ */    font-size: 10px;
+    background: #ffea00;
+    font-weight: 600;
     text-transform: uppercase;
-    font-size: 11.5px;
+    letter-spacing: 0.75px;
+    color: #535353;
+    border-radius: 0;
+    cursor: default;
 }
 
 
@@ -254,7 +257,7 @@ a.btn-success, a.btn-danger  {
     border-right: 2px solid #ffffff;
     background: #494949;
     color: #ffffff;
-    padding: 10px 18px;
+    padding: 10px 26px;
     margin: 0;
     /* letter-spacing: 1px; */
     font-weight: 600;
@@ -270,11 +273,11 @@ a.btn-success, a.btn-danger  {
 }
 .btn-super {
     border: none;
-    font-size: 12.5px;
+    font-size: 13.5px;
     background: none;
     font-weight: 800;
     font-style: italic;
-    letter-spacing: 0px;
+    letter-spacing: 1px;
     color: #ffd522;
     padding: 11px 17px;
     margin: 0;
@@ -291,14 +294,14 @@ a.btn-success, a.btn-danger  {
 }
 
 .btn-mod:hover {
-  border: 1px dashed #29AF4A; 
-  background: #29AF4A;
+/*   border: 1px dashed #29AF4A; 
+ */  background: #6f9d3c;
     color:#ffffff;
 }
 button.new-mod {
   padding: 20px 0 20px 0;
   color: #ffffff;
-  background: #29AF4A;
+  background: #6f9d3c;
   font-weight: 700;
   letter-spacing: 1px;
 }
@@ -356,22 +359,22 @@ textarea[readonly] {
 -------------------------------*/
 
 .preview-outline {
-    border: #29AF4A solid 2px; 
+    border: #6f9d3c solid 2px; 
     display: block;
 
 }
 .img-outline {
-    border: #29AF4A solid 2px; 
+    border: #6f9d3c solid 2px; 
 }
 .table-outline {
-    border: #29AF4A solid 2px !important; 
+    border: #6f9d3c solid 2px !important; 
 }
 .header-table-outline {
-    border: #29AF4A solid 2px !important; 
+    border: #6f9d3c solid 2px !important; 
     border-top: none !important;
 }
 .input-outline {
-  border: #29AF4A solid 2px;  
+  border: #6f9d3c solid 2px;  
   border-radius: 0; 
   padding: 0;
 }

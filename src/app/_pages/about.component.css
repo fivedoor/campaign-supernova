@@ -1,6 +1,9 @@
 
 .hero-bg {
-    background-image: linear-gradient(180deg,#fff,#f7f7f7)  /* background: #ffe73f; #ffeb5e  #ffe73f;  #ffea55 #fde327; #ffdb43  fde9e9 ;;*/
+        background-image: linear-gradient(180deg,#fbfcfe,#f7f7f7);
+     /*   background-image:  linear-gradient(180deg,#c6dcff,#f7f7f7); */
+
+      /*   background-image: linear-gradient(180deg,#d8e7ff,#f7f7f7); background: #ffe73f; #ffeb5e  #ffe73f;  #ffea55 #fde327; #ffdb43  fde9e9 ;;*/
 }
 .secondary-bg {
     background-image: linear-gradient(180deg,#fff,#f7f7f7);
@@ -31,7 +34,7 @@ a#learn-anchor {
 
 /* Dimensions */
 .hero {
-    padding: 15.75vw 0 14vw; /* 13em 0 13em; */
+    padding: 14.5vw 0 15vw; /* 13em 0 13em; */
     margin: 0 auto;
 }
 .secondary {
@@ -51,16 +54,16 @@ a#learn-anchor {
     max-width: 100%;
 }
 .secondary-page-width {
-    max-width: 774px ;
+    max-width: 730px ;
 }
 .tertiary-page-width,
 .fourth-page-width,
 .fifth-page-width,
 .sixth-page-width {
-    max-width: 774px;
+    max-width: 730px;
 }
 .page-width {
-    max-width: 774px;
+    max-width: 730px;
 }
 
 .hero-image {
@@ -89,21 +92,21 @@ img#logo {
 /*  1.9em 3em; */
 button.btn-primary,
 button.btn-success {
-    padding: 1.95em 3em;
+    padding: 1.3em 2.4em;
     margin: 1em 0;
-    font-size: .8em;
+    font-size: 0.83em;
     -webkit-font-smoothing: auto;
     font-weight: 600;
     text-align: center;
     letter-spacing: 1px;
-    text-transform: uppercase;
-    border-radius: 1px;
+    /* text-transform: uppercase; */
+    border-radius: 0px;
 }
 
 button.btn-success {
     color: #fff;
-    border: 1px solid #3b9a3b;
-    background-color: #3b9a3b;
+    border: 1px solid #5e7f39;
+    background-color: #5e7f39;
 }
 button.btn-primary {
     color: #fff;
@@ -115,8 +118,8 @@ button.btn-success:active,
 button.btn-success:focus,
 button.btn-success:hover {
     color: #fff;
-    border: 1px solid #2dad2d;
-    background-color: #2dad2d;
+    border: 1px solid #6f9d3c;
+    background-color: #6f9d3c;
 }
 button.btn-primary:active,
 button.btn-primary:focus,
@@ -132,10 +135,10 @@ button.btn-primary:hover {
 }
 /* Fonts */
 .hero h1 {
-    padding: 0 18px;
+ padding: 0 18px;
     margin-bottom: 0;
     font-family: "Big Shoulders Text";
-    font-size: 8.1em;
+    font-size: 5.6em;
     font-style: normal;
     font-weight: 600;
     line-height: 1em;
@@ -143,15 +146,14 @@ button.btn-primary:hover {
 }
 .sub-head-small {
 position: relative;
-    top: 16px;
-    left: 337px;
+    top: 13px;
+    left: 245px;
     width: 70px;
     font-family: "Gochi Hand";
-    font-size: 1.55em;
-    font-style: italic;
-    /* font-weight: 600; */
-    letter-spacing: 0px;
-    text-transform: lowercase;
+    font-size: 1.3em;
+    letter-spacing: .75px;
+    text-transform: capitalize;
+    color: #3c5124;
 }
 
 h1 {
@@ -161,36 +163,36 @@ h1 {
     /* letter-spacing: -0.5px; */
 
     font-family: "Big Shoulders Text";
-    font-size: 14em;
+    font-size: 12em;
     font-weight: 400;
     line-height: 1em;
 
     text-transform: none;
     /* background-color: #ffe73f; */
 
-        color: #ff7c15;
+    color: #ea5252  /* #ff4a37; *//*  #ff7c15;  ff5858 */
 }
 
 .hero h2 {
-    padding: 3px 18px 0;
+    padding: 5px 18px 0;
     margin-top: 1.4em;
-    margin-bottom: 1.1em;
-    font-size: 1.22em;
+    margin-bottom: 1.4em;
+    font-size: 1.03em;
     -webkit-font-smoothing: auto;
     font-weight: 400;
-    line-height: 1.35em;
-    letter-spacing: 0;
-    color: #212121;
+    line-height: 1.4em;
+    letter-spacing: 0.25px;
+    color: #2e2e2e;
 }
 
 .title-text {
     margin-top: 1.55em;
     margin-bottom: 1.5em;
-    font-size: 1.35em;
+    font-size: 1.13em;
     -webkit-font-smoothing: auto;
     font-style: normal;
     font-weight: 400;
-    line-height: 1.95em;
+    line-height: 2em;
     text-align: center;
     letter-spacing: 0;
     text-transform: none;
@@ -204,14 +206,14 @@ h1 {
     width: 100px;
     margin-right: auto;
     margin-left: auto;
-    font-size: .9em;
+    font-size: 0.85em;
 }
 
 .supernova {
     padding: 6px 15px;
     font-family: "Big Shoulders Text";
-    font-size: 2.1em;
-    background-color: #ff7c15;
+    font-size: 1.9em;
+    background-color: #39424c;
     color: #ffffff;
 }
 
@@ -223,13 +225,13 @@ h1 {
     margin-bottom: 1.6em;
     /*   font-size: 1.215em ;   1.05em;1.15rem; */
 
-    font-size: 1.13em;
+    font-size: 1.03em;
     font-style: normal;
     font-weight: 400;
     line-height: 1.65em;
 
-    letter-spacing: .3px;
-    text-transform: none;
+/*     letter-spacing: .3px;
+ */    text-transform: none;
 
     color: #202020;
 }
@@ -241,7 +243,7 @@ h3 {
     margin-top: 2.25em;
 
     font-family: "Big Shoulders Text";
-    font-size: 2.1em;
+    font-size: 1.9em;
     font-weight: 700;
     line-height: 1em;
     /* margin-bottom: 1.25em; */
@@ -249,11 +251,11 @@ h3 {
 
 
 h4 {
-    margin-top: 1.25em;
+    margin-top: 1.2em;
     margin-bottom: .3em;
 
     font-family: sans-serif;
-    font-size: 1.215em;
+    font-size: 1.03em;
     font-style: italic;
     font-weight: 400;
     line-height: 1.5em;
@@ -264,20 +266,20 @@ h4 {
 }
 
 .features h2 {
-    margin-top: 2.25em;
+    margin-top: 2em;
 
     font-family: "Big Shoulders Text";
-    font-size: 2.1em;
+    font-size: 1.85em;
     font-weight: 700;
     line-height: 1.1em;
 
-    letter-spacing: .3px;
-}
+/*     letter-spacing: .3px;
+ */}
 
 .features .secondary-text {
     margin-bottom: -.65em;
 
-    font-size: 1.115em;
+    font-size: 1em;
     line-height: 1.5em;
 }
 .features-text {
@@ -290,7 +292,7 @@ h4 {
     margin-bottom: .465em;
 
     font-family: "Big Shoulders Text";
-    font-size: 2.75em;
+    font-size: 2.2em;
     font-weight: 700;
     line-height: 1.7em;
 }
@@ -299,7 +301,7 @@ h4 {
     margin-top: 3em;
     margin-bottom: 1.6em;
 
-    font-size: 1.13em;
+    font-size: 1.03em;
     font-style: normal;
     font-weight: 400;
     line-height: 1.6em;
@@ -334,66 +336,66 @@ ul.custom-bullet {
     display: block;
 }
 .custom-bullet li:before {
-    font-size: 1.2em;
+    font-size: 1.03em;
     font-weight: 400;
-    line-height: 1.45em;
+    line-height: 1.55em;
 
     color: #202020;
 }
 .custom-bullet li.sub {
-    font-size: 1.2em;
+    font-size: 1.03em;
     font-weight: 400;
-    line-height: 1.45em;
-
+    line-height: 1.55em;
     color: #202020;
 }
+
 .red-bullet {
-    color: #ff5f00;
+    color: #39424c;
 }
 
 
 
 @media(max-width:1200px) {
-    .hero h1 {
+/*     .hero h1 {
         padding: 0 18px;
         margin-bottom: 0;
 
         font-family: "Big Shoulders Text";
-        font-size: 7em;
+        font-size: 6.8em;
         font-style: normal;
         font-weight: 600;
         line-height: 1em;
-    }
-    .hero button {
+    }  */   
+  /*   .hero button {
         padding-top: 1.7em 2.7em;
-    }
-    .sub-head-small {
-        top: 16px;
-        left: 278px;
+    } */
+/*     .sub-head-small {
+        top: 18px;
+        left: 287px;
         font-size: 1.5em;
     }
-
+ */
     h1 {
         font-size: 10em;
     }
 
-    button.btn-primary[_ngcontent-c2], 
+/*     button.btn-primary[_ngcontent-c2], 
     button.btn-success[_ngcontent-c2] {
         padding: 1.6em 2.5em;
         margin: 1em 0;
-        font-size: .8em;
+        font-size: .75em;
         -webkit-font-smoothing: auto;
         font-weight: 600;
         text-align: center;
         letter-spacing: 1px;
         text-transform: uppercase;
         border-radius: 1px;
-    }
+    } */
 
 }
 
 @media(max-width:730px) {
-    .sub-head-small {
+/*     .sub-head-small {
         position: relative;
         top: 13px;
         left: 238px;
@@ -403,7 +405,7 @@ ul.custom-bullet {
         font-size: 1.45em;
 
         letter-spacing: 0;
-    }
+    } */
     .hero {
         padding: 8.7em 0 7.3em;
     }
@@ -416,30 +418,30 @@ ul.custom-bullet {
         font-size: 6em;
         line-height: 1em;
     }
-    .hero h1 {
+/*     .hero h1 {
         font-size: 6em;
         line-height: 1em;
-    }
-    .hero h2 {
+    } 
+     .hero h2 {
         font-size: 1.2em;
     }
+    */
+   
 
-    button.btn-success,
+   /*  button.btn-success,
     button.btn-primary {
         padding: 1.7em 2.7em;
-    }
+    } */
 }
 
 
-@media(max-width:624px) {
+@media(max-width:588px) {
     .sub-head-small {
         position: relative;
-        top: 125px;
+        top: 118px;
         left: 114px;
 
         width: 70px;
-
-        font-size: 1.45em;
 
         letter-spacing: 0;
     }

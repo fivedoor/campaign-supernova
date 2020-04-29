@@ -83,19 +83,19 @@ h1 {
     margin-bottom: 0;
 
     font-family: Lato,sans-serif;
-    font-size: 20px;
+    font-size: 19px;
     -webkit-font-smoothing: auto;
     font-weight: 700;
     line-height: 20px;
 
     letter-spacing: -.5px;
 
-    color: #1d1d1d;
+    color: #202020;
 }
 
 
 #beta {
-    font-size: 11px;
+    font-size: 12px;
     font-style: italic;
     font-weight: 400;
 
@@ -113,7 +113,7 @@ h1 {
     background: #fff;
     -webkit-box-shadow: 0 0 6px rgba(158, 158, 156, .5);
        -moz-box-shadow: 0 0 6px rgba(158, 158, 156, .5);
-            box-shadow: 0 0 2px rgba(158, 158, 156, .5);
+            box-shadow: 0 0 6px rgba(158, 158, 156, .5);
 }
 
 .navbar {
@@ -173,12 +173,12 @@ nav {
 nav a,
 nav span {
     float: right;
-    padding: 19.25px 1.2em;
+    padding: 19.25px 1.3em;
 
     font-size: .8em;
     font-weight: 400;
 
-    letter-spacing: 0;
+    letter-spacing: 0.25px;
 
     color: #202020;
     border: none;
@@ -202,7 +202,7 @@ nav a.user {
 }
 
 span#user-email {
-    font-size: 12px ;
+    font-size: 11px ;
 
     text-align: right;
     text-transform: lowercase ;
@@ -285,7 +285,7 @@ i.fa-user {
 
     font-size: 16px;
 
-    color: #ff7029;  /* ffe6d9*/
+    color: #5e7f39;  /* ffe6d9*/
 }
 nav a:hover .fa-user,
 nav a.hover .fa-user,
@@ -296,7 +296,7 @@ nav a.focus .fa-user {
     border-top: none;
 }
 .navbar-default .navbar-nav > .open > a:focus .fa-user {
-    color: #ff7029 ;
+    color: #5e7f39 ;
     border-top: none;
     background: transparent ;
 }

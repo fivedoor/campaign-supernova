@@ -8,9 +8,7 @@
 /*    max-width: 650px;
 */}
 
-h1,h2,h3,h4 {
-color:#202020;
-}
+
 
 .panel-default, .panel {
   padding: 20px;
@@ -42,20 +40,18 @@ color:  #202020;
     width: 100%;
     text-transform: capitalize;
     font-weight: bold;
-    letter-spacing: 1px;
-    padding-top: 18px;
-    padding-bottom: 18px;
+    letter-spacing: 0;
+    padding-top: 16px;
+    padding-bottom: 16px;
     border-radius: 0;
-    font-size: 17px;
+    font-size: 16px;
     font-style: italic;
-    margin-top: 21px;
-}
+/*     margin-top: 21px;
+ */}
 
 .btn.btn-danger[disabled] {
     background-color: #CC0000;
 }
-
-
 
 .info {
 height: 27px;
@@ -65,16 +61,14 @@ display: block;
 */}
 
 label {
-color: #202020;
-    font-weight: 200;
-    font-size: 21px;
-    font-style: italic;
+    color: #606060;
+    font-weight: 400;
+    font-size: 15px;
     text-transform: capitalize;
-    letter-spacing: 0px;
-   -webkit-font-smoothing: auto;
-
+    letter-spacing: 0;
+    -webkit-font-smoothing: auto;
+    margin-bottom: 2px;
 }
-
 
 small {
   background-color: #ffffff;
@@ -85,16 +79,15 @@ small {
 
 input {
     border: none;
-    background-color: #f3f3f3;
-    height: 47px;
-    color: #444444;
+    background-color: #f0f0f0;
+    height: 40px;
+    color: #202020;
     font-size: 19px;
     font-weight: 400;
     border-radius: 0;
-    margin-bottom: 22px;
+    margin-bottom: 18px;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
-
 }
 
 .info {
@@ -106,20 +99,19 @@ height: none;
 
 
 select {
--webkit-appearance: none;
+    -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background-color: #f3f3f3;
-    color: hsl(0, 0%, 27%);
-    font-size: 19px;
-    font-weight: 400;
+    background-color: #f0f0f0;
+    color: #202020;
+    font-size: 14px;
+    font-weight: 700;
     text-transform: capitalize;
     border: none;
     border-radius: 0;
-    border-radius: 0;
     margin-bottom: 22px;
-    height: 45px;
-    letter-spacing: 0px;
+    height: 40px;
+    letter-spacing: 0;
 }
 
 select .first-option {
